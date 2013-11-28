@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'ipat.in.th',
-			'database'  => 'ipatinth_pcu',
-			'username'  => 'ipatinth_pcu',
-			'password'  => 'Cheer1234',
+			'host'      => 'localhost',
+			'database'  => 'database',
+			'username'  => 'username',
+			'password'  => 'password',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
