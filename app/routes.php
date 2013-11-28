@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'HomeController@showWelcome');
+
+//Define the Service Controller, for getProvince, getAmphur, and getTambol rEST
+Route::controller('service', 'ServiceController');
