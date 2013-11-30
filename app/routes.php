@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'HomeController@showWelcome');
+Route::get('/reg', 'HomeController@showForm');
+
+Route::post('doit', array('uses' => 'HomeController@showSubmit'));
 
 //Define the Service Controller, for getProvince, getAmphur, and getTambol rEST
 Route::controller('service', 'ServiceController');

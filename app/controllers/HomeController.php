@@ -20,4 +20,22 @@ class HomeController extends BaseController {
 		return View::make('hello');
 	}
 
+	public function showForm()
+	{
+		return View::make('form');
+	}
+
+	public function showSubmit()
+	{
+		$name_prefix = Input::get('name_prefix');
+		$name_first = Input::get('name_first');
+		$name_last = Input::get('name_last');
+
+		return View::make('showSubmit', array(	'name_prefix' => $name_prefix, 
+												'name_first' => $name_first,
+												'name_last' => $name_last));
+
+	}
+
+
 }
