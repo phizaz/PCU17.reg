@@ -40,7 +40,7 @@
     </style>
 </head>
 <body>
-    <form action="doit" method="POST">
+    <form action="" method="POST">
         <label for="name_prefix">คำนำหน้า</label>
         <input type="text" name="name_prefix">
         <br>

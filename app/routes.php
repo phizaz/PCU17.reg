@@ -12,9 +12,12 @@
 */
 
 Route::get('/', 'HomeController@showWelcome');
-Route::get('/reg', 'HomeController@showForm');
 
-Route::post('doit', array('uses' => 'HomeController@showSubmit'));
+// Route::get('/reg', 'HomeController@showForm');
+// Route::post('doit', array('uses' => 'HomeController@showSubmit'));
+// ^ change into
+Route::controller('reg', 'RegisterController');
 
-//Define the Service Controller, for getProvince, getAmphur, and getTambol rEST
+
+//Define the Service Controller, for getProvince, getAmphur, and getTambol rESTful style
 Route::controller('service', 'ServiceController');
