@@ -17,7 +17,6 @@ class RegisterController extends BaseController {
 			array(	'name_prefix' => $name_prefix, 
 					'name_first' => $name_first,
 					'name_last' => $name_last));
-
 	}
 
 }

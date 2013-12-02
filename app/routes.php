@@ -12,7 +12,9 @@
 */
 
 Route::get('/', 'HomeController@showWelcome');
-
+Route::get('ui', function () {
+	return View::make('ui_form', array('url' => URL::to('')));
+});
 // Route::get('/reg', 'HomeController@showForm');
 // Route::post('doit', array('uses' => 'HomeController@showSubmit'));
 // ^ change into
