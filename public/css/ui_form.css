@@ -16,6 +16,13 @@ h4 {
 	color: rgb(77,77,77);
 	margin: 5px 0px 5px 0px;
 }
+
+select{
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 .nr-text {
 	margin: 0px 0px 10px 0px;
 	font-size: 18px;

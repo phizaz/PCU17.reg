@@ -46,6 +46,8 @@
     <?php echo $name_first ?>
     &nbsp;
     <?php echo $name_last ?>
+    &nbsp;
+    <?php echo $date ?>
 
 </body>
 </html>
