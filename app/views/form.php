@@ -145,7 +145,9 @@
                 <h4>อาหารที่แพ้</h4>
                 <input name="food_allergies" class="input-text" type="text" style="width: 260px">
             </div>
-
+			<div>
+				<button type="submit">ยืนยัน</button>
+			</div>
         </div>
     </div>
     </form>
