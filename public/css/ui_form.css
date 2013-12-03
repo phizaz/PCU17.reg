@@ -23,6 +23,20 @@ select{
     appearance: none;
 }
 
+a {
+	text-decoration: none;
+}
+.nav {
+	border-radius: 5px;
+	padding: 15px; 
+	text-decoration: none;
+	background: rgb(220,220,220); color: rgb(255,255,255);
+}
+
+.nav-select {
+	background: rgb(255,25,173); color: rgb(255,255,255);
+}
+
 .nr-text {
 	margin: 0px 0px 10px 0px;
 	font-size: 18px;
@@ -34,6 +48,7 @@ select{
 	background: rgb(200,200,200);
 	color: rgb(255,255,255);
 	*/
+	border-radius: 5px;
 	border-top: 5px solid rgb(249,249,249);
 	background: rgb(240,240,240);
 	color: rgb(33,33,33);

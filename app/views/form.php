@@ -18,10 +18,9 @@
         <h1 style="font-size: 350%; margin-top: -100px;">ครั้งที่ <span style="color: rgb(255,60,168);">17</span></h1>
         
         <a href="javascript:;" onclick="$('#register').submit();">
-            <h1 style="padding: 15px; background: rgb(255,25,173); color: rgb(255,255,255);">กรอกข้อมูลส่วนตัว</h1>
-        </a>
-        <h1 style="padding: 15px; background: rgb(220,220,220); color: rgb(255,255,255);">พิมพ์ใบสมัคร</h1>
-        <h1 style="padding: 15px; background: rgb(220,220,220); color: rgb(255,255,255);">ทำแบบทดสอบ และส่งใบสมัคร</h1>
+            <h1 class="nav nav-select">กรอกข้อมูลส่วนตัว</h1></a>
+        <h1 class="nav">พิมพ์ใบสมัคร</h1>
+        <h1 class="nav">ทำแบบทดสอบ และส่งใบสมัคร</h1>
     </div>
     <div class="grid_12">
         <div style="height: 60px;"></div>
@@ -124,10 +123,11 @@
                 <h4>หมู่เลือด</h4>
                 <!-- <input name="blood_group" class="nr-text" type="text" style="width: 70px"> -->
                 <select name="blood_group"class="nr-text" style="width: 70px">
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="AB">AB</option>
-                            <option value="O">O</option>                            
+                	<option value="-">-</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>                            
                 </select>
             </div>
             <div class="just-left">
