@@ -27,39 +27,39 @@
         <div style="padding-left: 20px;">
             <div class="just-left">
                 <h4>คำนำหน้า</h4>
-                <input name="name_prefix" type="text" class="nr-text" style="width: 90px;">
+                <input name="name_prefix" type="text" class="input-text" style="width: 90px;">
             </div>
             <div class="just-left">
                 <h4>ชื่อ</h4>
-                <input name="name_first" class="nr-text" type="text">
+                <input name="name_first" class="input-text" type="text">
             </div>
             <div class="just-left just-last">
                 <h4>สกุล</h4>
-                <input name="name_last" class="nr-text" type="text">
+                <input name="name_last" class="input-text" type="text">
             </div>
 
 
             <div class="just-left">
                 <h4>ชื่อเล่น</h4>
-                <input name="nickname" class="nr-text" type="text" style="width: 100px">
+                <input name="nickname" class="input-text" type="text" style="width: 100px">
             </div>
             <div class="just-left">
                 <h4>ศาสนา</h4>
-                <input name="religion" class="nr-text" type="text" style="width: 100px">
+                <input name="religion" class="input-text" type="text" style="width: 100px">
             </div>
             <div class="just-left just-last">
                 <h4>เลขประจำตัวประชาชนไทย</h4>
-                <input name="national_id" class="nr-text" type="text" style="width: 210px">
+                <input name="national_id" class="input-text" type="text" style="width: 210px">
             </div>
             
 
             <div style="clear:both;"></div>
             <div style="height: 10px;"></div>
-            <div style="padding: 10px 20px 10px 20px; background: rgb(255,230,246);">
+            <div class="group group-pink">
                 <div class="just-left">
-                    <h4 style="color: rgb(255,60,160);">วันเกิด</h4>
-                    <!-- <input class="nr-text pink" type="text" style="width: 80px;"> -->
-                    <select name="day" tabindex="1" class="nr-text pink" style="width: 80px;">
+                    <h4 class="pink">วันเกิด</h4>
+                    <!-- <input class="input-text input-pink" type="text" style="width: 80px;"> -->
+                    <select name="day" tabindex="1" class="input-text input-pink" style="width: 80px;">
 	                    <?php 
 	                    for($day = 1; $day <= 31; ++$day)
 	                    	echo '<option value="' . $day . '">' . $day . '</option>';
@@ -67,9 +67,9 @@
                     </select>
                 </div>
                 <div class="just-left">
-                    <h4 style="color: rgb(255,60,160);">เดือนเกิด</h4>
-                    <!-- <input class="nr-text pink" type="text" style="width: 190px;"> -->
-                    <select name="month" tabindex="2" class="nr-text pink" style="width: 190px;">
+                    <h4 class="pink">เดือนเกิด</h4>
+                    <!-- <input class="input-text input-pink" type="text" style="width: 190px;"> -->
+                    <select name="month" tabindex="2" class="input-text input-pink" style="width: 190px;">
                         <?php 
                         foreach($months as $key => $month) 
                         	echo '<option value="' . $month->id .'">' . $month->name_th . '</option>';
@@ -77,9 +77,9 @@
 					</select>
                 </div>
                 <div class="just-left just-last">
-                    <h4 style="color: rgb(255,60,160);">ปีเกิด</h4>
-                    <!-- <input class="nr-text pink" type="text" style="width: 100px"> -->
-                    <select name="year" tabindex="3" class="nr-text pink" style="width: 100px">
+                    <h4 class="pink">ปีเกิด</h4>
+                    <!-- <input class="input-text input-pink" type="text" style="width: 100px"> -->
+                    <select name="year" tabindex="3" class="input-text input-pink" style="width: 100px">
                         <option value="2013">2013</option>
                         <option value="2012">2012</option>
                         <option value="2011">2011</option>
@@ -112,17 +112,17 @@
 
             <div class="just-left">
                 <h4>Facebook</h4>
-                <input name="facebook" class="nr-text blue" type="text" style="width: 215px">
+                <input name="facebook" class="input-text input-blue" type="text" style="width: 215px">
             </div>
             <div class="just-left just-last">
                 <h4>Email</h4>
-                <input name="email" class="nr-text" type="text" style="width: 215px">
+                <input name="email" class="input-text" type="text" style="width: 215px">
             </div>
 
             <div class="just-left">
                 <h4>หมู่เลือด</h4>
-                <!-- <input name="blood_group" class="nr-text" type="text" style="width: 70px"> -->
-                <select name="blood_group"class="nr-text" style="width: 70px">
+                <!-- <input name="blood_group" class="input-text" type="text" style="width: 70px"> -->
+                <select name="blood_group"class="input-text" style="width: 70px">
                 	<option value="-">-</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
@@ -132,8 +132,8 @@
             </div>
             <div class="just-left">
                 <h4>ขนาดเสื้อ</h4>
-                <!-- <input name="shirt_size" class="nr-text" type="text" style="width: 80px"> -->
-                <select name="blood_group"class="nr-text" style="width: 70px">
+                <!-- <input name="shirt_size" class="input-text" type="text" style="width: 80px"> -->
+                <select name="blood_group"class="input-text" style="width: 70px">
                             <option value="0">S</option>
                             <option value="1">M</option>
                             <option value="2">L</option>
@@ -143,7 +143,7 @@
             </div>
             <div class="just-left just-last">
                 <h4>อาหารที่แพ้</h4>
-                <input name="food_allergies" class="nr-text" type="text" style="width: 260px">
+                <input name="food_allergies" class="input-text" type="text" style="width: 260px">
             </div>
 
         </div>
