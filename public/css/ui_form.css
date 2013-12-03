@@ -23,7 +23,27 @@ select{
     appearance: none;
 }
 
-.nr-text {
+a {
+	text-decoration: none;
+}
+
+
+.pink {
+	color: rgb(255,60,160);
+}
+
+.nav {
+	border-radius: 5px;
+	padding: 15px; 
+	text-decoration: none;
+	background: rgb(220,220,220); color: rgb(255,255,255);
+}
+
+.nav-select {
+	background: rgb(255,25,173); color: rgb(255,255,255);
+}
+
+.input-text {
 	margin: 0px 0px 10px 0px;
 	font-size: 18px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -34,21 +54,30 @@ select{
 	background: rgb(200,200,200);
 	color: rgb(255,255,255);
 	*/
+	border-radius: 5px;
 	border-top: 5px solid rgb(249,249,249);
 	background: rgb(240,240,240);
 	color: rgb(33,33,33);
 	padding: 8px 10px 8px 10px;
 	width: 160px;
 }
-.pink {
+.input-pink {
 	border-top: 5px solid rgb(255,163,221);
 	background: rgb(255,25,173);
 	color: rgb(255,255,255);
 }
-.blue {
+.input-blue {
 	border-top: 5px solid rgb(159,165,206);
 	background: rgb(60,83,154);
 	color: rgb(255,255,255);
+}
+
+.group {
+	border-radius: 5px;
+	padding: 10px 20px 10px 20px; 
+}
+.group-pink {
+	background: rgb(255,230,246);
 }
 
 .just-left {
