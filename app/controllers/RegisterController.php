@@ -4,7 +4,11 @@ class RegisterController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('form', array('url' => URL::to('')));
+		$months = DB::table('month')->get();
+		return View::make('form', 
+			array(
+				'url' => URL::to(''),
+				'months' => $months));
 	}
 
 	public function postIndex()

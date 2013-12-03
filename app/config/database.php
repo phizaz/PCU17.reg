@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => '_pcu',
+			'database'  => 'pcu.reg',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'theakitata',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
