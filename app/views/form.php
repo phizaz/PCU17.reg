@@ -11,17 +11,18 @@
 </head>
 <body>
 <div class="container_24">
-    <form id="register" action="" method="POST">
+    
     <div class="grid_12" style="text-align: center; color: rgb(180,180,180);">
         <h1 style="font-size: 430%; text-align:right;">สมัครเข้าค่าย</h1>
         <h1 style="font-size: 950%; text-align:right; margin-top: -95px; color: rgb(255,60,168);">พี่จุฬา ฯ</h1>
         <h1 style="font-size: 350%; margin-top: -100px;">ครั้งที่ <span style="color: rgb(255,60,168);">17</span></h1>
         
-        <a href="javascript:;" onclick="$('#register').submit();">
-            <h1 class="nav nav-select">กรอกข้อมูลส่วนตัว</h1></a>
+        <h1 class="nav nav-select">กรอกข้อมูลส่วนตัว</h1>
         <h1 class="nav">พิมพ์ใบสมัคร</h1>
         <h1 class="nav">ทำแบบทดสอบ และส่งใบสมัคร</h1>
     </div>
+
+    <form id="register" action="" method="POST">
     <div class="grid_12">
         <div style="height: 60px;"></div>
         <div style="padding-left: 20px;">
@@ -80,30 +81,10 @@
                     <h4 class="pink">ปีเกิด</h4>
                     <!-- <input class="input-text input-pink" type="text" style="width: 100px"> -->
                     <select name="year" tabindex="3" class="input-text input-pink" style="width: 100px">
-                        <option value="2013">2013</option>
-                        <option value="2012">2012</option>
-                        <option value="2011">2011</option>
-                        <option value="2010">2010</option>
-                        <option value="2009">2009</option>
-                        <option value="2008">2008</option>
-                        <option value="2007">2007</option>
-                        <option value="2006">2006</option>
-                        <option value="2005">2005</option>
-                        <option value="2004">2004</option>
-                        <option value="2003">2003</option>
-                        <option value="2002">2002</option>
-                        <option value="2001">2001</option>
-                        <option value="2000">2000</option>
-                        <option value="1999">1999</option>
-                        <option value="1998">1998</option>
-                        <option value="1997">1997</option>
-                        <option value="1996">1996</option>
-                        <option value="1995">1995</option>
-                        <option value="1994">1994</option>
-                        <option value="1993">1993</option>
-                        <option value="1992">1992</option>
-                        <option value="1991">1991</option>
-                        <option value="1990">1990</option>
+                        <?php 
+                        for($year = 2013; $year >= 1990; --$year)
+                            echo '<option value="' . $year . '">' . $year . '</option>';
+                         ?>                  
                     </select>
                 </div>
                 <div style="clear:both;"></div>
@@ -144,10 +125,111 @@
             <div class="just-left just-last">
                 <h4>อาหารที่แพ้</h4>
                 <input name="food_allergies" class="input-text" type="text" style="width: 260px">
+            </div>			
+            <!-- Address Group -->
+            <div style="clear:both;"></div>
+            <div style="height: 10px;"></div>
+            <div class="group group-pink">
+                <div class="just-left">
+                    <h4 class="pink">บ้านเลขที่</h4>
+                    <input name="address" type="text" class="input-text input-pink" style="width: 80px">
+                </div>
+                <div class="just-left">
+                    <h4 class="pink">ถนน</h4>
+                    <input name="road" type="text" class="input-text input-pink" style="width: 200px">
+                </div>
+                <div class="just-left just-last">
+                    <h4 class="pink">หมู่</h4>
+                    <input name="moo" type="text" class="input-text input-pink" style="width: 60px">
+                </div>
+
+                <div class="just-left">
+                    <h4 class="pink">จังหวัด</h4>
+                    <input name="province" type="text" class="input-text input-pink" style="width: 120px">
+                </div>
+                <div class="just-left">
+                    <h4 class="pink">อำเภอ</h4>
+                    <input name="amphur" type="text" class="input-text input-pink" style="width: 120px">
+                </div>
+                <div class="just-left just-last">
+                    <h4 class="pink">ตำบล</h4>
+                    <input name="tambol" type="text" class="input-text input-pink" style="width: 120px">
+                </div>
+
+                <div style="clear:both;"></div>
             </div>
-			<div>
-				<button type="submit">ยืนยัน</button>
-			</div>
+            <div style="height: 10px"></div>
+            <!-- End address group -->
+            <div class="just-left">
+                <h4>โทรศัพท์บ้าน</h4>
+                <input name="phone_home" class="input-text" type="text" style="width: 180px">                
+            </div>
+            <div class="just-left just-last">
+                <h4>โทรศัพท์มือถือ</h4>
+                <input name="phone_mobile" class="input-text" type="text" style="width: 180px">                
+            </div>
+            <div style="clear:both;"></div>
+            <div style="height: 10px"></div>
+            <!-- School details group -->
+            <div class="group group-pink">
+                <div class="just-left">
+                    <h4 class="pink">ชั้น</h4>
+                    <!-- <input name="address" type="text" class="input-text input-pink" style="width: 80px"> -->
+                    <select name="school_level"class="input-text input-pink" style="width: 80px">
+                            <option value="4">ม.4</option>  
+                            <option value="5">ม.5</option>                          
+                </select>
+                </div>
+                <div class="just-left">
+                    <h4 class="pink">หลักสูตรการศึกษา</h4>
+                    <!-- <input name="road" type="text" class="input-text input-pink" style="width: 200px"> -->
+                    <select name="school_plan"class="input-text input-pink" style="width: 140px">
+                            <option value="0">วิทย์-คณิต</option>
+                            <option value="1">ศิลป์-คำนวณ</option>
+                            <option value="2">ศิลป์-ภาษา</option>                        
+                    </select>
+                </div>
+                <div class="just-left">
+                    <h4 class="pink">โรงเรียน</h4>
+                    <input name="school_name" type="text" class="input-text input-pink" style="width: 160px">
+                </div>
+
+                <div class="just-left">
+                    <h4 class="pink">จังหวัด</h4>
+                    <input name="province" type="text" class="input-text input-pink" style="width: 100px">
+                </div>
+                <div class="just-left just-last">
+                    <h4 class="pink">อำเภอ</h4>
+                    <input name="amphur" type="text" class="input-text input-pink" style="width: 100px">
+                </div>
+
+                <div style="clear:both;"></div>
+            </div>
+            <div style="height: 10px"></div>
+            <!-- End School Details group -->
+            <div class="just-left just-last">
+                <h4>วิธีการเดินทางมา</h4>
+                <input name="method_arrive" class="input-text" type="text" style="width: 450px">                
+            </div>
+            <div class="just-left just-last">
+                <h4>วิธีการเดินทางกลับ</h4>
+                <input name="method_depart" class="input-text" type="text" style="width: 450px">                
+            </div>
+
+            <div class="just-left">
+                <h4>คอร์สที่ต้องการเรียน</h4>
+                <select name="course"class="input-text" style="width: 140px">
+                            <option value="0">วิทย์-คณิต</option>
+                            <option value="1">ศิลป์-คำนวณ</option>
+                            <option value="2">ศิลป์-ภาษา</option>                        
+                </select>               
+            </div>
+
+            <div styel="clear:both;"></div>
+            <div style="height: 10px"></div>
+            <div class="just-left">
+                <button type="submit">ยืนยัน</button>
+            </div>
         </div>
     </div>
     </form>
