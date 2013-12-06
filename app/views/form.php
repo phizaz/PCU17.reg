@@ -20,7 +20,7 @@
         <a href="javascript:;" onclick="$('#register').submit();">
             <h1 class="nav nav-select">กรอกข้อมูลส่วนตัว</h1></a>
         <h1 class="nav">พิมพ์ใบสมัคร</h1>
-        <h1 class="nav">ทำแบบทดสอบ และส่งใบสมัคร</h1>
+        <h1 class="nav">ทำแบบทดสอบ + ส่งใบสมัคร</h1>
     </div>
     <div class="grid_12">
         <div style="height: 60px;"></div>
@@ -71,7 +71,7 @@
                     <!-- <input class="input-text input-pink" type="text" style="width: 190px;"> -->
                     <select name="month" tabindex="2" class="input-text input-pink" style="width: 190px;">
                         <?php 
-                        foreach($months as $key => $month) 
+                        foreach($months as $month) 
                         	echo '<option value="' . $month->id .'">' . $month->name_th . '</option>';
                          ?>
 					</select>
