@@ -43,6 +43,11 @@ a {
 	background: rgb(255,25,173); color: rgb(255,255,255);
 }
 
+.sidebar{
+	position: fixed;
+
+}
+
 .input-text {
 	margin: 0px 0px 10px 0px;
 	font-size: 18px;
@@ -86,4 +91,9 @@ a {
 }
 .just-last {
 	margin-right: 0px;
+}
+
+.register{
+	position: absolute;
+	margin-left: 470px;
 }
