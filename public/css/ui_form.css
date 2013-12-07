@@ -45,7 +45,6 @@ a {
 
 .sidebar{
 	position: fixed;
-
 }
 
 .input-text {
@@ -91,9 +90,4 @@ a {
 }
 .just-last {
 	margin-right: 0px;
-}
-
-.register{
-	position: absolute;
-	margin-left: 470px;
 }
