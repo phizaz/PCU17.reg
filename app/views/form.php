@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div class="container_24">
-		<div class="sidebar" style="text-align:center; color: rgb(180,180,180);">
+		<div class="grid_12 sidebar" style="text-align:center; color: rgb(180,180,180);">
 			<h1 style="font-size: 430%; text-align:right;">สมัครเข้าค่าย</h1>
 			<h1 style="font-size: 950%; text-align:right; margin-top: -95px; color: rgb(255,60,168);">พี่จุฬา ฯ</h1>
 			<h1 style="font-size: 350%; margin-top: -100px;">ครั้งที่ <span style="color: rgb(255,60,168);">17</span></h1>
