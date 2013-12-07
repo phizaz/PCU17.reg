@@ -77,6 +77,22 @@ class RegisterController extends BaseController {
 		$blood_group = Input::get('blood_group');
 		$shirt_size = Input::get('shirt_size');
 		$food_allergies = Input::get('food_allergies');
+		$address = Input::get('address');
+		$road = Input::get('road');
+		$moo = Input::get('moo');
+		$province = Input::get('province');
+		$amphur = Input::get('amphur');
+		$tambol = Input::get('tambol');
+		$phone_home = Input::get('phone_home');
+		$phone_moblie = Input::get('phone_moblie');
+		$school_level = Input::get('school_level');
+		$school_plan = Input::get('school_plan');
+		$school_name = Input::get('school_name');
+		$school_province = Input::get('school_province');
+		$school_amphur = Input::get('school_amphur');
+		$method_arrive = Input::get('method_arrive');
+		$method_depart = Input::get('method_depart');
+		$course = Input::get('course');
 
 		DB::table('candidate')->insert(array('name_prefix' => $name_prefix, 
 					'name_first' => $name_first,
@@ -89,7 +105,23 @@ class RegisterController extends BaseController {
 					'email' => $email,
 					'blood_group' => $blood_group,
 					'shirt_size' => $shirt_size,
-					'food_allergies' => $food_allergies
+					'food_allergies' => $food_allergies,
+					'address' => $address,
+					'road' => $road,
+					'moo' => $moo,
+					'province' => $province,
+					'amphur' =>$amphur,
+					'tambol' => $tambol,
+					'phone_home' => $phone_home,
+					'phone_moblie' => $phone_moblie,
+					'school_level' => $school_level,
+					'school_plan' => $school_plan,
+					'school_name' => $school_name,
+					'school_province' => $school_province,
+					'school_amphur' => $school_amphur,
+					'method_arrive' => $method_arrive,
+					'method_depart' => $method_depart,
+					'course' => $course
 		));
 
 		return View::make('showSubmit', 
@@ -104,7 +136,23 @@ class RegisterController extends BaseController {
 					'email' => $email,
 					'blood_group' => $blood_group,
 					'shirt_size' => $shirt_size,
-					'food_allergies' => $food_allergies));
+					'food_allergies' => $food_allergies,
+					'address' => $address,
+					'road' => $road,
+					'moo' => $moo,
+					'province' => $province,
+					'amphur' =>$amphur,
+					'tambol' => $tambol,
+					'phone_home' => $phone_home,
+					'phone_moblie' => $phone_moblie,
+					'school_level' => $school_level,
+					'school_plan' => $school_plan,
+					'school_name' => $school_name,
+					'school_province' => $school_province,
+					'school_amphur' => $school_amphur,
+					'method_arrive' => $method_arrive,
+					'method_depart' => $method_depart,
+					'course' => $course));
 
 	}
 
