@@ -60,11 +60,11 @@ class RegisterController extends BaseController {
 			$messages);
 
 		//Check if any failure ? then show the messages to user.
-		if($validator->fails()) {
+		/*if($validator->fails()) {
 			$showMessages = $validator->messages();
 			//This only the example of how to things work.
 			return var_dump($showMessages->all());
-		}
+		}*/
 
 		// ------ Make Date-------------
 		$day = Input::get('day');

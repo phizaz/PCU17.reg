@@ -6,7 +6,26 @@
     <link rel="stylesheet" href="<?=$url?>/css/ui_form.css">
     <link rel="stylesheet" href="<?=$url?>/css/easydropdown.css">
     <script>
-    
+    	var provices = null;
+   		$.ajax({
+   			dataType: 'json',
+   			success: function (array) {
+   				province=  array;
+   			}
+   		});
+   		$.ajax({
+   			dataType: 'json',
+   			success: function (array) {
+   				
+   			}
+   		});
+   		$.ajax({
+   			dataType: 'json',
+   			success: function (array) {
+   				
+   			}
+   		});
+
     </script>
 </head>
 <body>
@@ -224,8 +243,7 @@
                             <option value="2">ศิลป์-ภาษา</option>                        
                 </select>               
             </div>
-
-            <div styel="clear:both;"></div>
+            <div style="clear:both;"></div>
             <div style="height: 10px"></div>
             <div class="just-left">
                 <button type="submit">ยืนยัน</button>
