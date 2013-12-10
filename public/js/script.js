@@ -15,7 +15,8 @@ $(document).ready(function(){
 	// ----------------- Auto suggest province, amphur, tambol dropdown -------------------------
 
 	$.ajax({
-		url: '/PCU17/public/service/province',
+		//url: '/PCU17/public/service/province',
+		url: 'service/province',
 		type: 'GET',
 		dataType: 'json',		
 	}).success(function(province){
@@ -32,7 +33,8 @@ $(document).ready(function(){
 	var amphur,tambol;
 
 	$.ajax({
-			url: '/PCU17/public/service/amphur/',
+			//url: '/PCU17/public/service/amphur/',
+			url: 'service/amphur/',
 			type: 'GET',
 			dataType: 'json',		
 		}).success(function(amphur_in){
@@ -52,7 +54,8 @@ $(document).ready(function(){
 	
 
 	$.ajax({
-			url: '/PCU17/public/service/tambol/1',
+			//url: '/PCU17/public/service/tambol/1',
+			url: 'service/tambol/1',
 			type: 'GET',
 			dataType: 'json',		
 		}).success(function(tambol_in){
@@ -83,7 +86,8 @@ $(document).ready(function(){
 		var prov_id = $("#province option:selected").val();
 
 		$.ajax({
-			url: '/PCU17/public/service/tambol/' + prov_id,
+			//url: '/PCU17/public/service/tambol/' + prov_id,
+			url: 'service/tambol/' + prov_id,
 			type: 'GET',
 			dataType: 'json',		
 		}).success(function(tambol_in){
