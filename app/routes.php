@@ -23,3 +23,5 @@ Route::controller('reg', 'RegisterController');
 
 //Define the Service Controller, for getProvince, getAmphur, and getTambol rESTful style
 Route::controller('service', 'ServiceController');
+
+Route::controller('redir', 'RedirController');

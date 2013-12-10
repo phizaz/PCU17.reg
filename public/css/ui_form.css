@@ -3,6 +3,7 @@ html,body {
 }
 
 body,td,th {
+	margin: 0px;
 	font-size: 15px;
 	/*font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;*/
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
