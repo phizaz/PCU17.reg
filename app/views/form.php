@@ -148,15 +148,21 @@
 
 							<div class="just-left">
 								<h4 class="pink">จังหวัด</h4>
-								<input name="province" type="text" class="input-text input-pink" style="width: 120px">
+								<!-- <input name="province" type="text" class="input-text input-pink" style="width: 120px"> -->
+								<select name="province" id="province" class="input-text input-pink" style="width: 120px">
+								</select>
 							</div>
 							<div class="just-left">
 								<h4 class="pink">อำเภอ</h4>
-								<input name="amphur" type="text" class="input-text input-pink" style="width: 120px">
+								<!-- <input name="amphur" type="text" class="input-text input-pink" style="width: 120px"> -->
+								<select name="amphur" id="amphur" class="input-text input-pink" style="width: 120px">
+								</select>
 							</div>
 							<div class="just-left just-last">
 								<h4 class="pink">ตำบล</h4>
-								<input name="tambol" type="text" class="input-text input-pink" style="width: 120px">
+								<!-- <input name="tambol" type="text" class="input-text input-pink" style="width: 120px"> -->
+								<select name="tambol" id="tambol" class="input-text input-pink" style="width: 120px">
+								</select>
 							</div>
 
 							<div style="clear:both;"></div>
@@ -181,11 +187,15 @@
 							</div>
 							<div class="just-left just-last">
 								<h4 class="pink">จังหวัด</h4>
-								<input name="school_province" type="text" class="input-text input-pink" style="width: 140px">
+								<!-- <input name="school_province" type="text" class="input-text input-pink" style="width: 140px"> -->
+								<select name="school_province" id="school_province" class="input-text input-pink" style="width: 140px">
+								</select>
 							</div>
 							<div class="just-left">
 								<h4 class="pink">อำเภอ</h4>
-								<input name="school_amphur" type="text" class="input-text input-pink" style="width: 140px">
+								<!-- <input name="school_amphur" type="text" class="input-text input-pink" style="width: 140px"> -->
+								<select name="school_amphur" id="school_amphur" class="input-text input-pink" style="width: 140px">
+								</select>
 							</div>
 							<div class="just-left">
 								<h4 class="pink">ชั้น</h4>
