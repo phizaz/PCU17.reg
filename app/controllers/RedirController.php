@@ -3,7 +3,15 @@ class RedirController extends BaseController {
 	public function getIndex() {
 		//Hit Counting here!
 		//collect information about the requester, time, ip, etc...
-		return Redirect::to(Input::get('url'));
+		$url = Input::get('url');
+		$ip = Request::getClientIp();
+
+		$clicker = new Clicker;
+		$clicker->url = $url;
+		$clicker->ip = $ip;
+		$clicker->save();
+
+		return Redirect::to($url);
 	}
 }
  ?>
