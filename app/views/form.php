@@ -76,7 +76,7 @@
 								<select name="month" tabindex="2" class="input-text input-pink" style="width: 190px;">
 									<?php 
 									foreach($months as $key => $month) 
-										echo '<option value="' . $month->id .'">' . $month->name_th . '</option>';
+										echo '<option value="' . $month->name_en .'">' . $month->name_th . '</option>';
 									?>
 								</select>
 							</div>
@@ -117,7 +117,7 @@
 						<div class="just-left">
 							<h4>ขนาดเสื้อ</h4>
 							<!-- <input name="shirt_size" class="input-text" type="text" style="width: 80px"> -->
-							<select name="blood_group"class="input-text" style="width: 70px">
+							<select name="shirt_size"class="input-text" style="width: 70px">
 								<option value="0">S</option>
 								<option value="1">M</option>
 								<option value="2">L</option>
@@ -149,20 +149,24 @@
 							<div class="just-left">
 								<h4 class="pink">จังหวัด</h4>
 								<!-- <input name="province" type="text" class="input-text input-pink" style="width: 120px"> -->
-								<select name="province" id="province" class="input-text input-pink" style="width: 120px">
-								</select>
-							</div>
-							<div class="just-left">
-								<h4 class="pink">อำเภอ</h4>
-								<!-- <input name="amphur" type="text" class="input-text input-pink" style="width: 120px"> -->
-								<select name="amphur" id="amphur" class="input-text input-pink" style="width: 120px">
+								<select name="province" id="province" class="input-text input-pink" style="width: 190px">
 								</select>
 							</div>
 							<div class="just-left just-last">
+								<h4 class="pink">อำเภอ</h4>
+								<!-- <input name="amphur" type="text" class="input-text input-pink" style="width: 120px"> -->
+								<select name="amphur" id="amphur" class="input-text input-pink" style="width: 190px">
+								</select>
+							</div>
+							<div class="just-left">
 								<h4 class="pink">ตำบล</h4>
 								<!-- <input name="tambol" type="text" class="input-text input-pink" style="width: 120px"> -->
-								<select name="tambol" id="tambol" class="input-text input-pink" style="width: 120px">
+								<select name="tambol" id="tambol" class="input-text input-pink" style="width: 190px">
 								</select>
+							</div>
+							<div class="just-left just-last">
+								<h4 class="pink">รหัสไปรษณีย์</h4>
+								<input name="zip_code" type="text" class="input-text input-pink" style="width: 190px">								
 							</div>
 
 							<div style="clear:both;"></div>
