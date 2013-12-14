@@ -14,4 +14,4 @@ class RedirController extends BaseController {
 		return Redirect::to($url);
 	}
 }
- ?>
+ 

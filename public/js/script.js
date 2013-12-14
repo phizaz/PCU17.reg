@@ -37,7 +37,7 @@ $(document).ready(function(){
 			url: 'service/amphur/',
 			type: 'GET',
 			dataType: 'json',		
-		}).success(function(amphur_in){
+	}).success(function(amphur_in){
 			var select = $('#amphur');
 			var options = select.prop('options');
 			$('option', select).remove();

@@ -25,3 +25,5 @@ Route::controller('reg', 'RegisterController');
 Route::controller('service', 'ServiceController');
 
 Route::controller('redir', 'RedirController');
+
+Route::controller('print', 'PrintController');
