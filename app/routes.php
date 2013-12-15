@@ -11,19 +11,24 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+//Route::get('/', 'HomeController@showWelcome');
 Route::get('ui', function () {
 	return View::make('ui_form', array('url' => URL::to('')));
 });
-// Route::get('/reg', 'HomeController@showForm');
-// Route::post('doit', array('uses' => 'HomeController@showSubmit'));
-// ^ change into
+//==========================================================
+//All the controllers
+//==========================================================
+//Step 2: fill in the blanks.
 Route::controller('reg', 'RegisterController');
-
-
+//Step 3: print and send the message to us. (Require auth.)
+//Add: users can login and return their works. (for those disconnected.)
+Route::when('print', 'auth');
+Route::when('print/pdf', 'auth');
+Route::when('print/return', 'auth.pass');
+Route::controller('print', 'PrintController');
 //Define the Service Controller, for getProvince, getAmphur, and getTambol rESTful style
 Route::controller('service', 'ServiceController');
-
+//Redir use only for redirection.
 Route::controller('redir', 'RedirController');
-
-Route::controller('print', 'PrintController');
+//Step 1: agreements. (Declare the last, prevent ambiguous.)
+Route::controller('', 'CoverController');

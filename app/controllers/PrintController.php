@@ -1,6 +1,20 @@
 <?php 
 class PrintController extends BaseController {
+	public function getReturn() {
+		return 'login-page';
+	}
+
+	public function postReturn() {
+		return Route::intended('print');
+	}
+
 	public function getIndex() {
+		return 'aoeu';
+		
+	}
+
+	//This function generate the PDF file.
+	public function getPdf(){
 		$htmlContent = View::make('print.test');
 		 // convert in PDF
 		//$path = app_path() . '/libs/html2pdf.class.php';
@@ -27,4 +41,6 @@ class PrintController extends BaseController {
 // 		}
 		//return $htmlContent;
 	}
+
+
 }

@@ -35,7 +35,12 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-	if (Auth::guest()) return Redirect::guest('login');
+	if (Auth::guest()) return Redirect::guest('print/return');
+});
+
+//Auto pass those authenticated to the place.
+Route::filter('auth.pass', function () {
+	if(Auth::check()) return Redirect::to('print');
 });
 
 

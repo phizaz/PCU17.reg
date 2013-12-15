@@ -9,10 +9,17 @@ $(document).ready(function(){
 	
 
 	$(window).scroll(function(){
-	       $('.sidebar').css({"top": '0' + (he - $(window).scrollTop() * ratio) + 'px' });
+		$('.sidebar').css({"top": '0' + (he - $(window).scrollTop() * ratio) + 'px' });
 	});	
 
 	// ----------------- Auto suggest province, amphur, tambol dropdown -------------------------
+	var amphur,tambol;
+	var province_def = 1; //Default province.
+	if(credential.province) province_def = credential.province;
+	var amphur_def = 1; //Default amphur.
+	if(credential.amphur) amphur_def = credential.amphur;
+	var tambol_def = 1; //Default tambol.
+	if(credential.tambol) tambol_def = credential.tambol;
 
 	$.ajax({
 		//url: '/PCU17/public/service/province',
@@ -27,35 +34,31 @@ $(document).ready(function(){
 		$.each(province, function(index, array) {
 			options[options.length] = new Option(array['PROVINCE_NAME'], array['PROVINCE_ID']);
 		});
-		
+		select.val(province_def);
 	});
-
-	var amphur,tambol;
 
 	$.ajax({
 			//url: '/PCU17/public/service/amphur/',
-			url: 'service/amphur/',
+			url: 'service/amphur',
 			type: 'GET',
 			dataType: 'json',		
-	}).success(function(amphur_in){
+		}).success(function(amphur_in){
 			var select = $('#amphur');
 			var options = select.prop('options');
 			$('option', select).remove();
 
-				amphur = amphur_in;
+			amphur = amphur_in;
 
 			$.each(amphur, function(index, array) {
-				if(array['PROVINCE_ID'] == $("#province option:selected").val())
+				if(array['PROVINCE_ID'] == province_def)
 					options[options.length] = new Option(array['AMPHUR_NAME'], array['AMPHUR_ID']);				
-			});			
-			
-	});
+			});
+			select.val(amphur_def);
+		});
 
-	
-
-	$.ajax({
+		$.ajax({
 			//url: '/PCU17/public/service/tambol/1',
-			url: 'service/tambol/1',
+			url: 'service/tambol/' + province_def,
 			type: 'GET',
 			dataType: 'json',		
 		}).success(function(tambol_in){
@@ -63,29 +66,29 @@ $(document).ready(function(){
 			var options = select.prop('options');
 			$('option', select).remove();
 
-				tambol = tambol_in;
+			tambol = tambol_in;
 
 			$.each(tambol, function(index, array) {
-				if(array['AMPHUR_ID'] == 1)
+				if(array['AMPHUR_ID'] == amphur_def)
 					options[options.length] = new Option(array['DISTRICT_NAME'], array['DISTRICT_ID']);	
 				console.log(array['AMPHUR_ID'] + " " + $("#amphur option:selected").val());		
-			});			
-			
-	});
+			});
+			select.val(tambol_def);
+		});
 
 
-	$('#province').on('change',function(event) {
-		var select = $('#amphur');
-		var options = select.prop('options');
-		$('option', select).remove();
-		$.each(amphur, function(index, array) {
+		$('#province').on('change',function(event) {
+			var select = $('#amphur');
+			var options = select.prop('options');
+			$('option', select).remove();
+			$.each(amphur, function(index, array) {
 				if(array['PROVINCE_ID'] == $("#province option:selected").val())
 					options[options.length] = new Option(array['AMPHUR_NAME'], array['AMPHUR_ID']);				
-		});	
+			});	
 
-		var prov_id = $("#province option:selected").val();
+			var prov_id = $("#province option:selected").val();
 
-		$.ajax({
+			$.ajax({
 			//url: '/PCU17/public/service/tambol/' + prov_id,
 			url: 'service/tambol/' + prov_id,
 			type: 'GET',
@@ -95,33 +98,35 @@ $(document).ready(function(){
 			var options = select.prop('options');
 			$('option', select).remove();
 
-				tambol = tambol_in;
+			tambol = tambol_in;
 
 			$.each(tambol, function(index, array) {
 				if(array['AMPHUR_ID'] == $("#amphur option:selected").val())
 					options[options.length] = new Option(array['DISTRICT_NAME'], array['DISTRICT_ID']);			
 			});			
-			
 		});
-
 	});
 
-	$('#amphur').on('change', function(event) {
-		var select = $('#tambol');
-		var options = select.prop('options');
-		$('option', select).remove();
-		
-		$.each(tambol, function(index, array) {
+		$('#amphur').on('change', function(event) {
+			var select = $('#tambol');
+			var options = select.prop('options');
+			$('option', select).remove();
+
+			$.each(tambol, function(index, array) {
 				if(array['AMPHUR_ID'] == $("#amphur option:selected").val())
 					options[options.length] = new Option(array['DISTRICT_NAME'], array['DISTRICT_ID'])		
-						
-		});		
-	});
+
+			});		
+		});
 
 	// ----------------- Auto suggest school_province, school_amphur ----------------------
-
+	var school_amphur;
+	var school_province_def = 1; //Default school province.
+	if(credential.school_province) school_province_def = credential.school_province;
+	var school_amphur_def = 1; //Default school amphur.
+	if(credential.school_amphur) school_amphur_def = credential.school_amphur;
 	$.ajax({
-		url: '/PCU17/public/service/province',
+		url: 'service/province',
 		type: 'GET',
 		dataType: 'json',		
 	}).success(function(province){
@@ -132,37 +137,35 @@ $(document).ready(function(){
 		$.each(province, function(index, array) {
 			options[options.length] = new Option(array['PROVINCE_NAME'], array['PROVINCE_ID']);
 		});
-		
+		select.val(school_province_def);
 	});
 
-	var school_amphur;
-
 	$.ajax({
-			url: '/PCU17/public/service/amphur/',
-			type: 'GET',
-			dataType: 'json',		
-		}).success(function(amphur_in){
-			var select = $('#school_amphur');
-			var options = select.prop('options');
-			$('option', select).remove();
+		url: 'service/amphur/',
+		type: 'GET',
+		dataType: 'json',		
+	}).success(function(amphur_in){
+		var select = $('#school_amphur');
+		var options = select.prop('options');
+		$('option', select).remove();
 
-				school_amphur = amphur_in;
+		school_amphur = amphur_in;
 
-			$.each(school_amphur, function(index, array) {
-				if(array['PROVINCE_ID'] == $("#school_province option:selected").val())
-					options[options.length] = new Option(array['AMPHUR_NAME'], array['AMPHUR_ID']);				
-			});			
-			
+		$.each(school_amphur, function(index, array) {
+			if(array['PROVINCE_ID'] == school_province_def)
+				options[options.length] = new Option(array['AMPHUR_NAME'], array['AMPHUR_ID']);				
+		});			
+		select.val(school_amphur_def);
 	});
 
 	$('#school_province').on('change', function(event) {
 		var select = $('#school_amphur');
-			var options = select.prop('options');
-			$('option', select).remove();
-			$.each(school_amphur, function(index, array) {
-				if(array['PROVINCE_ID'] == $("#school_province option:selected").val())
-					options[options.length] = new Option(array['AMPHUR_NAME'], array['AMPHUR_ID']);				
-			});	
+		var options = select.prop('options');
+		$('option', select).remove();
+		$.each(school_amphur, function(index, array) {
+			if(array['PROVINCE_ID'] == $("#school_province option:selected").val())
+				options[options.length] = new Option(array['AMPHUR_NAME'], array['AMPHUR_ID']);				
+		});	
 	});
 
 

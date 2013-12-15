@@ -40,14 +40,17 @@
     </style>
 </head>
 <body>
-    <h2>Finally Welcome</h2>
+    <h2>ยืนยัน</h2>
     <?php echo $name_prefix ?>
     &nbsp;
     <?php echo $name_first ?>
     &nbsp;
     <?php echo $name_last ?>
     &nbsp;
-    <?php echo $date ?>
+    <div>
+    	<a href="reg">กลับไปแก้ไข</a>
+    	<a href="reg/confirm">ยืนยัน</a>
+    </div>
 
 </body>
 </html>
