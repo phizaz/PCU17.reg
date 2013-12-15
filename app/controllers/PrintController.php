@@ -1,11 +1,21 @@
 <?php 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
 class PrintController extends BaseController {
 	public function getReturn() {
-		return 'login-page';
+		return View::make('returnForm');
 	}
 
 	public function postReturn() {
-		return Route::intended('print');
+		$national_id = Input::get('national_id');
+		try {
+			$candidate = Candidate::where('national_id', '=', $national_id)->firstOrFail();
+			Auth::login($candidate);
+			return Redirect::intended('print');
+		} catch (ModelNotFoundException $e) {
+			Session::flash('fail', true);
+			return Redirect::to('print/return');
+		}
 	}
 
 	public function getIndex() {
@@ -42,5 +52,9 @@ class PrintController extends BaseController {
 		//return $htmlContent;
 	}
 
-
+	//just for debugging
+	public function getLogout() {
+		Auth::logout();
+		return 'logged out';
+	}
 }

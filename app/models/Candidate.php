@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Candidate extends Eloquent implements UserInterface, RemindableInterface {
+class Candidate extends Eloquent implements UserInterface{
 
 	/**
 	 * The database table used by the model.
@@ -11,13 +10,7 @@ class Candidate extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var string
 	 */
 	protected $table = 'candidate';
-
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-	//protected $hidden = array('password');
+	protected $guarded = array('day', 'month', 'year');
 
 	/**
 	 * Get the unique identifier for the user.
@@ -34,19 +27,8 @@ class Candidate extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @return string
 	 */
-	/*public function getAuthPassword()
+	public function getAuthPassword()
 	{
 		return $this->password;
-	}*/
-
-	/**
-	 * Get the e-mail address where password reminders are sent.
-	 *
-	 * @return string
-	 */
-	public function getReminderEmail()
-	{
-		return $this->email;
 	}
-
 }

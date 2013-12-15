@@ -171,49 +171,17 @@ class RegisterController extends BaseController {
 
 	public function anyConfirm() {
 		$credential = Session::get('credential');
-		$date = date('Y-m-d',
+		Session::forget('credential');
+		$credential['birth_date'] = date('Y-m-d',
 			strtotime($credential['day'] . " " . $credential['month'] . " " . $credential['year']));
-		DB::table('candidate')->insert(array(
-			'name_prefix' => $credential['name_prefix'], 
-			'name_first' => $credential['name_first'],
-			'name_last' => $credential['name_last'],
-			'nickname' => $credential['nickname'],
-			'religion' => $credential['religion'],
-			'national_id' => $credential['national_id'],
-			'birth_date' => $date,
-			'facebook' => $credential['facebook'],
-			'email' => $credential['email'],
-			'blood_group' => $credential['blood_group'],
-			'shirt_size' => $credential['shirt_size'],
-			'food_allergies' => $credential['food_allergies'],
-			'address' => $credential['address'],
-			'road' => $credential['road'],
-			'moo' => $credential['moo'],
-			'province' => $credential['province'],
-			'zip_code' => $credential['zip_code'],
-			'amphur' => $credential['amphur'],
-			'tambol' => $credential['tambol'],
-			'phone_home' => $credential['phone_home'],
-			'phone_mobile' => $credential['phone_mobile'],
-			'school_level' => $credential['school_level'],
-			'school_plan' => $credential['school_plan'],
-			'school_name' => $credential['school_name'],
-			'school_province' => $credential['school_province'],
-			'school_amphur' => $credential['school_amphur'],
-			'method_arrive' => $credential['method_arrive'],
-			'method_depart' => $credential['method_depart'],
-			'course' => $credential['course']
-			));
+		$candidate = new Candidate($credential);
+		$candidate->save();
 
-		if(Auth::attempt(array('national_id' => $credential['national_id']))) {
-			//Always.
-			return Route::to('print');
-		} else {
-			//This should not happened.
-			return 'There\'s an error contact us.';
-		}
+		Auth::login($candidate);
+		return Redirect::to('print');
 	}
 
+	//just for debugging.
 	public function anyClear() {
 		Session::forget('credential');
 		return 'cleared';
