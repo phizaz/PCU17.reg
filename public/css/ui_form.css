@@ -28,6 +28,16 @@ a {
 	text-decoration: none;
 }
 
+.error{
+	background-color: #f69595;
+	width: 430px;
+	border-top: 5px solid #ff0000;
+	border-radius: 5px;
+	padding: 10px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
 
 .pink {
 	color: rgb(255,60,160);

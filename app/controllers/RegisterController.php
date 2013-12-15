@@ -98,7 +98,9 @@ class RegisterController extends BaseController {
 			'name_last' => 'required|thai', 
 			'nickname' => 'required|thai',
 			'religion' => 'required', 
-			'national_id' => 'required|national_id');
+			'national_id' => 'required|national_id',
+			'email' => 'required|email',
+			'address' => 'required|numeric');
 
 		//Messages array is defining text to respond to each circumstances.
 		$messages = array(
@@ -112,7 +114,11 @@ class RegisterController extends BaseController {
 			'nickname.thai' => 'กรุณากรอกชื่อเล่นเป็นภาษาไทย',
 			'religion.required' => 'กรุณากรอกข้อมูลศาสนา',
 			'national_id.required' => 'กรุณากรอกเลขประจำตัวประชาชน',
-			'national_id.national_id' => 'รูปแบบเลขประจำตัวประชาชนไม่ถูกต้อง');
+			'national_id.national_id' => 'รูปแบบเลขประจำตัวประชาชนไม่ถูกต้อง',
+			'email.required' => 'กรุณากรอกอีเมล์',
+			'email.email' => 'รูปแบบการกรอกอีเมล์ไม่ถูกต้อง',
+			'address.required' => 'กรุณากรอกย้านเลขที่',
+			'address.numeric' => 'รูปแบบการกรอกบ้านเลขที่ไม่ถูกต้อง');
 
 		//Just turn the Validator on. the result kept in $validator.
 		$validator = Validator::make(
@@ -122,16 +128,18 @@ class RegisterController extends BaseController {
 				'name_last' => $name_last,
 				'nickname' => $nickname,
 				'religion' => $religion,
-				'national_id' => $national_id),
+				'national_id' => $national_id,
+				'email' => $email,
+				'address' => $address),
 			$rules,
 			$messages);
 
 		//Check if any failure ? then show the messages to user.
-		/*if($validator->fails()) {
+		if($validator->fails()) {
 			$showMessages = $validator->messages();
-			//This only the example of how to things work.
-			return var_dump($showMessages->all());
-		}*/
+			//This only the example of how to things work. REALLY!!!!
+			return Redirect::to('reg')->withErrors($validator);
+		}
 
 		
 

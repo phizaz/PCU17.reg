@@ -25,9 +25,19 @@
 		</div>
 
 		<div class="prefix_12 grid_12">
+			<div style="height: 60px;"></div>			
+				<?php 
+					if(!$errors->first()==""){
+						echo "<div class=\"error\">";
+						foreach ($errors->all() as $message)
+						{
+						    echo $message . "<br>";
+						}
+						echo "</div>";
+					}
+				?>			
 			<div class="register">
-				<form id="register" action="" method="POST">
-					<div style="height: 60px;"></div>
+				<form id="register" action="" method="POST">					
 					<div style="padding-left: 20px;">
 						<div class="just-left">
 							<h4>คำนำหน้า</h4>
