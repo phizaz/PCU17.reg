@@ -19,8 +19,8 @@ class PrintController extends BaseController {
 	}
 
 	public function getIndex() {
-		return 'aoeu';
-		
+		return View::make('print', array(
+			'credential' => Auth::user()));
 	}
 
 	//This function generate the PDF file.
