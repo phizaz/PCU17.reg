@@ -24,6 +24,17 @@ App::after(function($request, $response)
 
 /*
 |--------------------------------------------------------------------------
+| Credential Filter
+|--------------------------------------------------------------------------
+| Only who filled the blanks, who has credentials, only, shall go further.
+*/
+
+Route::filter('credential', function() {
+	if(! Session::has('credential')) return Redirect::guest('reg');
+});
+
+/*
+|--------------------------------------------------------------------------
 | Authentication Filters
 |--------------------------------------------------------------------------
 |
