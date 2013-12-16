@@ -90,6 +90,9 @@ class RegisterController extends BaseController {
 		//Hand-made validation rules defined in ValidatorLib in controller folder.
 		Validator::extend('thai', 'ValidatorLib@isThai');
 		Validator::extend('national_id', 'ValidatorLib@isNationalId');
+		Validator::extend('address', 'ValidatorLib@isAddress');
+		Validator::extend('phone', 'ValidatorLib@isPhone');
+		Validator::extend('zipcode', 'ValidatorLib@isZipcode');
 
 		//Rules array is defining the rules using.
 		$rules = array(
@@ -100,7 +103,15 @@ class RegisterController extends BaseController {
 			'religion' => 'required', 
 			'national_id' => 'required|national_id',
 			'email' => 'required|email',
-			'address' => 'required|numeric');
+			'address' => 'required|numeric',
+			'road' => 'required|thai',
+			'moo' => 'numeric',
+			'zip_code' => 'required|zipcode',
+			'phone_mobile' => 'required|phone',
+			'phone_home' => 'required|phone',
+			'school_name' => 'required|thai',
+			'method_arrive'  => 'required|thai',
+			'method_depart'  => 'required|thai');
 
 		//Messages array is defining text to respond to each circumstances.
 		$messages = array(
@@ -118,7 +129,22 @@ class RegisterController extends BaseController {
 			'email.required' => 'กรุณากรอกอีเมล์',
 			'email.email' => 'รูปแบบการกรอกอีเมล์ไม่ถูกต้อง',
 			'address.required' => 'กรุณากรอกย้านเลขที่',
-			'address.numeric' => 'รูปแบบการกรอกบ้านเลขที่ไม่ถูกต้อง');
+			'address.numeric' => 'รูปแบบการกรอกบ้านเลขที่ไม่ถูกต้อง',
+			'road.required' => 'กรุณากรอกถนน',
+			'road.thai' => 'กรุณากรอกถนนเป็นภาษาไทย',
+			'moo.numeric' => 'กรุณากรอกหมู่เป็นตัวเลข',
+			'zip_code.required' => 'กรุณากรอกรหัสไปรษณีย์',
+			'zip_code.zipcode' => 'กรุณากรอกรหัสไปรษณีย์เป็นตัวเลข',
+			'phone_mobile.required' => 'กรุณากรอกหมายเลขโทรศัพท์มือถือ',
+			'phone_mobile.phone' => 'รูปแบบการกรอกหมายเลขโทรศัพท์มือถือไม่รถูกต้อง',
+			'phone_home.required' => 'กรุณากรอกหมายเลขโทรศัพท์บ้าน',
+			'phone_home.phone' => 'รูปแบบการกรอกหมายเลขโทรศัพท์บ้านไม่รถูกต้อง',
+			'school_name.required' => 'กรุณากรอกชื่อโรงเรียน',
+			'school_name.thai' => 'กรุณากรอกชื่อโรงเรียนเป็นภาษาไทย',
+			'method_arrive.required' => 'กรุณากรอกวิธีการเดินทางมา',
+			'method_arrive.thai' => 'กรุณากรอกวิธีการเดินทางมาเป็นภาษาไทย',
+			'method_depart.required' => 'กรุณากรอกวิธีการเดินทางกลับ',
+			'method_depart.thai' => 'กรุณากรอกวิธีการเดินทางกลับเป็นภาษาไทย');
 
 		//Just turn the Validator on. the result kept in $validator.
 		$validator = Validator::make(
@@ -130,7 +156,15 @@ class RegisterController extends BaseController {
 				'religion' => $religion,
 				'national_id' => $national_id,
 				'email' => $email,
-				'address' => $address),
+				'address' => $address,
+				'road' => $road,
+				'moo' => $moo,
+				'zip_code' => $zip_code,
+				'phone_mobile'=> $phone_mobile,
+				'phone_home' => $phone_home,
+				'school_name' => $school_name,
+				'method_arrive' => $method_arrive,
+				'method_depart' => $method_depart ),
 			$rules,
 			$messages);
 
