@@ -104,9 +104,9 @@ class RegisterController extends BaseController {
 			'national_id' => 'required|national_id',
 			'email' => 'required|email',
 			'address' => 'required|numeric',
-			'road' => 'required|thai',
+			'road' => 'thai',
 			'moo' => 'numeric',
-			'zip_code' => 'required|zipcode',
+			'zip_code' => 'required|numeric|digits:5',
 			'phone_mobile' => 'required|phone',
 			'phone_home' => 'required|phone',
 			'school_name' => 'required|thai',
@@ -134,7 +134,9 @@ class RegisterController extends BaseController {
 			'road.thai' => 'กรุณากรอกถนนเป็นภาษาไทย',
 			'moo.numeric' => 'กรุณากรอกหมู่เป็นตัวเลข',
 			'zip_code.required' => 'กรุณากรอกรหัสไปรษณีย์',
-			'zip_code.zipcode' => 'กรุณากรอกรหัสไปรษณีย์เป็นตัวเลข',
+			//'zip_code.zipcode' => 'กรุณากรอกรหัสไปรษณีย์เป็นตัวเลข',
+			'zip_code.numeric' => 'กรุณากรอกรหัสไปรษณีย์เป็นตัวเลข',
+			'zip_code.digits' => 'กรุณากรอกรหัสไปรษณีย์ให้ครบ 5 หลัก',
 			'phone_mobile.required' => 'กรุณากรอกหมายเลขโทรศัพท์มือถือ',
 			'phone_mobile.phone' => 'รูปแบบการกรอกหมายเลขโทรศัพท์มือถือไม่รถูกต้อง',
 			'phone_home.required' => 'กรุณากรอกหมายเลขโทรศัพท์บ้าน',
@@ -170,9 +172,8 @@ class RegisterController extends BaseController {
 
 		//Check if any failure ? then show the messages to user.
 		if($validator->fails()) {
-			$showMessages = $validator->messages();
 			//This only the example of how to things work. REALLY!!!!
-			return Redirect::to('reg')->withErrors($validator);
+			//return Redirect::to('reg')->withErrors($validator);
 		}
 
 		

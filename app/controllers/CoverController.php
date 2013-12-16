@@ -3,6 +3,9 @@
 //When user accepts go to register page.
 class CoverController extends BaseController{
 	function getIndex() {
+		//Just clear the way for the next user.
+		Auth::logout();
+
 		return 'aoeu';
 	}
 

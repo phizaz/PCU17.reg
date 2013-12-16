@@ -2,13 +2,22 @@
 <head>
 	<meta charset='utf-8'>
 	<script src="<?=$url?>/js/jquery.min.js"></script>
-	<script src="<?=$url?>/js/script.js"></script>
 	<link rel="stylesheet" href="<?=$url?>/css/960_24_col.css">
 	<link rel="stylesheet" href="<?=$url?>/css/ui_form.css">
 	<link rel="stylesheet" href="<?=$url?>/css/easydropdown.css">
 	<script>
-
+	var credential = {
+		<?php 
+		$first = true;
+		foreach($credential as $key => $val) {
+			if($first) $first = false;
+			else echo ',';
+			echo "'". $key . "'" . ':' . "'" . $val . "'";
+		}
+		?>
+	};
 	</script>
+	<script src="<?=$url?>/js/script.js"></script>
 	<title>
 		ลงทะเบียนค่ายพี่จุฬาฯครั้งที่ 17
 	</title>
@@ -274,17 +283,6 @@
 		</div>
 	</div>
 	<script>
-	var credential = {
-		<?php 
-		$first = true;
-		foreach($credential as $key => $val) {
-			if($first) $first = false;
-			else echo ',';
-			echo "'". $key . "'" . ':' . "'" . $val . "'";
-		}
-		?>
-	};
-
 	$.each(credential, function (key, val) {
 		$('#' + key).val(val);
 	})
