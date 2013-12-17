@@ -24,11 +24,14 @@ App::after(function($request, $response)
 
 /*
 |--------------------------------------------------------------------------
-| Credential Filter
+| Level Filter
 |--------------------------------------------------------------------------
-| Only who filled the blanks, who has credentials, only, shall go further.
+| Only who pass something will be allowed to get further.
 */
 
+Route::filter('agreed', function () {
+	if(! Session::has('agree')) return Redirect::guest('');
+});
 Route::filter('credential', function() {
 	if(! Session::has('credential')) return Redirect::guest('reg');
 });

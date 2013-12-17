@@ -19,6 +19,7 @@ Route::get('ui', function () {
 //All the controllers
 //==========================================================
 //Step 2: fill in the blanks.
+Route::when('reg*', 'agreed');
 Route::when('reg/confirm', 'credential');
 Route::controller('reg', 'RegisterController');
 //Step 3: print and send the message to us. (Require auth.)

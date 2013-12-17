@@ -5,11 +5,9 @@ class CoverController extends BaseController{
 	function getIndex() {
 		//Just clear the way for the next user.
 		Auth::logout();
+		Session::put('agree', true);
 
-		return 'aoeu';
-	}
-
-	function postIndex() {
-
+		
+		return View::make('cover');
 	}
 }
