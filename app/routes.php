@@ -24,6 +24,7 @@ Route::when('reg/confirm', 'credential');
 Route::controller('reg', 'RegisterController');
 //Step 3: print and send the message to us. (Require auth.)
 //Add: users can login and return their works. (for those disconnected.)
+Route::when('print*', 'disagree');
 Route::when('print', 'auth');
 Route::when('print/pdf', 'auth');
 Route::when('print/return', 'auth.pass');

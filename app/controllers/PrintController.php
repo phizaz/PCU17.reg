@@ -19,8 +19,6 @@ class PrintController extends BaseController {
 	}
 
 	public function getIndex() {
-		Session::forget('agree');
-
 		return View::make('print', array(
 			'credential' => Auth::user()));
 	}
