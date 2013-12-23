@@ -27,6 +27,7 @@ Route::controller('reg', 'RegisterController');
 Route::when('print*', 'disagree');
 Route::when('print', 'auth');
 Route::when('print/pdf', 'auth');
+Route::when('print/fpdf', 'auth');
 Route::when('print/return', 'auth.pass');
 Route::controller('print', 'PrintController');
 //Define the Service Controller, for getProvince, getAmphur, and getTambol rESTful style

@@ -28,6 +28,24 @@ class PrintController extends BaseController {
 		//Write PDF Generating code here!
 	}
 
+	private function p($text){
+		return iconv('utf-8', 'cp874', $text);
+	}
+	public function getFpdf(){
+		require(app_path() . '/libs/fpdf.php');
+		define('FPDF_FONTPATH', app_path() . '/libs/font/');
+
+		$pdf = new FPDF();
+		$pdf->AddPage();
+		
+		$pdf->AddFont('angsa','','angsa.php');
+		$pdf->AddFont('angsa','B','angsab.php');
+
+		$pdf->SetFont('angsa','',16);
+		$pdf->Cell(40,10, $this->p('สวัสดีครับ'));
+		$pdf->Output();
+	}
+
 	//just for debugging
 	public function getLogout() {
 		Auth::logout();

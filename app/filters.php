@@ -30,14 +30,11 @@ App::after(function($request, $response)
 */
 
 Route::filter('agreed', function () {
-	if(! Session::has('agree') or ! Session::get('agree')) return Redirect::to('');
+	if(! Session::get('agree')) return Redirect::to('');
 });
 
 Route::filter('disagree', function () {
-	if(Session::has('agree'))  {
-		Session::put('agree', false);
-		Session::forget('agree');
-	}
+	Session::put('agree', false);
 });
 
 Route::filter('credential', function() {
