@@ -34,7 +34,7 @@ class PrintController extends BaseController {
 	public function getFpdf(){
 		require(app_path() . '/libs/fpdf.php');
 		define('FPDF_FONTPATH', app_path() . '/libs/font/');
-
+		
 		$pdf = new FPDF();
 		$pdf->AddPage();
 		
@@ -44,6 +44,8 @@ class PrintController extends BaseController {
 		$pdf->SetFont('angsa','',16);
 		$pdf->Cell(40,10, $this->p('สวัสดีครับ'));
 		$pdf->Output();
+
+		exit;
 	}
 
 	//just for debugging
