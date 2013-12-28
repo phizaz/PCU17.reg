@@ -148,6 +148,15 @@
 							<h4>อาหารที่แพ้</h4>
 							<input id="food_allergies" name="food_allergies" class="input-text" type="text" style="width: 270px">
 						</div>			
+						<div style="clear:both;"></div>
+						<div class="just-left">
+							<h4>แพ้ยา</h4>
+							<input id="drug" name="drug" class="input-text" type="text" style="width: 215px">
+						</div>
+						<div class="just-left just-last">
+							<h4>โรคประจำตัว</h4>
+							<input id="disease" name="disease" class="input-text" type="text" style="width: 215px">
+						</div>
 						<!-- Address Group -->
 						<div style="clear:both;"></div>
 						<div style="height: 10px;"></div>

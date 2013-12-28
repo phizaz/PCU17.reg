@@ -37,6 +37,8 @@ class RegisterController extends BaseController {
 		$blood_group = Input::get('blood_group');
 		$shirt_size = Input::get('shirt_size');
 		$food_allergies = Input::get('food_allergies');
+		$drug = Input::get('drug');
+		$disease = Input::get('disease');
 		$address = Input::get('address');
 		$road = Input::get('road');
 		$moo = Input::get('moo');
@@ -81,6 +83,8 @@ class RegisterController extends BaseController {
 			'blood_group' => $blood_group,
 			'shirt_size' => $shirt_size,
 			'food_allergies' => $food_allergies,
+			'drug' => $drug,
+			'disease' => $disease,
 			'address' => $address,
 			'road' => $road,
 			'moo' => $moo,
@@ -261,6 +265,8 @@ class RegisterController extends BaseController {
 			'blood_group' => $blood_group,
 			'shirt_size' => $shirt_size,
 			'food_allergies' => $food_allergies,
+			'drug' => $drug,
+			'disease' => $disease,
 			'address' => $address,
 			'road' => $road,
 			'moo' => $moo,
