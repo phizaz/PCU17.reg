@@ -38,11 +38,11 @@ class PrintController extends BaseController {
 		define('FPDF_FONTPATH', $path . '/font/');
 
 		$pdf = new FPDI();
-		$pdf->AddFont('angsa','','angsa.php');
-		$pdf->AddFont('angsa','B','angsab.php');
+		$pdf->AddFont('thsarabunnew','','thsarabunnew.php');
+		$pdf->AddFont('thsarabunnew','B','thsarabunnew.php');
 
 		//Set font as angsana 14pt
-		$pdf->SetFont('angsa','',14);
+		$pdf->SetFont('thsarabunnew','',14);
 
 		//Import pages from pdf
 		$pageCount = $pdf->setSourceFile($path . '/form.pdf');
@@ -148,6 +148,8 @@ class PrintController extends BaseController {
 		$pdf->useTemplate($pages[4], 0, 0);
 
 		$pdf->output();
+
+		exit;
 
 		/*
 		$pdf = new FPDF();

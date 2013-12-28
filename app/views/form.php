@@ -194,12 +194,23 @@
 						<!-- End address group -->
 						<div class="just-left">
 							<h4>โทรศัพท์บ้าน</h4>
-							<input id="phone_home" name="phone_home" class="input-text" type="text" style="width: 215px">                
+							<input id="phone_home" name="phone_home" class="input-text" type="text" style="width: 120px">                
+						</div>
+						<div class="just-left">
+							<h4>โทรศัพท์มือถือ</h4>
+							<input id="phone_mobile" name="phone_mobile" class="input-text" type="text" style="width: 120px">                
 						</div>
 						<div class="just-left just-last">
-							<h4>โทรศัพท์มือถือ</h4>
-							<input id="phone_mobile" name="phone_mobile" class="input-text" type="text" style="width: 215px">                
-						</div>
+							<h4>รายได้ผู้ปกครองต่อเดือน</h4>
+							<select id="parent_income" name="parent_income"class="input-text" style="width: 170px">
+								<option value="0"><10000 บาท</option>
+								<option value="1">10000-19999 บาท</option>
+								<option value="2">20000-29999 บาท</option>
+								<option value="3">30000-39999 บาท</option>  
+								<option value="4">>40000 บาท</option>                          
+							</select>
+						</div>						
+
 						<div style="clear:both;"></div>
 						<div style="height: 10px"></div>
 						<!-- School details group -->
@@ -259,6 +270,57 @@
 								<option value="2">ศิลป์-ภาษา</option>                        
 							</select>               
 						</div>
+						<div style="clear:both;"></div>
+						<div style="height: 10px"></div>
+						<div class="group group-pink">
+							<div class="just-left just-last">
+								<h4 class="pink">ชื่อผู้ติดต่อกรณีฉุกเฉิน ท่านที่1</h4>
+								<input id="contact1_name" name="contact1_name" type="text" class="input-text input-pink" style="width: 400px">
+							</div>
+							<div class="just-left">
+								<h4 class="pink">เบอร์โทรศัพท์</h4>
+								<select id="contact1_phone" name="contact1_phone" class="input-text input-pink" style="width: 190px">
+								</select>
+							</div>
+							<div class="just-left just-last">
+								<h4 class="pink">เกี่ยวข้องเป็น</h4>
+								<select id="contact1_relation" name="contact1_relation" class="input-text input-pink" style="width: 190px">
+								</select>
+							</div>
+							<div class="just-left just-last">
+								<h4 class="pink">ชื่อผู้ติดต่อกรณีฉุกเฉิน ท่านที่2</h4>
+								<input id="contact2_name" name="contact2_name" type="text" class="input-text input-pink" style="width: 400px">
+							</div>
+							<div class="just-left">
+								<h4 class="pink">เบอร์โทรศัพท์</h4>
+								<select id="contact2_phone" name="contact2_phone" class="input-text input-pink" style="width: 190px">
+								</select>
+							</div>
+							<div class="just-left just-last">
+								<h4 class="pink">เกี่ยวข้องเป็น</h4>
+								<select id="contact2_relation" name="contact2_relation" class="input-text input-pink" style="width: 190px">
+								</select>
+							</div>
+							<div style="clear:both;"></div>
+						</div>
+						<div style="clear:both;"></div>
+						<div class="just-left">
+							<h4>คณะที่สนใจศึกษาต่อ 1</h4>
+							<input id="faculty1" name="faculty1" class="input-text" type="text" style="width: 215px">                
+						</div>
+ 						<div class="just-left just-last">
+							<h4>คณะที่สนใจศึกษาต่อ 2</h4>
+							<input id="faculty2" name="faculty2" class="input-text" type="text" style="width: 215px">                
+						</div>
+						<div class="just-left">
+							<h4>คณะที่สนใจศึกษาต่อ 3</h4>
+							<input id="faculty3" name="faculty3" class="input-text" type="text" style="width: 215px">                
+						</div>
+ 						<div class="just-left just-last">
+							<h4>คณะที่สนใจศึกษาต่อ 4</h4>
+							<input id="faculty4" name="faculty4" class="input-text" type="text" style="width: 215px">                
+						</div>
+						
 
 						<div style="clear:both;"></div>
 						<div style="height: 10px"></div>

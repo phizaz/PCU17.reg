@@ -42,6 +42,7 @@ class RegisterController extends BaseController {
 		$tambol = Input::get('tambol');
 		$phone_home = Input::get('phone_home');
 		$phone_mobile = Input::get('phone_mobile');
+		$parent_income = Input::get('parent_income');
 		$school_level = Input::get('school_level');
 		$school_plan = Input::get('school_plan');
 		$school_name = Input::get('school_name');
@@ -50,6 +51,16 @@ class RegisterController extends BaseController {
 		$method_arrive = Input::get('method_arrive');
 		$method_depart = Input::get('method_depart');
 		$course = Input::get('course');
+		$contact1_name = Input::get('contact1_name');
+		$contact1_phone = Input::get('contact1_phone');
+		$contact1_relation = Input::get('contact1_relation');
+		$contact2_name = Input::get('contact2_name');
+		$contact2_phone = Input::get('contact2_phone');
+		$contact2_relation = Input::get('contact2_relation');
+		$faculty1 = Input::get('faculty1');
+		$faculty2 = Input::get('faculty2');
+		$faculty3 = Input::get('faculty3');
+		$faculty4 = Input::get('faculty4');
 
 		$credential = array(
 			'name_prefix' => $name_prefix,
@@ -75,6 +86,7 @@ class RegisterController extends BaseController {
 			'tambol' => $tambol,
 			'phone_home' => $phone_home,
 			'phone_mobile' => $phone_mobile,
+			'parent_income' => $parent_income,
 			'school_level' => $school_level,
 			'school_plan' => $school_plan,
 			'school_name' => $school_name,
@@ -82,7 +94,17 @@ class RegisterController extends BaseController {
 			'school_amphur' => $school_amphur,
 			'method_arrive' => $method_arrive,
 			'method_depart' => $method_depart,
-			'course' => $course);
+			'course' => $course,
+			'contact1_name' => $contact1_name,
+			'contact1_phone' => $contact1_phone,
+			'contact1_relation' => $contact1_relation,
+			'contact2_name' => $contact2_name,
+			'contact2_phone' => $contact2_phone,
+			'contact2_relation' => $contact2_relation,
+			'faculty1' => $faculty1,
+			'faculty2' => $faculty2,
+			'faculty3' => $faculty3,
+			'faculty4' => $faculty4);
 
 		//Keeps in session.
 		Session::put('credential', $credential);
@@ -111,7 +133,17 @@ class RegisterController extends BaseController {
 			'phone_home' => 'required|phone',
 			'school_name' => 'required|thai',
 			'method_arrive'  => 'required|thai',
-			'method_depart'  => 'required|thai');
+			'method_depart'  => 'required|thai',
+			'contact1_name' => 'required|thai',
+			'contact1_phone' => 'required|numeric',
+			'contact1_relation' => 'required|thai',
+			'contact2_name' => 'required|thai',
+			'contact2_phone' => 'required|numeric',
+			'contact2_relation' => 'required|thai',
+			'faculty1' => 'required|thai',
+			'faculty2' => 'required|thai',
+			'faculty3' => 'required|thai',
+			'faculty4' => 'required|thai');
 
 		//Messages array is defining text to respond to each circumstances.
 		$messages = array(
@@ -134,7 +166,6 @@ class RegisterController extends BaseController {
 			'road.thai' => 'กรุณากรอกถนนเป็นภาษาไทย',
 			'moo.numeric' => 'กรุณากรอกหมู่เป็นตัวเลข',
 			'zip_code.required' => 'กรุณากรอกรหัสไปรษณีย์',
-			//'zip_code.zipcode' => 'กรุณากรอกรหัสไปรษณีย์เป็นตัวเลข',
 			'zip_code.numeric' => 'กรุณากรอกรหัสไปรษณีย์เป็นตัวเลข',
 			'zip_code.digits' => 'กรุณากรอกรหัสไปรษณีย์ให้ครบ 5 หลัก',
 			'phone_mobile.required' => 'กรุณากรอกหมายเลขโทรศัพท์มือถือ',
@@ -146,7 +177,27 @@ class RegisterController extends BaseController {
 			'method_arrive.required' => 'กรุณากรอกวิธีการเดินทางมา',
 			'method_arrive.thai' => 'กรุณากรอกวิธีการเดินทางมาเป็นภาษาไทย',
 			'method_depart.required' => 'กรุณากรอกวิธีการเดินทางกลับ',
-			'method_depart.thai' => 'กรุณากรอกวิธีการเดินทางกลับเป็นภาษาไทย');
+			'method_depart.thai' => 'กรุณากรอกวิธีการเดินทางกลับเป็นภาษาไทย',
+			'contact1_name.requierd' => 'กรุณาใส่ชื่อผู้ติดต่อ 1',
+			'contact1_name.thai' => 'กรุณาใส่ชื่อผู้ติดต่อ 1 เป็นภาษาไทย',
+			'contact1_phone.requierd' => 'กรุณาใส่เบอร์ผู้ติดต่อ 1',
+			'contact1_phone.numeric' => 'รูปแบบเบอร์ผู้ติดต่อ 1 ไม่ถูกต้อง',
+			'contact1_relation.requierd' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 1',
+			'contact1_relation.thai' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 1 เป็นภาษาไทย',
+			'contact2_name.requierd' => 'กรุณาใส่ชื่อผู้ติดต่อ 2',
+			'contact2_name.thai' => 'กรุณาใส่ชื่อผู้ติดต่อ 2 เป็นภาษาไทย',
+			'contact2_phone.requierd' => 'กรุณาใส่เบอร์ผู้ติดต่อ 2',
+			'contact2_phone.numeric' => 'รูปแบบเบอร์ผู้ติดต่อ 2 ไม่ถูกต้อง',
+			'contact2_relation.requierd' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 2',
+			'contact2_relation.thai' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 2 เป็นภาษาไทย',
+			'faculty1.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 1',
+			'faculty1.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 1เป็นภาษาไทย',
+			'faculty2.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 2',
+			'faculty2.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 2เป็นภาษาไทย',
+			'faculty3.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 3',
+			'faculty3.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 3เป็นภาษาไทย',
+			'faculty4.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 4',
+			'faculty4.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 4เป็นภาษาไทย');
 
 		//Just turn the Validator on. the result kept in $validator.
 		$validator = Validator::make(
@@ -166,7 +217,17 @@ class RegisterController extends BaseController {
 				'phone_home' => $phone_home,
 				'school_name' => $school_name,
 				'method_arrive' => $method_arrive,
-				'method_depart' => $method_depart ),
+				'method_depart' => $method_depart,
+				'contact1_name' => $contact1_name,
+				'contact1_phone' => $contact1_phone,
+				'contact1_relation' => $contact1_relation,
+				'contact2_name' => $contact2_name,
+				'contact2_phone' => $contact2_phone,
+				'contact2_relation' => $contact2_relation,
+				'faculty1' => $faculty1,
+				'faculty2' => $faculty2,
+				'faculty3' => $faculty3,
+				'faculty4' => $faculty4 ),
 			$rules,
 			$messages);
 
@@ -202,6 +263,7 @@ class RegisterController extends BaseController {
 			'tambol' => $tambol,
 			'phone_home' => $phone_home,
 			'phone_mobile' => $phone_mobile,
+			'parent_income' => $parent_income,
 			'school_level' => $school_level,
 			'school_plan' => $school_plan,
 			'school_name' => $school_name,
@@ -209,7 +271,17 @@ class RegisterController extends BaseController {
 			'school_amphur' => $school_amphur,
 			'method_arrive' => $method_arrive,
 			'method_depart' => $method_depart,
-			'course' => $course));
+			'course' => $course,
+			'contact1_name' => $contact1_name,
+			'contact1_phone' => $contact1_phone,
+			'contact1_relation' => $contact1_relation,
+			'contact2_name' => $contact2_name,
+			'contact2_phone' => $contact2_phone,
+			'contact2_relation' => $contact2_relation,
+			'faculty1' => $faculty1,
+			'faculty2' => $faculty2,
+			'faculty3' => $faculty3,
+			'faculty4' => $faculty4 ));
 	}
 
 	public function anyConfirm() {
