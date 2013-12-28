@@ -36,7 +36,8 @@ class PrintController extends BaseController {
 		require($path . '/fpdf.php');
 		require($path . '/fpdi/fpdi.php');
 		define('FPDF_FONTPATH', $path . '/font/');
-
+		$credential = Auth::user();
+		
 		$pdf = new FPDI();
 		$pdf->AddFont('sarabun','','THSarabun.php');
 
@@ -59,7 +60,7 @@ class PrintController extends BaseController {
 
 		//Write Name
 		$pdf->setXY($col,$row);
-		$text = $this->p('กรพัฒน์ ปรีชากุล');
+		$text = $this->p($credential->name_first . ' ' . $credential->name_last);
 		$pdf->multiCell(56, $height, $text, 0, 'C', false);
 		//Write National ID
 		$pdf->setXY($col + 90, $row);
@@ -147,6 +148,8 @@ class PrintController extends BaseController {
 		$pdf->useTemplate($pages[4], 0, 0);
 
 		$pdf->output();
+
+		exit;
 
 		/*
 		$pdf = new FPDF();

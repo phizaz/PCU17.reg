@@ -279,13 +279,13 @@
 							</div>
 							<div class="just-left">
 								<h4 class="pink">เบอร์โทรศัพท์</h4>
-								<select id="contact1_phone" name="contact1_phone" class="input-text input-pink" style="width: 190px">
-								</select>
+								<input id="contact1_phone" name="contact1_phone" class="input-text input-pink" style="width: 190px">
+								
 							</div>
 							<div class="just-left just-last">
 								<h4 class="pink">เกี่ยวข้องเป็น</h4>
-								<select id="contact1_relation" name="contact1_relation" class="input-text input-pink" style="width: 190px">
-								</select>
+								<input id="contact1_relation" name="contact1_relation" class="input-text input-pink" style="width: 190px">
+								
 							</div>
 							<div class="just-left just-last">
 								<h4 class="pink">ชื่อผู้ติดต่อกรณีฉุกเฉิน ท่านที่2</h4>
@@ -293,13 +293,13 @@
 							</div>
 							<div class="just-left">
 								<h4 class="pink">เบอร์โทรศัพท์</h4>
-								<select id="contact2_phone" name="contact2_phone" class="input-text input-pink" style="width: 190px">
-								</select>
+								<input id="contact2_phone" name="contact2_phone" class="input-text input-pink" style="width: 190px">
+								
 							</div>
 							<div class="just-left just-last">
 								<h4 class="pink">เกี่ยวข้องเป็น</h4>
-								<select id="contact2_relation" name="contact2_relation" class="input-text input-pink" style="width: 190px">
-								</select>
+								<input id="contact2_relation" name="contact2_relation" class="input-text input-pink" style="width: 190px">
+								
 							</div>
 							<div style="clear:both;"></div>
 						</div>
@@ -347,6 +347,10 @@
 	<script>
 	$.each(credential, function (key, val) {
 		$('#' + key).val(val);
+	})
+
+	$.each(faculty, function (key, val){
+		$('#'+key).val(val);
 	})
 	</script>
 </body>
