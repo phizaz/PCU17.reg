@@ -26,7 +26,7 @@ class PrintController extends BaseController {
 	private function p($text){
 		return iconv('utf-8', 'cp874', $text);
 	}
-	
+
 	public function getPdf(){
 		$path = app_path() . '/libs';
 		require($path . '/fpdf.php');
@@ -148,11 +148,11 @@ class PrintController extends BaseController {
 		$col += 12;
 		$pdf->setXY($col, $row);
 		$salary = $credential->parent_income;
-		if ($salary == 0) 	$text = "<10000 บาท";
-		else if ($salary == 0) 	$text = "10000-19999 บาท";
-		else if ($salary == 0) 	$text = "20000-29999 บาท";
-		else if ($salary == 0) 	$text = "30000-39999 บาท";
-		else $text = ">40000 บาท";
+		if ($salary == 0) $text = "น้อยกว่า 10,000 บาท";
+		else if ($salary == 1) $text = "10,000 - 19,999 บาท";
+		else if ($salary == 2) $text = "20,000 - 29,999 บาท";
+		else if ($salary == 3) $text = "30,000 - 39,999 บาท";
+		else if ($salary == 4) $text = "มากกว่า 40,000 บาท";
 		$text = $this->p($text);
 		$pdf->multiCell(30, $height, $text, 0, 'C', false);
 		//Write Class
