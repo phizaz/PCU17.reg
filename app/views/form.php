@@ -212,11 +212,11 @@
 						<div class="just-left just-last">
 							<h4>รายได้ผู้ปกครองต่อเดือน</h4>
 							<select id="parent_income" name="parent_income"class="input-text" style="width: 170px">
-								<option value="0"><10000 บาท</option>
-								<option value="1">10000-19999 บาท</option>
-								<option value="2">20000-29999 บาท</option>
-								<option value="3">30000-39999 บาท</option>  
-								<option value="4">>40000 บาท</option>                          
+								<option value="0">น้อยกว่า 10000</option>
+								<option value="1">10000 - 19999</option>
+								<option value="2">20000 - 29999</option>
+								<option value="3">30000 - 39999</option>  
+								<option value="4">มากกว่า 40000</option>                          
 							</select>
 						</div>						
 
