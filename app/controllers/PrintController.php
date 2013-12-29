@@ -23,15 +23,11 @@ class PrintController extends BaseController {
 			'credential' => Auth::user()));
 	}
 
-	//This function generate the PDF file.
-	public function getPdf(){
-		//Write PDF Generating code here!
-	}
-
 	private function p($text){
 		return iconv('utf-8', 'cp874', $text);
 	}
-	public function getFpdf(){
+	
+	public function getPdf(){
 		$path = app_path() . '/libs';
 		require($path . '/fpdf.php');
 		require($path . '/fpdi/fpdi.php');
