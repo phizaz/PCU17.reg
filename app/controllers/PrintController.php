@@ -153,9 +153,9 @@ class PrintController extends BaseController {
 		$pdf->setXY($col, $row);
 		$salary = $credential->parent_income;
 		if ($salary == 0) 	$text = "<10000 บาท";
-		else if ($salary == 0) 	$text = "10000-19999 บาท";
-		else if ($salary == 0) 	$text = "20000-29999 บาท";
-		else if ($salary == 0) 	$text = "30000-39999 บาท";
+		else if ($salary == 1) 	$text = "10000-19999 บาท";
+		else if ($salary == 2) 	$text = "20000-29999 บาท";
+		else if ($salary == 3) 	$text = "30000-39999 บาท";
 		else $text = ">40000 บาท";
 		$text = $this->p($text);
 		$pdf->multiCell(30, $height, $text, 0, 'C', false);
@@ -163,8 +163,72 @@ class PrintController extends BaseController {
 		$pdf->setXY($col + 29 + 55, $row);
 		$text = $this->p('ม.' . $credential->school_plan);
 		$pdf->multiCell(15, $height, $text, 0, 'C', false);
+		//Write School Plan
+		$row += $height;
+		$col -= 15;
+		$pdf->setXY($col, $row);
+		$school_plan = $credential->school_plan;
+		if($school_plan == 0) $text = "วิทย์-คณิต";
+		else if($school_plan == 1) $text = "ศิลป์-คำนวณ";
+		else if($school_plan == 2) $text = "ศิลป์-ภาษา";
+		$text = $this->p($text);
+		$pdf->multiCell(25, $height, $text, 0, 'C', false);
+		//Write School Name
+		$pdf->setXY($col + 25 + 32, $row);
+		$text = $this->p($credential->school_name);
+		$pdf->multiCell(39, $height, $text, 0, 'C', false);
+		//Write school province
+		$getdata = DB::table('province')->select('PROVINCE_NAME')->where('PROVINCE_ID' , '=' , $credential->school_province)->get();
+		$text = $this->p($getdata[0]->PROVINCE_NAME);
+		$pdf->setXY($col + 25 + 32 + 39 + 8, $row);
+		$pdf->multiCell(28, $height, $text, 0, 'C', false);
+		//Write shirt_size
+		$shirt_size = $credential->shirt_size;
+		if($shirt_size == 0) $text='S';
+		else if($shirt_size == 1) $text='M';
+		else if($shirt_size == 2) $text='L';
+		else if($shirt_size == 3) $text='XL';
+		else if($shirt_size == 4) $text='XXL';
+		$pdf->setXY($col + 25 + 32 + 39 + 8 + 28 + 10, $row);
+		$pdf->multiCell(10, $height, $text, 0, 'C', false);
+		//Write method_arrive
+		$row += $height;
+		$pdf->setXY($col + 28, $row);
+		$text = $this->p($credential->method_arrive);
+		$pdf->multiCell(130, $height, $text, 0, 'L', false);
+		//Write method_depart
+		$row += $height;
+		$pdf->setXY($col + 20, $row);
+		$text = $this->p($credential->method_depart);
+		$pdf->multiCell(140, $height, $text, 0, 'L', false);
+		//Write contact1 name
+		$row += $height;
+		$pdf->setXY($col + 23, $row);
+		$text = $this->p($credential->contact1_name);
+		$pdf->multiCell(55, $height, $text, 0, 'C', false);
+		//Write contact1 phone
+		$pdf->setXY($col + 23 + 72, $row);
+		$text = $this->p($credential->contact1_phone);
+		$pdf->multiCell(22, $height, $text, 0, 'C', false);
+		//Write contact1 relation
+		$pdf->setXY($col + 23 + 72 + 41, $row);
+		$text = $this->p($credential->contact1_relation);
+		$pdf->multiCell(17, $height, $text, 0, 'C', false);
+		//Write contact2 name
+		$row += $height;
+		$pdf->setXY($col + 23, $row);
+		$text = $this->p($credential->contact2_name);
+		$pdf->multiCell(55, $height, $text, 0, 'C', false);
+		//Write contact2 phone
+		$pdf->setXY($col + 23 + 72, $row);
+		$text = $this->p($credential->contact2_phone);
+		$pdf->multiCell(22, $height, $text, 0, 'C', false);
+		//Write contact2 relation
+		$pdf->setXY($col + 23 + 72 + 41, $row);
+		$text = $this->p($credential->contact2_relation);
+		$pdf->multiCell(17, $height, $text, 0, 'C', false);
 
-		//And much more
+
 
 		$pdf->addPage();
 		$pdf->useTemplate($pages[3], 0, 0);
