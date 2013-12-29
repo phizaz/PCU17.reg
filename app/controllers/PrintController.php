@@ -125,7 +125,8 @@ class PrintController extends BaseController {
 		$col -= 9;
 		$pdf->setXY($col, $row);
 		//Address Road Moo
-		$text = $this->p($credential->address . ' ถนน ' . $credential->road);
+		$text = $this->p($credential->address);
+		$text .= $credential->road == '' ? '' : $this-p(' ถนน ' . $credential->road);
 		$text .= $credential->moo == '' ? '' : $this->p(' หมู่ ' . $credential->moo);
 		//Tambol
 		$getdata = DB::table('district')->select('DISTRICT_NAME')->where('DISTRICT_ID' , '=' , $credential->tambol)->get();
