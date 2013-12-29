@@ -20,7 +20,7 @@ class PrintController extends BaseController {
 
 	public function getIndex() {
 		return View::make('print', array(
-			'credential' => Auth::user()));
+			'credential' => Auth::user(), 'faculty' => Session::get('faculty')));
 	}
 
 	private function p($text){
@@ -232,11 +232,56 @@ class PrintController extends BaseController {
 		$pdf->setXY($col + 23 + 72 + 41, $row);
 		$text = $this->p($credential->contact2_relation);
 		$pdf->multiCell(17, $height, $text, 0, 'C', false);
+		//Write Faculty
+		$faculty = DB::select("select faculty from faculty where cand_id = ".$credential->id);
+		$row += $height;
+		//Write Faculty 1
+		$text = $this->p($faculty[0]->faculty);
+		$pdf->setXY($col + 23, $row);
+		$pdf->multiCell(40, $height, $text, 0, 'C', false);
+		//Write Faculty 2
+		$text = $this->p($faculty[1]->faculty);
+		$pdf->setXY($col + 23 + 50, $row);
+		$pdf->multiCell(40, $height, $text, 0, 'C', false);
+		//Write Faculty 3
+		$row += $height;
+		$text = $this->p($faculty[2]->faculty);
+		$pdf->setXY($col + 23, $row);
+		$pdf->multiCell(40, $height, $text, 0, 'C', false);
+		//Write Faculty 4
+		$text = $this->p($faculty[3]->faculty);
+		$pdf->setXY($col + 23 + 50, $row);
+		$pdf->multiCell(40, $height, $text, 0, 'C', false);
+		//Write sign name
+		$row += 3*$height + 2;
+		$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
+		$pdf->setXY($col + 23 + 70, $row);
+		$pdf->multiCell(48, $height, $text, 0, 'C', false);
+		//Write parent approve student name
+		$row += 5*$height + 2;
+		$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
+		$pdf->setXY($col + 23 + 80, $row);
+		$pdf->multiCell(46, $height, $text, 0, 'C', false);
 
-
-
+		//------------Page 4---------------
 		$pdf->addPage();
 		$pdf->useTemplate($pages[3], 0, 0);
+		//Write course
+		$row = 21.75*$height;
+		$course_num = $credential->course;
+		if($course_num == 0) $course = 'วิทย์ ม.4 ขึ้น ม.5';
+		else if($course_num == 1) $course = 'วิทย์ ม.5 ขึ้น ม.6';
+		else if($course_num == 2) $course = 'ศิลป์ภาษา';
+		else if($course_num == 3) $course = 'ศิลป์คำนวณ';
+		$text = $this->p($course);
+		$pdf->setXY($col + 25, $row);
+		$pdf->multiCell(46, $height, $text, 0, 'C', false);
+		//Write sign name page 4
+		$row += 3*$height + 2;
+		$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
+		$pdf->setXY($col + 23 + 70, $row);
+		$pdf->multiCell(48, $height, $text, 0, 'C', false);
+
 
 		$pdf->addPage();
 		$pdf->useTemplate($pages[4], 0, 0);
