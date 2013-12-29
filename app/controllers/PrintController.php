@@ -124,14 +124,20 @@ class PrintController extends BaseController {
 		$row += $height;
 		$col -= 9;
 		$pdf->setXY($col, $row);
-		$text = $this->p($credential->Address . ' ถนน ' . $credential->road . ' หมู่ ' . $credential->moo);
+		//Address Road Moo
+		$text = $this->p($credential->address . ' ถนน ' . $credential->road);
+		$text .= $credential->moo == '' ? '' : $this->p(' หมู่ ' . $credential->moo);
+		//Tambol
 		$getdata = DB::table('district')->select('DISTRICT_NAME')->where('DISTRICT_ID' , '=' , $credential->tambol)->get();
-		$text .= $this->p(' ตำบล/แขวง ' . $getdata[0]->DISTRICT_NAME);
+		$text .= $this->p(' ตำบล/แขวง ' . trim($getdata[0]->DISTRICT_NAME));
+		//Amphur
 		$getdata = DB::table('amphur')->select('AMPHUR_NAME')->where('AMPHUR_ID' , '=' , $credential->amphur)->get();
-		$text .= $this->p(' อำเภอ/เขต ' . $getdata[0]->AMPHUR_NAME);
+		$text .= $this->p(' อำเภอ/เขต ' . trim($getdata[0]->AMPHUR_NAME));
+		//Province
 		$getdata = DB::table('province')->select('PROVINCE_NAME')->where('PROVINCE_ID' , '=' , $credential->province)->get();
-		$text .= $this->p(' จังหวัด ' . $getdata[0]->PROVINCE_NAME);
-		$text .= $credential->zip_code;
+		$text .= $this->p(' จังหวัด ' . trim($getdata[0]->PROVINCE_NAME));
+		//Zip Code
+		$text .= ' ' . $credential->zip_code;
 		$pdf->multiCell(130, $height, $text, 0, 'L', false);
 		//Write Home Tel
 		$row += 2 * $height;
