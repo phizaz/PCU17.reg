@@ -5,6 +5,7 @@ class CoverController extends BaseController{
 	function getIndex() {
 		//Just clear the way for the next user.
 		Auth::logout();
+		Session::forget('credential');
 		Session::put('agree', true);
 
 		
