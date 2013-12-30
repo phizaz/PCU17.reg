@@ -99,17 +99,17 @@ class PrintController extends BaseController {
 		//Write Drug
 		$pdf->setXY($col + 10 + 10, $row);
 		$text = $credential->drug;
-		$pdf->multiCell(16, $height, $text, 0, 'C', false);
 		if ($text == "") {
 			$text = "-";
 		}
+		$pdf->multiCell(16, $height, $text, 0, 'C', false);		
 		//Write Disease
 		$pdf->setXY($col + 10 + 10 + 16 + 19, $row);
 		$text = $credential->disease;
-		$pdf->multiCell(26, $height, $text, 0, 'C', false);
 		if ($text == "") {
 			$text = "-";
 		}
+		$pdf->multiCell(26, $height, $text, 0, 'C', false);
 		//Write Facebook
 		$row += $height;
 		$col += 2;
@@ -166,7 +166,7 @@ class PrintController extends BaseController {
 		$pdf->multiCell(30, $height, $text, 0, 'C', false);
 		//Write Class
 		$pdf->setXY($col + 29 + 55, $row);
-		$text = $this->p('ม.' . $credential->school_plan);
+		$text = $this->p('ม.' . $credential->school_level);
 		$pdf->multiCell(15, $height, $text, 0, 'C', false);
 		//Write School Plan
 		$row += $height;
@@ -179,9 +179,9 @@ class PrintController extends BaseController {
 		$text = $this->p($text);
 		$pdf->multiCell(25, $height, $text, 0, 'C', false);
 		//Write School Name
-		$pdf->setXY($col + 25 + 32, $row);
+		$pdf->setXY($col + 25 + 30, $row);
 		$text = $this->p($credential->school_name);
-		$pdf->multiCell(39, $height, $text, 0, 'C', false);
+		$pdf->multiCell(42, $height, $text, 0, 'C', false);
 		//Write school province
 		$getdata = DB::table('province')->select('PROVINCE_NAME')->where('PROVINCE_ID' , '=' , $credential->school_province)->get();
 		$text = $this->p($getdata[0]->PROVINCE_NAME);
