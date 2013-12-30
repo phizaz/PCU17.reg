@@ -12,7 +12,7 @@
 	</script>
 </head>
 <body>
-	<div style="background: rgb(55,55,55);" align="center">
+	<div align="center">
 		<div style="width: 600px; margin: auto;">
 			<div style="text-align:center; font-size: 200%; color: rgb(255,255,255); text-shadow: 0px -1px 0px rgb(33,33,33);">
 				<div style="height: 80px;"></div>

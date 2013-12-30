@@ -6,6 +6,7 @@ html, body {
 
 body, td, th {
 	margin: 0px;
+	background: rgb(55,55,55);
 	font-size: 15px;
 	font-weight: 400;
 	color: rgb(77,77,77);
