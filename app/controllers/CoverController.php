@@ -8,7 +8,8 @@ class CoverController extends BaseController{
 		Session::forget('credential');
 		Session::put('agree', true);
 
-		
-		return View::make('cover');
+		$url = URL::to('');
+		return View::make('cover', array(
+			'url' => $url));
 	}
 }

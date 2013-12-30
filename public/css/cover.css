@@ -1,0 +1,31 @@
+@import "../fonts/stylesheet.css";
+
+html, body {
+	height: 100%;
+}
+
+body, td, th {
+	margin: 0px;
+	font-size: 15px;
+	font-weight: 400;
+	color: rgb(77,77,77);
+	/*font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;*/
+	font-family: "Helvetica Neue", 'thaisans' ,Helvetica,Arial,sans-serif;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'thaisans_bold';
+	font-weight: 800;
+}
+
+.pink {
+	color: rgb(255,60,160);
+}
+
+.light-grey {
+	color: rgb(180,180,180);
+}
+
+.grey {
+	color: rgb(66,66,66);
+}

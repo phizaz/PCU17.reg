@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
 	<meta charset='utf-8'>
@@ -34,15 +35,15 @@
 </head>
 <body>
 	<div class="container_24">
-		<div class="grid_12 sidebar" style="text-align:center; color: rgb(180,180,180);">
-			<h1 style="font-size: 430%; text-align:right;">สมัครเข้าค่าย</h1>
-			<h1 style="font-size: 950%; text-align:right; margin-top: -95px; color: rgb(255,60,168);">พี่จุฬา ฯ</h1>
-			<h1 style="font-size: 350%; margin-top: -100px;">ครั้งที่ <span style="color: rgb(255,60,168);">17</span></h1>
+		<div id="sidebar" class="sidebar" style="text-align: center; color: rgb(180,180,180);">
+			<h1 style="font-size: 400%; text-align:right;">สมัครเข้าค่าย</h1>
+			<h1 style="font-size: 800%; text-align:right; margin-top: -95px; color: rgb(255,60,168);">พี่จุฬา ฯ</h1>
+			<h1 style="font-size: 300%; margin-top: -100px;">ครั้งที่ <span style="color: rgb(255,60,168);">17</span></h1>
 			<h1 class="nav nav-select">กรอกข้อมูลส่วนตัว</h1>
 			<h1 class="nav">พิมพ์ใบสมัคร</h1>
 			<h1 class="nav">ทำแบบทดสอบ และส่งใบสมัคร</h1>
 		</div>
-
+		
 		<div class="prefix_12 grid_12">
 			<div style="height: 60px;"></div>			
 				<?php 
@@ -60,7 +61,7 @@
 					<div style="padding-left: 20px;">
 						<div class="just-left">
 							<h4>คำนำหน้า</h4>
-							<input id="name_prefix" name="name_prefix" type="text" class="input-text" style="width: 90px;">
+							<input id="name_prefix" name="name_prefix" type="text" class="input-text" style="width: 70px;">
 						</div>
 						<div class="just-left">
 							<h4>ชื่อ</h4>
@@ -74,15 +75,15 @@
 
 						<div class="just-left">
 							<h4>ชื่อเล่น</h4>
-							<input id="nickname" name="nickname" class="input-text" type="text" style="width: 100px">
+							<input id="nickname" name="nickname" class="input-text" type="text" style="width: 80px">
 						</div>
 						<div class="just-left">
 							<h4>ศาสนา</h4>
-							<input id="religion" name="religion" class="input-text" type="text" style="width: 100px">
+							<input id="religion" name="religion" class="input-text" type="text" style="width: 80px">
 						</div>
 						<div class="just-left just-last">
 							<h4>เลขประจำตัวประชาชนไทย</h4>
-							<input id="national_id" name="national_id" class="input-text" type="text" style="width: 210px">
+							<input id="national_id" name="national_id" class="input-text" type="text" style="width: 190px">
 						</div>
 
 
@@ -125,11 +126,11 @@
 
 						<div class="just-left">
 							<h4>Facebook</h4>
-							<input id="facebook" name="facebook" class="input-text input-blue" type="text" style="width: 215px">
+							<input id="facebook" name="facebook" class="input-text input-blue" type="text" style="width: 195px">
 						</div>
 						<div class="just-left just-last">
 							<h4>Email</h4>
-							<input id="email" name="email" class="input-text" type="text" style="width: 215px">
+							<input id="email" name="email" class="input-text" type="text" style="width: 195px">
 						</div>
 
 						<div class="just-left">
@@ -156,16 +157,16 @@
 						</div>
 						<div class="just-left just-last">
 							<h4>อาหารที่แพ้</h4>
-							<input id="food_allergies" name="food_allergies" class="input-text" type="text" style="width: 270px">
+							<input id="food_allergies" name="food_allergies" class="input-text" type="text" style="width: 250px">
 						</div>			
 						<div style="clear:both;"></div>
 						<div class="just-left">
 							<h4>แพ้ยา</h4>
-							<input id="drug" name="drug" class="input-text" type="text" style="width: 215px">
+							<input id="drug" name="drug" class="input-text" type="text" style="width: 195px">
 						</div>
 						<div class="just-left just-last">
 							<h4>โรคประจำตัว</h4>
-							<input id="disease" name="disease" class="input-text" type="text" style="width: 215px">
+							<input id="disease" name="disease" class="input-text" type="text" style="width: 195px">
 						</div>
 						<!-- Address Group -->
 						<div style="clear:both;"></div>
@@ -173,15 +174,15 @@
 						<div class="group group-pink">
 							<div class="just-left">
 								<h4 class="pink">บ้านเลขที่</h4>
-								<input id="address" name="address" type="text" class="input-text input-pink" style="width: 90px">
+								<input id="address" name="address" type="text" class="input-text input-pink" style="width: 70px">
 							</div>
 							<div class="just-left">
 								<h4 class="pink">ถนน</h4>
-								<input id="road" name="road" type="text" class="input-text input-pink" style="width: 200px">
+								<input id="road" name="road" type="text" class="input-text input-pink" style="width: 180px">
 							</div>
 							<div class="just-left just-last">
 								<h4 class="pink">หมู่</h4>
-								<input id="moo" name="moo" type="text" class="input-text input-pink" style="width: 80px">
+								<input id="moo" name="moo" type="text" class="input-text input-pink" style="width: 60px">
 							</div>
 
 							<div class="just-left">
@@ -204,7 +205,7 @@
 							</div>
 							<div class="just-left just-last">
 								<h4 class="pink">รหัสไปรษณีย์</h4>
-								<input id="zip_code" name="zip_code" type="text" class="input-text input-pink" style="width: 195px">								
+								<input id="zip_code" name="zip_code" type="text" class="input-text input-pink" style="width: 175px">								
 							</div>
 
 							<div style="clear:both;"></div>
@@ -213,11 +214,11 @@
 						<!-- End address group -->
 						<div class="just-left">
 							<h4>โทรศัพท์บ้าน</h4>
-							<input id="phone_home" name="phone_home" class="input-text" type="text" style="width: 120px">                
+							<input id="phone_home" name="phone_home" class="input-text" type="text" style="width: 100px">                
 						</div>
 						<div class="just-left">
 							<h4>โทรศัพท์มือถือ</h4>
-							<input id="phone_mobile" name="phone_mobile" class="input-text" type="text" style="width: 120px">                
+							<input id="phone_mobile" name="phone_mobile" class="input-text" type="text" style="width: 100px">                
 						</div>
 						<div class="just-left just-last">
 							<h4>รายได้ผู้ปกครองต่อเดือน</h4>
@@ -236,7 +237,7 @@
 						<div class="group group-pink">
 							<div class="just-left">
 								<h4 class="pink">โรงเรียน</h4>
-								<input id="school_name" name="school_name" type="text" class="input-text input-pink" style="width: 250px">
+								<input id="school_name" name="school_name" type="text" class="input-text input-pink" style="width: 230px">
 							</div>
 							<div class="just-left just-last">
 								<h4 class="pink">จังหวัด</h4>
@@ -274,64 +275,64 @@
 						<!-- End School Details group -->
 						<div class="just-left just-last">
 							<h4>วิธีการเดินทางมา</h4>
-							<input id="method_arrive" name="method_arrive" class="input-text" type="text" style="width: 450px">                
+							<input id="method_arrive" name="method_arrive" class="input-text" type="text" style="width: 430px">                
 						</div>
 						<div class="just-left just-last">
 							<h4>วิธีการเดินทางกลับ</h4>
-							<input id="method_depart" name="method_depart" class="input-text" type="text" style="width: 450px">                
+							<input id="method_depart" name="method_depart" class="input-text" type="text" style="width: 430px">                
 						</div>
 
 						<div style="clear:both;"></div>
-						<h2>เบอร์ติดต่อกรณีฉุกเฉิน</h2>
+						<h2 class="grey">เบอร์ติดต่อกรณีฉุกเฉิน</h2>
 						<div class="just-left">
 							<h4>ชื่อผู้ติดต่อ ท่านแรก</h4>
-							<input id="contact1_name" name="contact1_name" type="text" class="input-text" style="width: 210px">
+							<input id="contact1_name" name="contact1_name" type="text" class="input-text" style="width: 190px">
 						</div>
 						<div class="just-left">
 							<h4>เบอร์โทรศัพท์</h4>
-							<input id="contact1_phone" name="contact1_phone" class="input-text" style="width: 120px">
+							<input id="contact1_phone" name="contact1_phone" class="input-text" style="width: 100px">
 						</div>
 						<div class="just-left just-last">
-							<h4>เกี่ยวข้องเป็น</h4>
-							<input id="contact1_relation" name="contact1_relation" class="input-text" style="width: 80px">
+							<h4>เป็น</h4>
+							<input id="contact1_relation" name="contact1_relation" class="input-text" style="width: 60px">
 						</div>
 
 
 						<div class="just-left">
 							<h4>ชื่อผู้ติดต่อ ท่านที่สอง</h4>
-							<input id="contact2_name" name="contact2_name" type="text" class="input-text" style="width: 210px">
+							<input id="contact2_name" name="contact2_name" type="text" class="input-text" style="width: 190px">
 						</div>
 						<div class="just-left">
 							<h4>เบอร์โทรศัพท์</h4>
-							<input id="contact2_phone" name="contact2_phone" class="input-text" style="width: 120px">
+							<input id="contact2_phone" name="contact2_phone" class="input-text" style="width: 100px">
 							
 						</div>
 						<div class="just-left just-last">
-							<h4>เกี่ยวข้องเป็น</h4>
-							<input id="contact2_relation" name="contact2_relation" class="input-text" style="width: 80px">
+							<h4>เป็น</h4>
+							<input id="contact2_relation" name="contact2_relation" class="input-text" style="width: 60px">
 							
 						</div>
 						<div style="clear:both;"></div>
-						<h2>คณะที่สนใจศึกษาต่อในระดับมหาวิทยาลัย</h2>
+						<h2 class="grey">คณะที่สนใจศึกษาต่อในระดับมหาวิทยาลัย</h2>
 						<div class="just-left">
 							<h4>สนใจเป็นอันดับแรก</h4>
-							<input id="faculty1" name="faculty1" class="input-text" type="text" style="width: 215px">                
+							<input id="faculty1" name="faculty1" class="input-text" type="text" style="width: 195px">                
 						</div>
  						<div class="just-left just-last">
 							<h4>สนใจเป็นอันดับสอง</h4>
-							<input id="faculty2" name="faculty2" class="input-text" type="text" style="width: 215px">                
+							<input id="faculty2" name="faculty2" class="input-text" type="text" style="width: 195px">                
 						</div>
 						<div class="just-left">
 							<h4>สนใจเป็นอันดับสาม</h4>
-							<input id="faculty3" name="faculty3" class="input-text" type="text" style="width: 215px">                
+							<input id="faculty3" name="faculty3" class="input-text" type="text" style="width: 195px">                
 						</div>
  						<div class="just-left just-last">
 							<h4>สนใจเป็นอันดับสี่</h4>
-							<input id="faculty4" name="faculty4" class="input-text" type="text" style="width: 215px">                
+							<input id="faculty4" name="faculty4" class="input-text" type="text" style="width: 195px">                
 						</div>
 
 						<div style="clear: both;"></div>
-						<h2>ส่วนวิชาการ</h2>
+						<h2 class="grey">ส่วนวิชาการ</h2>
 						<div class="just-left">
 							<h4>คอร์สที่ต้องการเรียน</h4>
 							<select id="course" name="course" class="input-text" style="width: 215px">

@@ -2,14 +2,15 @@ $(document).ready(function(){
 
 	// ----------------- Parallax scroll --------------------------
 
-	var he = $(window).height() - $('.sidebar').height()-50;
+	//var he = $(window).height() - $('#sidebar').height();
+	var he = $(window).height() - 670;
 	var ratio = he/($(document).height()-$(window).height());
-	console.log(ratio);
+	//console.log(ratio);
 	$('.sidebar').css({"top": he});
 	
 
 	$(window).scroll(function(){
-		$('.sidebar').css({"top": '0' + (he - $(window).scrollTop() * ratio) + 'px' });
+		$('.sidebar').css({"top": (he - $(window).scrollTop() * ratio) + 'px' });
 	});	
 
 	// ----------------- Auto suggest province, amphur, tambol dropdown -------------------------
