@@ -38,3 +38,27 @@ img {
 .grey {
 	color: rgb(66,66,66);
 }
+
+#content {
+	width: 600px; margin: auto; text-align:center; font-size: 200%; color: rgb(255,255,255); text-shadow: 0px -1px 0px rgb(33,33,33);
+}
+
+#list {
+	color: rgb(160,160,160); list-style-type: none; padding: 0px; margin: 0px; font-size: 20px; font-family: 'thaisans_light'; font-weight: 100;
+}
+
+#box-reg {
+	text-shadow: none; font-size: 200%; text-align: center; width: 330px; padding: 7px 0px 7px 0px; margin: auto auto 5px auto; background: rgb(255,0,150); color: rgb(255,255,255); border-radius: 15px;
+}
+
+hr#separator-line {
+	border-width: 1px 0px 1px 0px; border-style: solid; border-color: rgb(44,44,44) transparent rgb(77,77,77) transparent;
+}
+
+#separator-text {
+	position: relative; margin: -35px auto auto auto; width: 60px; background: rgb(55,55,55); color: rgb(120,120,120); font-size: 70%;
+}
+
+#box-return {
+	font-size: 100%; margin-top: 5px; text-align: center; color: rgb(230,230,230);
+}
