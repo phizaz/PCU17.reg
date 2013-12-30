@@ -19,7 +19,7 @@ class ValidatorLib extends BaseController {
 	}
 
 	public function isAddress($attr, $val, $params){
-		if(preg_match("#/(\d+)#",$val)){ 
+		if(preg_match("/^([1-9]{0,1})([0-9]{1})(\/[0-9])?$/",$val)){ 
 		 return true;
 		} else {
 		 return false;

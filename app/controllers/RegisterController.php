@@ -108,7 +108,7 @@ class RegisterController extends BaseController {
 			'contact1_relation' => $contact1_relation,
 			'contact2_name' => $contact2_name,
 			'contact2_phone' => $contact2_phone,
-			'contact2_relation' => $contact2_relation,
+			'contact2_relation' => $contact2_relation
 			);
 		$faculty = array(
 			'faculty1' => $faculty1,
@@ -136,7 +136,7 @@ class RegisterController extends BaseController {
 			'religion' => 'required', 
 			'national_id' => 'required|national_id',
 			'email' => 'required|email',
-			'address' => 'required|numeric',
+			'address' => 'required|address',
 			'road' => 'thai',
 			'moo' => 'numeric',
 			'zip_code' => 'required|numeric|digits:5',
@@ -172,7 +172,7 @@ class RegisterController extends BaseController {
 			'email.required' => 'กรุณากรอกอีเมล์',
 			'email.email' => 'รูปแบบการกรอกอีเมล์ไม่ถูกต้อง',
 			'address.required' => 'กรุณากรอกย้านเลขที่',
-			'address.numeric' => 'รูปแบบการกรอกบ้านเลขที่ไม่ถูกต้อง',
+			'address.address' => 'รูปแบบการกรอกบ้านเลขที่ไม่ถูกต้อง',
 			'road.required' => 'กรุณากรอกถนน',
 			'road.thai' => 'กรุณากรอกถนนเป็นภาษาไทย',
 			'moo.numeric' => 'กรุณากรอกหมู่เป็นตัวเลข',
@@ -189,17 +189,17 @@ class RegisterController extends BaseController {
 			'method_arrive.thai' => 'กรุณากรอกวิธีการเดินทางมาเป็นภาษาไทย',
 			'method_depart.required' => 'กรุณากรอกวิธีการเดินทางกลับ',
 			'method_depart.thai' => 'กรุณากรอกวิธีการเดินทางกลับเป็นภาษาไทย',
-			'contact1_name.requierd' => 'กรุณาใส่ชื่อผู้ติดต่อ 1',
+			'contact1_name.required' => 'กรุณาใส่ชื่อผู้ติดต่อ 1',
 			'contact1_name.thai' => 'กรุณาใส่ชื่อผู้ติดต่อ 1 เป็นภาษาไทย',
-			'contact1_phone.requierd' => 'กรุณาใส่เบอร์ผู้ติดต่อ 1',
+			'contact1_phone.required' => 'กรุณาใส่เบอร์ผู้ติดต่อ 1',
 			'contact1_phone.numeric' => 'รูปแบบเบอร์ผู้ติดต่อ 1 ไม่ถูกต้อง',
-			'contact1_relation.requierd' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 1',
+			'contact1_relation.required' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 1',
 			'contact1_relation.thai' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 1 เป็นภาษาไทย',
-			'contact2_name.requierd' => 'กรุณาใส่ชื่อผู้ติดต่อ 2',
+			'contact2_name.required' => 'กรุณาใส่ชื่อผู้ติดต่อ 2',
 			'contact2_name.thai' => 'กรุณาใส่ชื่อผู้ติดต่อ 2 เป็นภาษาไทย',
-			'contact2_phone.requierd' => 'กรุณาใส่เบอร์ผู้ติดต่อ 2',
+			'contact2_phone.required' => 'กรุณาใส่เบอร์ผู้ติดต่อ 2',
 			'contact2_phone.numeric' => 'รูปแบบเบอร์ผู้ติดต่อ 2 ไม่ถูกต้อง',
-			'contact2_relation.requierd' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 2',
+			'contact2_relation.required' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 2',
 			'contact2_relation.thai' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 2 เป็นภาษาไทย',
 			'faculty1.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 1',
 			'faculty1.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 1เป็นภาษาไทย',
@@ -245,7 +245,7 @@ class RegisterController extends BaseController {
 		//Check if any failure ? then show the messages to user.
 		if($validator->fails()) {
 			//This only the example of how to things work. REALLY!!!!
-			//return Redirect::to('reg')->withErrors($validator);
+			return Redirect::to('reg')->withErrors($validator);
 		}
 
 		
