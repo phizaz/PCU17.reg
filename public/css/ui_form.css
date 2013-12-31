@@ -51,10 +51,13 @@ a {
 }
 
 .error{
-	font-family: 'thaisans_bold';
-	background-color: #f69595;
+	font-family: 'thaisans';
+	background-color: rgb(255,0,109);
 	width: 430px;
-	border-top: 5px solid #ff0000;
+	font-size: 13px;
+	font-family: 'thaisans_bold';
+	font-weight: 800;
+	color: rgb(255,255,255);
 	border-radius: 5px;
 	padding: 10px;
 	margin-left: 20px;
