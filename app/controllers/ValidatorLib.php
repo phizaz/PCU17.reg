@@ -4,7 +4,7 @@ class ValidatorLib extends BaseController {
 	public function isThai($attr, $val, $params) {
 		//Write code here to check if $val contains only Thai alphabets.
 		$val = iconv(  'UTF-8','TIS-620', $val);
-		if(preg_match("/^[ก-๙]+$/",$val)){ 
+		if(preg_match("/^[[\xA1-\xF9]+$/",$val)){ 
 		 return true;
 		} else {
 		 return false;

@@ -51,6 +51,7 @@ a {
 }
 
 .error{
+	font-family: 'thaisans_bold';
 	background-color: #f69595;
 	width: 430px;
 	border-top: 5px solid #ff0000;
