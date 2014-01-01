@@ -60,5 +60,39 @@ hr#separator-line {
 }
 
 #box-return {
-	font-size: 100%; margin-top: 5px; text-align: center; color: rgb(230,230,230);
+	margin: 0px;
+	font-size: 100%; text-align: center; color: rgb(230,230,230);
+}
+
+#section-return input {
+	margin: 0px; 
+	padding: 0px 10px 0px 10px; 
+	border-radius: 4px 0px 0px 4px; 
+	border-width: 1px 0px 0px 0px;
+	border-color: rgb(44,44,44) transparent transparent transparent;
+	border-style: solid;
+	outline: none;
+	color: rgb(0,0,0);
+	background: rgb(255,255,255);
+	font-family: 'thaisans'; 
+	width: 220px;
+	font-size: 25px;
+	text-align: center;
+	box-shadow: inset 0px 3px 5px 0px rgba(0,0,0,0.4);
+}
+
+#section-return button {
+	margin: 0px 0px 0px 0px;
+	padding: 10px;
+	outline: none;
+	border-radius: 0px 4px 4px 0px;
+	border-width: 1px 0px 0px 0px;
+	border-color: rgb(44,44,44) transparent transparent transparent;
+	border-style: solid;
+	color: rgb(255,255,255);
+	background: rgb(255,0,150);
+	font-family: 'thaisans_bold';
+	font-weight: 800;
+	font-size: 20px;
+	height: 48px;
 }
