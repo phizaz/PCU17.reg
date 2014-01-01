@@ -3,7 +3,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class PrintController extends BaseController {
 	public function getReturn() {
-		return View::make('returnForm');
+		return Redirect::to(URL::to('') . '/#return');
 	}
 
 	public function postReturn() {
@@ -14,7 +14,7 @@ class PrintController extends BaseController {
 			return Redirect::intended('print');
 		} catch (ModelNotFoundException $e) {
 			Session::flash('fail', true);
-			return Redirect::to('print/return');
+			return Redirect::to(URL::to('') . '/#return');
 		}
 	}
 

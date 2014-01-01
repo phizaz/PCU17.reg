@@ -7,9 +7,12 @@ class CoverController extends BaseController{
 		Auth::logout();
 		Session::forget('credential');
 		Session::put('agree', true);
+		if(Session::has('fail')) $fail = true;
+		else $fail = false;
 
 		$url = URL::to('');
 		return View::make('cover', array(
-			'url' => $url));
+			'url' => $url,
+			'fail' => $fail));
 	}
 }

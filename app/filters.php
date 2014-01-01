@@ -54,7 +54,7 @@ Route::filter('credential', function() {
 
 Route::filter('auth', function()
 {
-	if (Auth::guest()) return Redirect::guest('print/return');
+	if (Auth::guest()) return Redirect::guest(URL::to('') . '/#return');
 });
 
 //Auto pass those authenticated to the place.
