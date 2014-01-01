@@ -17,16 +17,7 @@
 		}
 		?>
 	};
-	var faculty = {
-		<?php 
-		$first = true;
-		foreach ($faculty as $key => $val) {
-			if($first) $first = false;
-			else echo ',';
-			echo "'". $key . "'" . ':' . "'" . $val . "'";
-		}
-		?>
-	};
+	
 	</script>
 	<script src="<?=$url?>/js/script.js"></script>
 	<title>
@@ -369,10 +360,6 @@
 	<script>
 	$.each(credential, function (key, val) {
 		$('#' + key).val(val);
-	})
-
-	$.each(faculty, function (key, val){
-		$('#'+key).val(val);
 	})
 	</script>
 </body>

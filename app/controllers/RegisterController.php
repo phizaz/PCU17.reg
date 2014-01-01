@@ -108,17 +108,14 @@ class RegisterController extends BaseController {
 			'contact1_relation' => $contact1_relation,
 			'contact2_name' => $contact2_name,
 			'contact2_phone' => $contact2_phone,
-			'contact2_relation' => $contact2_relation
-			);
-		$faculty = array(
+			'contact2_relation' => $contact2_relation,
 			'faculty1' => $faculty1,
 			'faculty2' => $faculty2,
 			'faculty3' => $faculty3,
-			'faculty4' => $faculty4);
-
+			'faculty4' => $faculty4
+			);
 		//Keeps in session.
 		Session::put('credential', $credential);
-		Session::put('faculty', $faculty);
 
 		//Hand-made validation rules defined in ValidatorLib in controller folder.
 		Validator::extend('thai', 'ValidatorLib@isThai');
@@ -305,12 +302,11 @@ class RegisterController extends BaseController {
 		$candidate = new Candidate($credential);		
 		$candidate->save();
 
-		$faculty = Session::get('faculty');
 		$cand_id = DB::table('candidate')->select('id')->where('national_id','=',$credential['national_id'])->get();
-		DB::insert('insert into faculty(cand_id, faculty, ranking) values (?, ?, ?)', array($cand_id[0]->id, $faculty['faculty1'],1));
-		DB::insert('insert into faculty(cand_id, faculty, ranking) values (?, ?, ?)', array($cand_id[0]->id, $faculty['faculty2'],2));
-		DB::insert('insert into faculty(cand_id, faculty, ranking) values (?, ?, ?)', array($cand_id[0]->id, $faculty['faculty3'],3));
-		DB::insert('insert into faculty(cand_id, faculty, ranking) values (?, ?, ?)', array($cand_id[0]->id, $faculty['faculty4'],4));
+		DB::insert('insert into faculty(cand_id, faculty, ranking) values (?, ?, ?)', array($cand_id[0]->id, $credential['faculty1'],1));
+		DB::insert('insert into faculty(cand_id, faculty, ranking) values (?, ?, ?)', array($cand_id[0]->id, $credential['faculty2'],2));
+		DB::insert('insert into faculty(cand_id, faculty, ranking) values (?, ?, ?)', array($cand_id[0]->id, $credential['faculty3'],3));
+		DB::insert('insert into faculty(cand_id, faculty, ranking) values (?, ?, ?)', array($cand_id[0]->id, $credential['faculty4'],4));
 
 		Auth::login($candidate);
 		return Redirect::to('print');
@@ -319,7 +315,6 @@ class RegisterController extends BaseController {
 	//just for debugging.
 	public function anyClear() {
 		Session::forget('credential');
-		Session::forget('faculty');
 		return 'cleared';
 	}
 }

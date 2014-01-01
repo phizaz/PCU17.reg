@@ -10,7 +10,7 @@ class Candidate extends Eloquent implements UserInterface{
 	 * @var string
 	 */
 	protected $table = 'candidate';
-	protected $guarded = array('day', 'month', 'year');
+	protected $guarded = array('day', 'month', 'year', 'faculty1', 'faculty2', 'faculty3', 'faculty4');
 
 	/**
 	 * Get the unique identifier for the user.
