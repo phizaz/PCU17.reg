@@ -129,6 +129,43 @@ select.input-text {
 	color: rgb(255,255,255);
 }
 
+.show-text {
+	margin: 0px 0px 10px 0px;
+	font-size: 15px;
+	font-family: 'thaisans_light' ,Helvetica,Arial,sans-serif;
+	font-weight: 100;
+	outline: none;
+	border: 0px;
+	/*border-top:5px solid rgb(230,230,230);
+	background: rgb(200,200,200);
+	color: rgb(255,255,255);
+	*/
+	/*border-radius: 5px;*/
+	border-bottom: 5px solid rgb(230,230,230);
+	/*background: rgb(240,240,240);*/
+	color: rgb(33,33,33);
+	padding: 8px 10px 0px 10px;
+	line-height: 22px;
+	height: 22px;
+	width: 140px;
+}
+select.show-text {
+	padding: 0px 10px 0px 10px;
+	height: 43px;
+}
+
+
+.show-pink {
+	border-bottom: 5px solid rgb(255,25,173);
+	/*background: rgb(255,25,173);*/
+	color: rgb(33,33,33);
+}
+.show-blue {
+	border-bottom: 5px solid rgb(60,83,154);
+	/*background: rgb(60,83,154);*/
+	color: rgb(255,255,255);
+}
+
 .group {
 	border-radius: 5px;
 	padding: 10px 20px 10px 20px; 
