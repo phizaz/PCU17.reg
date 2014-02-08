@@ -181,3 +181,32 @@ select.show-text {
 .just-last {
 	margin-right: 0px !important;
 }
+
+.big-button{
+	float: left;
+	height: 200px;
+	width: 200px;
+	background: rgb(240,240,240);
+	font-family: 'thaisans_bold';
+	vertical-align: center;
+	border: 5px solid rgb(200,200,200);
+    border-radius: 5px;
+    margin: 20px;
+    margin-left: 0px;
+}
+
+.big-button a{
+	width: 50%;
+    margin: 0 auto;
+}
+
+.big-button a img{
+	margin-top: 10px;
+	margin-left: 20px;
+	height: 150px;
+	width: 150px;
+}
+
+.big-button a div{
+	margin-left: 55px;
+}

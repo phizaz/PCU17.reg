@@ -20,7 +20,7 @@ class PrintController extends BaseController {
 
 	public function getIndex() {
 		return View::make('print', array(
-			'credential' => Auth::user(), 'faculty' => Session::get('faculty')));
+			'credential' => Auth::user(), 'faculty' => Session::get('faculty'), 'url' => URL::to('')));
 	}
 
 	private function p($text){
