@@ -40,6 +40,10 @@ h4 {
 	margin: 5px 0px 0px 2px;
 }
 
+p {
+	font-family: 'thaisans';
+}
+
 select{
 	-webkit-appearance: none;
     -moz-appearance: none;
@@ -209,4 +213,19 @@ select.show-text {
 
 .big-button a div{
 	margin-left: 55px;
+}
+
+.add-box{
+	float: left;
+	height: 200px;
+	width: 390px;
+	background: rgb(240,240,240);
+	font-family: 'thaisans_bold';
+	vertical-align: center;
+	border: 5px solid rgb(200,200,200);
+    border-radius: 5px;
+    margin: 10px;
+    padding-left: 40px;
+    padding-top: 40px;
+    font-size: 150%;
 }
