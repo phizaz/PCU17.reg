@@ -87,23 +87,24 @@
         
         <div class="prefix_12 grid_12">
             <div class="register">
+                <div style="height:50px"></div>
                 <form id="register" action="" method="POST">                    
                     <div style="padding-left: 20px;">
                         <div class="just-left">
                             <h4>คำนำหน้า</h4>
-                            <div id="name_prefix" name="name_prefix" type="text" class="input-text" style="width: 70px;">
+                            <div id="name_prefix" name="name_prefix" type="text" class="show-text" style="width: 70px;">
                                 <?php echo $name_prefix; ?>
                             </div>
                         </div>
                         <div class="just-left">
                             <h4>ชื่อ</h4>
-                            <div id="name_first" name="name_first" class="input-text" type="text">
+                            <div id="name_first" name="name_first" class="show-text" type="text">
                                 <?php echo $name_first; ?>
                             </div>
                         </div>
                         <div class="just-left just-last">
                             <h4>สกุล</h4>
-                            <div id="name_last" name="name_last" class="input-text" type="text">
+                            <div id="name_last" name="name_last" class="show-text" type="text">
                                 <?php echo $name_last; ?>
                             </div>
                         </div>
@@ -111,19 +112,19 @@
 
                         <div class="just-left">
                             <h4>ชื่อเล่น</h4>
-                            <div id="nickname" name="nickname" class="input-text" type="text" style="width: 80px">
+                            <div id="nickname" name="nickname" class="show-text" type="text" style="width: 80px">
                                 <?php echo $nickname; ?>
                             </div>
                         </div>
                         <div class="just-left">
                             <h4>ศาสนา</h4>
-                            <div id="religion" name="religion" class="input-text" type="text" style="width: 80px">
+                            <div id="religion" name="religion" class="show-text" type="text" style="width: 80px">
                                 <?php echo $religion; ?>
                             </div>
                         </div>
                         <div class="just-left just-last">
                             <h4>เลขประจำตัวประชาชนไทย</h4>
-                            <div id="national_id" name="national_id" class="input-text" type="text" style="width: 190px">
+                            <div id="national_id" name="national_id" class="show-text" type="text" style="width: 190px">
                                 <?php echo $national_id ?>
                             </div>
                         </div>
@@ -134,19 +135,19 @@
                         <div class="group group-pink">
                             <div class="just-left">
                                 <h4 class="pink">วันเกิด</h4>
-                                <div id="day" name="day" tabindex="1" class="input-text input-pink" style="width: 80px;">
+                                <div id="day" name="day" tabindex="1" class="show-text show-pink" style="width: 50px;">
                                     <?php echo $day; ?>
                                 </div>
                             </div>
                             <div class="just-left">
                                 <h4 class="pink">เดือนเกิด</h4>
-                                <div id="month" name="month" tabindex="2" class="input-text input-pink" style="width: 190px;">
+                                <div id="month" name="month" tabindex="2" class="show-text show-pink" style="width: 190px;">
                                     <?php echo $month; ?>
                                 </div>
                             </div>
                             <div class="just-left just-last">
                                 <h4 class="pink">ปีเกิด</h4>
-                                <div id="year" name="year" tabindex="3" class="input-text input-pink" style="width: 100px">
+                                <div id="year" name="year" tabindex="3" class="show-text show-pink" style="width: 70px">
                                     <?php echo $year; ?>             
                                 </div>
                             </div>
@@ -156,46 +157,50 @@
 
                         <div class="just-left">
                             <h4>Facebook</h4>
-                            <div id="facebook" name="facebook" class="input-text input-blue" type="text" style="width: 195px">
+                            <div id="facebook" name="facebook" class="show-text show-blue" type="text" style="width: 195px">
                                 <?php echo $facebook; ?>
                             </div>
                         </div>
                         <div class="just-left just-last">
                             <h4>Email</h4>
-                            <div id="email" name="email" class="input-text" type="text" style="width: 195px">
+                            <div id="email" name="email" class="show-text" type="text" style="width: 195px">
                                 <?php echo $email; ?> 
                             </div>
                         </div>
 
                         <div class="just-left">
                             <h4>หมู่เลือด</h4>
-                            <div id="blood_group" name="blood_group"class="input-text" style="width: 70px">
+                            <div id="blood_group" name="blood_group"class="show-text" style="width: 70px">
                                 <?php echo $blood_group; ?>                        
                             </div>
                         </div>
                         <div class="just-left">
                             <h4>ขนาดเสื้อ</h4>
-                            <!-- <input name="shirt_size" class="input-text" type="text" style="width: 80px"> -->
-                            <div id="shirt_size" name="shirt_size"class="input-text" style="width: 70px">
-                                <?php echo $shirt_size; ?>                         
+                            <!-- <show name="shirt_size" class="show-text" type="text" style="width: 80px"> -->
+                            <div id="shirt_size" name="shirt_size"class="show-text" style="width: 70px">
+                                <?php   if($shirt_size == 0) echo "S";
+                                        else if($shirt_size == 1) echo "M";
+                                        else if($shirt_size == 2) echo "L";
+                                        else if($shirt_size == 3) echo "XL";
+                                        else if($shirt_size == 4) echo "XXL";?>                         
                             </div>
                         </div>
                         <div class="just-left just-last">
                             <h4>อาหารที่แพ้</h4>
-                            <div id="food_allergies" name="food_allergies" class="input-text" type="text" style="width: 250px">
+                            <div id="food_allergies" name="food_allergies" class="show-text" type="text" style="width: 210px">
                                 <?php echo $food_allergies; ?>
                             </div>
                         </div>          
                         <div style="clear:both;"></div>
                         <div class="just-left">
                             <h4>แพ้ยา</h4>
-                            <div id="drug" name="drug" class="input-text" type="text" style="width: 195px">
+                            <div id="drug" name="drug" class="show-text" type="text" style="width: 195px">
                                 <?php echo $drug; ?>
                             </div>
                         </div>
                         <div class="just-left just-last">
                             <h4>โรคประจำตัว</h4>
-                            <div id="disease" name="disease" class="input-text" type="text" style="width: 195px">
+                            <div id="disease" name="disease" class="show-text" type="text" style="width: 195px">
                                 <?php echo $disease; ?>
                             </div>
                         </div>
@@ -205,27 +210,27 @@
                         <div class="group group-pink">
                             <div class="just-left">
                                 <h4 class="pink">บ้านเลขที่</h4>
-                                <div id="address" name="address" type="text" class="input-text input-pink" style="width: 70px">
+                                <div id="address" name="address" type="text" class="show-text show-pink" style="width: 70px">
                                     <?php echo $address; ?>
                                 </div>
                             </div>
                             <div class="just-left">
                                 <h4 class="pink">ถนน</h4>
-                                <div id="road" name="road" type="text" class="input-text input-pink" style="width: 180px">
+                                <div id="road" name="road" type="text" class="show-text show-pink" style="width: 180px">
                                     <?php echo $road; ?>
                                 </div>
                             </div>
                             <div class="just-left just-last">
                                 <h4 class="pink">หมู่</h4>
-                                <div id="moo" name="moo" type="text" class="input-text input-pink" style="width: 60px">
+                                <div id="moo" name="moo" type="text" class="show-text show-pink" style="width: 60px">
                                     <?php echo $moo; ?>
                                 </div>
                             </div>
 
                             <div class="just-left">
                                 <h4 class="pink">จังหวัด</h4>
-                                <!-- <input name="province" type="text" class="input-text input-pink" style="width: 120px"> -->
-                                <div id="province" name="province" id="province" class="input-text input-pink" style="width: 195px">
+                                <!-- <show name="province" type="text" class="show-text show-pink" style="width: 120px"> -->
+                                <div id="province" name="province" id="province" class="show-text show-pink" style="width: 175px">
                                     <?php 
                                         $temp = DB::select("select PROVINCE_NAME from province where PROVINCE_ID = ".$province);
                                         echo $temp[0]->PROVINCE_NAME;
@@ -234,8 +239,8 @@
                             </div>
                             <div class="just-left just-last">
                                 <h4 class="pink">อำเภอ</h4>
-                                <!-- <input name="amphur" type="text" class="input-text input-pink" style="width: 120px"> -->
-                                <div id="amphur" name="amphur" id="amphur" class="input-text input-pink" style="width: 195px">
+                                <!-- <show name="amphur" type="text" class="show-text show-pink" style="width: 120px"> -->
+                                <div id="amphur" name="amphur" id="amphur" class="show-text show-pink" style="width: 175px">
                                     <?php 
                                         $temp = DB::select("select AMPHUR_NAME from amphur where AMPHUR_ID = ".$amphur);
                                         echo $temp[0]->AMPHUR_NAME;
@@ -244,8 +249,8 @@
                             </div>
                             <div class="just-left">
                                 <h4 class="pink">ตำบล</h4>
-                                <!-- <input name="tambol" type="text" class="input-text input-pink" style="width: 120px"> -->
-                                <div id="tambol" name="tambol" id="tambol" class="input-text input-pink" style="width: 195px">
+                                <!-- <show name="tambol" type="text" class="show-text show-pink" style="width: 120px"> -->
+                                <div id="tambol" name="tambol" id="tambol" class="show-text show-pink" style="width: 175px">
                                     <?php 
                                         $temp = DB::select("select DISTRICT_NAME from district where DISTRICT_ID = ".$tambol);
                                         echo $temp[0]->DISTRICT_NAME;
@@ -254,7 +259,7 @@
                             </div>
                             <div class="just-left just-last">
                                 <h4 class="pink">รหัสไปรษณีย์</h4>
-                                <div id="zip_code" name="zip_code" type="text" class="input-text input-pink" style="width: 175px">                                
+                                <div id="zip_code" name="zip_code" type="text" class="show-text show-pink" style="width: 175px">                                
                                     <?php echo $zip_code; ?>
                                 </div>
                             </div>
@@ -265,19 +270,19 @@
                         <!-- End address group -->
                         <div class="just-left">
                             <h4>โทรศัพท์บ้าน</h4>
-                            <div id="phone_home" name="phone_home" class="input-text" type="text" style="width: 100px">                
+                            <div id="phone_home" name="phone_home" class="show-text" type="text" style="width: 100px">                
                                 <?php echo $phone_home; ?>
                             </div>
                         </div>
                         <div class="just-left">
                             <h4>โทรศัพท์มือถือ</h4>
-                            <div id="phone_mobile" name="phone_mobile" class="input-text" type="text" style="width: 100px">                
+                            <div id="phone_mobile" name="phone_mobile" class="show-text" type="text" style="width: 100px">                
                                 <?php echo $phone_mobile; ?>
                             </div>
                         </div>
                         <div class="just-left just-last">
                             <h4>รายได้ผู้ปกครองต่อเดือน</h4>
-                            <div id="parent_income" name="parent_income"class="input-text" style="width: 170px">
+                            <div id="parent_income" name="parent_income"class="show-text" style="width: 150px">
                                 <?php 
                                 if($parent_income==0) echo "น้อยกว่า 10,000";
                                 else if($parent_income==1) echo "10,000 - 19,999";
@@ -294,13 +299,13 @@
                         <div class="group group-pink">
                             <div class="just-left">
                                 <h4 class="pink">โรงเรียน</h4>
-                                <div id="school_name" name="school_name" type="text" class="input-text input-pink" style="width: 230px">
+                                <div id="school_name" name="school_name" type="text" class="show-text show-pink" style="width: 230px">
                                     <?php echo $school_name; ?>
                                 </div>
                             </div>
                             <div class="just-left just-last">
                                 <h4 class="pink">จังหวัด</h4>
-                                <div id="school_province" name="school_province" id="school_province" class="input-text input-pink" style="width: 140px">
+                                <div id="school_province" name="school_province" id="school_province" class="show-text show-pink" style="width: 120px">
                                      <?php 
                                         $temp = DB::select("select PROVINCE_NAME from province where PROVINCE_ID = ".$school_province);
                                         echo $temp[0]->PROVINCE_NAME;
@@ -309,7 +314,7 @@
                             </div>
                             <div class="just-left">
                                 <h4 class="pink">อำเภอ</h4>
-                                <div id="school_amphur" name="school_amphur" id="school_amphur" class="input-text input-pink" style="width: 140px">
+                                <div id="school_amphur" name="school_amphur" id="school_amphur" class="show-text show-pink" style="width: 103.333px">
                                     <?php 
                                         $temp = DB::select("select AMPHUR_NAME from amphur where AMPHUR_ID = ".$school_amphur);
                                         echo $temp[0]->AMPHUR_NAME;
@@ -318,18 +323,18 @@
                             </div>
                             <div class="just-left">
                                 <h4 class="pink">ชั้น</h4>
-                                <!-- <input name="address" type="text" class="input-text input-pink" style="width: 80px"> -->
-                                <select id="school_level" name="school_level"class="input-text input-pink" style="width: 90px">
-                                    <?php  
-                                        if($school_level==4) echo "ม.4";  
-                                        else if($school_level==5) echo "ม.5";      
-                                    ?>                    
-                                </select>
+                                <!-- <show name="address" type="text" class="show-text show-pink" style="width: 80px"> -->
+                                <div id="school_level" name="school_level" id="school_level" class="show-text show-pink" style="width: 103.333px">
+                                    <?php 
+                                        if($school_level==4) echo "ม.4";
+                                        else if($school_level==5) echo "ม.5";
+                                    ?>
+                                </div> 
                             </div>
                             <div class="just-left just-last">
                                 <h4 class="pink">หลักสูตรการศึกษา</h4>
-                                <!-- <input name="road" type="text" class="input-text input-pink" style="width: 200px"> -->
-                                <div id="school_plan" name="school_plan"class="input-text input-pink" style="width: 140px">
+                                <!-- <show name="road" type="text" class="show-text show-pink" style="width: 200px"> -->
+                                <div id="school_plan" name="school_plan"class="show-text show-pink" style="width: 103.333px">
                                     <?php 
                                         if($school_plan==0) echo "วิทย์-คณิต";
                                         else if($school_plan==1) echo "ศิลป์-คำนวณ";
@@ -344,13 +349,13 @@
                         <!-- End School Details group -->
                         <div class="just-left just-last">
                             <h4>วิธีการเดินทางมา</h4>
-                            <div id="method_arrive" name="method_arrive" class="input-text" type="text" style="width: 430px">   
+                            <div id="method_arrive" name="method_arrive" class="show-text" type="text" style="width: 430px">   
                                 <?php echo $method_arrive; ?>             
                             </div>
                         </div>
                         <div class="just-left just-last">
                             <h4>วิธีการเดินทางกลับ</h4>
-                            <div id="method_depart" name="method_depart" class="input-text" type="text" style="width: 430px">                
+                            <div id="method_depart" name="method_depart" class="show-text" type="text" style="width: 430px">                
                                 <?php echo $method_depart; ?>
                             </div>
                         </div>
@@ -359,19 +364,19 @@
                         <h2 class="grey">เบอร์ติดต่อกรณีฉุกเฉิน</h2>
                         <div class="just-left">
                             <h4>ชื่อผู้ติดต่อ ท่านแรก</h4>
-                            <div id="contact1_name" name="contact1_name" type="text" class="input-text" style="width: 190px">
+                            <div id="contact1_name" name="contact1_name" type="text" class="show-text" style="width: 190px">
                                 <?php echo $contact1_name; ?>
                             </div>
                         </div>
                         <div class="just-left">
                             <h4>เบอร์โทรศัพท์</h4>
-                            <div id="contact1_phone" name="contact1_phone" class="input-text" style="width: 100px">
+                            <div id="contact1_phone" name="contact1_phone" class="show-text" style="width: 100px">
                                 <?php echo $contact1_phone; ?>
                             </div>
                         </div>
                         <div class="just-left just-last">
                             <h4>เป็น</h4>
-                            <div id="contact1_relation" name="contact1_relation" class="input-text" style="width: 60px">
+                            <div id="contact1_relation" name="contact1_relation" class="show-text" style="width: 60px">
                                 <?php echo $contact1_relation; ?>
                             </div>
                         </div>
@@ -379,19 +384,19 @@
 
                         <div class="just-left">
                             <h4>ชื่อผู้ติดต่อ ท่านที่สอง</h4>
-                            <div id="contact2_name" name="contact2_name" type="text" class="input-text" style="width: 190px">
+                            <div id="contact2_name" name="contact2_name" type="text" class="show-text" style="width: 190px">
                                 <?php echo $contact2_name; ?>
                             </div>
                         </div>
                         <div class="just-left">
                             <h4>เบอร์โทรศัพท์</h4>
-                            <div id="contact2_phone" name="contact2_phone" class="input-text" style="width: 100px">
+                            <div id="contact2_phone" name="contact2_phone" class="show-text" style="width: 100px">
                                 <?php echo $contact2_phone; ?>
                             </div>
                         </div>
                         <div class="just-left just-last">
                             <h4>เป็น</h4>
-                            <div id="contact2_relation" name="contact2_relation" class="input-text" style="width: 60px">
+                            <div id="contact2_relation" name="contact2_relation" class="show-text" style="width: 60px">
                                 <?php echo $contact2_relation; ?>
                             </div>
                             
@@ -400,25 +405,25 @@
                         <h2 class="grey">คณะที่สนใจศึกษาต่อในระดับมหาวิทยาลัย</h2>
                         <div class="just-left">
                             <h4>สนใจเป็นอันดับแรก</h4>
-                            <div id="faculty1" name="faculty1" class="input-text" type="text" style="width: 195px">                
+                            <div id="faculty1" name="faculty1" class="show-text" type="text" style="width: 195px">                
                                 <?php echo $faculty1; ?>
                             </div>
                         </div>
                         <div class="just-left just-last">
                             <h4>สนใจเป็นอันดับสอง</h4>
-                            <div id="faculty2" name="faculty2" class="input-text" type="text" style="width: 195px">                
+                            <div id="faculty2" name="faculty2" class="show-text" type="text" style="width: 195px">                
                                 <?php echo $faculty2; ?>
                             </div>
                         </div>
                         <div class="just-left">
                             <h4>สนใจเป็นอันดับสาม</h4>
-                            <div id="faculty3" name="faculty3" class="input-text" type="text" style="width: 195px">  
+                            <div id="faculty3" name="faculty3" class="show-text" type="text" style="width: 195px">  
                                 <?php echo $faculty3; ?>
                             </div>              
                         </div>
                         <div class="just-left just-last">
                             <h4>สนใจเป็นอันดับสี่</h4>
-                            <div id="faculty4" name="faculty4" class="input-text" type="text" style="width: 195px">                
+                            <div id="faculty4" name="faculty4" class="show-text" type="text" style="width: 195px">                
                                 <?php echo $faculty4; ?>
                             </div>
                         </div>
@@ -427,7 +432,7 @@
                         <h2 class="grey">ส่วนวิชาการ</h2>
                         <div class="just-left">
                             <h4>คอร์สที่ต้องการเรียน</h4>
-                            <div id="course" name="course" class="input-text" style="width: 215px">
+                            <div id="course" name="course" class="show-text" style="width: 215px">
                                 <?php 
                                 if($course==0) echo "วิทย์ ม.4 ขึ้น ม.5";
                                 else if($course==1) echo "วิทย์ ม.5 ขึ้น ม.6";
@@ -449,7 +454,7 @@
         </div>
     </div>
     <div style="height: 25px;"></div>
-    <div style="background:rgb(240,240,240);">
+    <div style="background:rgb(240,240,240); z-index:100; position:relative">
         <div class="container_24" style="padding: 20px 0px 20px 0px;">
             <div class="grid_12" align="left">
                 <h4 style="font-size: 13px; color: rgb(100,100,100);">เว็บไซต์อย่างเป็นทางการของค่ายพี่จุฬา ฯ ครั้งที่ 17</h4>

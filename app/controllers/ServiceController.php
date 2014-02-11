@@ -25,4 +25,5 @@ class ServiceController extends BaseController {
 		return json_encode($tambols);
 	}
 }
- ?>
+
+?>

@@ -346,7 +346,7 @@
 		</div>
 	</div>
 	<div style="height: 25px;"></div>
-	<div style="background:rgb(240,240,240);">
+	<div style="background:rgb(240,240,240); z-index:100; position:relative;">
 		<div class="container_24" style="padding: 20px 0px 20px 0px;">
 			<div class="grid_12" align="left">
 				<h4 style="font-size: 13px; color: rgb(100,100,100);">เว็บไซต์อย่างเป็นทางการของค่ายพี่จุฬา ฯ ครั้งที่ 17</h4>

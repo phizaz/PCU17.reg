@@ -40,6 +40,10 @@ h4 {
 	margin: 5px 0px 0px 2px;
 }
 
+p {
+	font-family: 'thaisans';
+}
+
 select{
 	-webkit-appearance: none;
     -moz-appearance: none;
@@ -129,6 +133,43 @@ select.input-text {
 	color: rgb(255,255,255);
 }
 
+.show-text {
+	margin: 0px 0px 10px 0px;
+	font-size: 15px;
+	font-family: 'thaisans_light' ,Helvetica,Arial,sans-serif;
+	font-weight: 100;
+	outline: none;
+	border: 0px;
+	/*border-top:5px solid rgb(230,230,230);
+	background: rgb(200,200,200);
+	color: rgb(255,255,255);
+	*/
+	/*border-radius: 5px;*/
+	border-bottom: 5px solid rgb(230,230,230);
+	/*background: rgb(240,240,240);*/
+	color: rgb(33,33,33);
+	padding: 8px 10px 0px 10px;
+	line-height: 22px;
+	height: 22px;
+	width: 140px;
+}
+select.show-text {
+	padding: 0px 10px 0px 10px;
+	height: 43px;
+}
+
+
+.show-pink {
+	border-bottom: 5px solid rgb(255,25,173);
+	/*background: rgb(255,25,173);*/
+	color: rgb(33,33,33);
+}
+.show-blue {
+	border-bottom: 5px solid rgb(60,83,154);
+	/*background: rgb(60,83,154);*/
+	color: rgb(255,255,255);
+}
+
 .group {
 	border-radius: 5px;
 	padding: 10px 20px 10px 20px; 
@@ -143,4 +184,48 @@ select.input-text {
 }
 .just-last {
 	margin-right: 0px !important;
+}
+
+.big-button{
+	float: left;
+	height: 200px;
+	width: 200px;
+	background: rgb(240,240,240);
+	font-family: 'thaisans_bold';
+	vertical-align: center;
+	border: 5px solid rgb(200,200,200);
+    border-radius: 5px;
+    margin: 20px;
+    margin-left: 0px;
+}
+
+.big-button a{
+	width: 50%;
+    margin: 0 auto;
+}
+
+.big-button a img{
+	margin-top: 10px;
+	margin-left: 20px;
+	height: 150px;
+	width: 150px;
+}
+
+.big-button a div{
+	margin-left: 55px;
+}
+
+.add-box{
+	float: left;
+	height: 200px;
+	width: 390px;
+	background: rgb(240,240,240);
+	font-family: 'thaisans_bold';
+	vertical-align: center;
+	border: 5px solid rgb(200,200,200);
+    border-radius: 5px;
+    margin: 10px;
+    padding-left: 40px;
+    padding-top: 40px;
+    font-size: 150%;
 }
