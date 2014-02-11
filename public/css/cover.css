@@ -51,11 +51,11 @@ img {
 	text-shadow: none; font-size: 200%; text-align: center; width: 330px; padding: 7px 0px 7px 0px; margin: auto auto 5px auto; background: rgb(255,0,150); color: rgb(255,255,255); border-radius: 15px;
 }
 
-hr#separator-line {
+hr.separator-line {
 	border-width: 1px 0px 1px 0px; border-style: solid; border-color: rgb(44,44,44) transparent rgb(77,77,77) transparent;
 }
 
-#separator-text {
+.separator-text {
 	position: relative; margin: -35px auto auto auto; width: 60px; background: rgb(55,55,55); color: rgb(120,120,120); font-size: 70%;
 }
 

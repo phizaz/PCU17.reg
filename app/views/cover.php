@@ -24,13 +24,13 @@
 			<li style="font-size: 150%;">เป็นนักเรียน ม.4 หรือ ม.5 ทั่วประเทศ</li>
 			<li style="margin: 8px 0px 8px 0px; font-size: 140%; font-family: 'thaisans';">สามารถเข้าร่วมกิจกรรมได้ตลอดทั้งค่าย<br>วันที่ 14 มีนามคม - 28 เมษายน 2557</li>
 			<li style="font-size: 170%;">ได้รับการอนุญาตจากผู้ปกครอง</li>
-			<li style="margin: 8px 0px 8px 0px; font-size: 230%; font-family: 'thaisans';">ไม่เคยเข้าค่ายนี้นมาก่อน</li>
+			<li style="margin: 8px 0px 8px 0px; font-size: 230%; font-family: 'thaisans';">ไม่เคยเข้าค่ายนี้มาก่อน</li>
 		</ul>
 		<div style="height: 45px;"></div>
 		<a id="nav-reg" href="reg"><h2 id="box-reg">สมัครเลย</h2></a>
 		<div style="height: 20px;"></div>
-		<hr id="separator-line">
-		<h3 id="separator-text">หรือ</h3>
+		<hr class="separator-line">
+		<h3 class="separator-text">หรือ</h3>
 		<div id="section-return" style="margin: 5px 0px 0px 0px;">
 			<a id="return" name="return"></a>
 			<h2 id="box-return">สมัครแล้ว พิมพ์ใบสมัคร</h2>
