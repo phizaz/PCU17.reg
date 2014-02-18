@@ -90,6 +90,7 @@
                 <div style="height:50px"></div>
                 <form id="register" action="" method="POST">                    
                     <div style="padding-left: 20px;">
+                    		<h1 style="color: rgb(66,66,66);">โปรดตรวจสอบความถูกต้อง</h1>
                         <div class="just-left">
                             <h4>คำนำหน้า</h4>
                             <div id="name_prefix" name="name_prefix" type="text" class="show-text" style="width: 70px;">
@@ -444,9 +445,11 @@
                         
 
                         <div style="clear:both;"></div>
-                        <div style="height: 10px"></div>
-                        <div class="just-left">
-                            <a href="reg/confirm" class="input-text">ยืนยัน</a>
+                        <div style="height: 30px"></div>
+                        <div style="text-align: center;">
+                        	<a href="reg" class="btn btn-default">กลับไปแก้ไข</a>
+                        	<span class="btn-separator">หรือ</span>
+                        	<a href="reg/confirm" class="btn btn-success">ยืนยัน</a>
                         </div>
                     </div>
                 </form>

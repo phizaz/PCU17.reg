@@ -37,7 +37,7 @@ h4 {
 	font-family: 'thaisans_bold';
 	font-weight: 800;
 	color: rgb(110,110,110);
-	margin: 5px 0px 0px 2px;
+	margin: 5px 0px 0px 4px;
 }
 
 p {
@@ -145,10 +145,10 @@ select.input-text {
 	color: rgb(255,255,255);
 	*/
 	/*border-radius: 5px;*/
-	border-bottom: 5px solid rgb(230,230,230);
+	border-bottom: 4px solid rgb(245,245,245);
 	/*background: rgb(240,240,240);*/
 	color: rgb(33,33,33);
-	padding: 8px 10px 0px 10px;
+	padding: 8px 10px 2px 5px;
 	line-height: 22px;
 	height: 22px;
 	width: 140px;
@@ -160,14 +160,14 @@ select.show-text {
 
 
 .show-pink {
-	border-bottom: 5px solid rgb(255,25,173);
+	border-bottom: none;
 	/*background: rgb(255,25,173);*/
 	color: rgb(33,33,33);
 }
 .show-blue {
-	border-bottom: 5px solid rgb(60,83,154);
+	
 	/*background: rgb(60,83,154);*/
-	color: rgb(255,255,255);
+	color: rgb(33,33,33);
 }
 
 .group {
@@ -228,4 +228,30 @@ select.show-text {
     padding-left: 40px;
     padding-top: 40px;
     font-size: 150%;
+}
+
+.btn {
+	display: inline-block;
+	padding: 5px 15px 5px 15px;
+	border: 1px solid rgb(200,200,200);
+	font-size: 18px;
+	border-radius: 4px;
+}
+
+.btn-success {
+	border-color: rgb(255,25,173);
+	background: rgb(255,25,173);
+	color: rgb(255,255,255);
+}
+
+.btn-default {
+	border-color: rgb(220,220,220);
+	background: rgb(240,240,240);
+	color: rgb(110,110,110);
+}
+
+.btn-separator {
+	padding: 15px;
+	font-size: 14px;
+	color: rgb(120,120,120);
 }
