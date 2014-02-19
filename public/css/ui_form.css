@@ -54,6 +54,11 @@ a {
 	text-decoration: none;
 }
 
+strong {
+	font-family: 'thaisans_bold';
+	font-weight: 800;
+}
+
 .error{
 	font-family: 'thaisans';
 	background-color: rgb(255,0,109);
@@ -188,31 +193,25 @@ select.show-text {
 
 .big-button{
 	float: left;
-	height: 200px;
-	width: 200px;
+	width: 180px;
 	background: rgb(240,240,240);
 	font-family: 'thaisans_bold';
 	vertical-align: center;
-	border: 5px solid rgb(200,200,200);
-    border-radius: 5px;
-    margin: 20px;
-    margin-left: 0px;
+   margin: 0px 20px 0px 0px;
+   text-align: center;
+   border-radius: 4px;
 }
 
-.big-button a{
-	width: 50%;
-    margin: 0 auto;
+.big-button .btn {
+	margin: 0px;
+	margin-top: 167px;
 }
 
-.big-button a img{
-	margin-top: 10px;
-	margin-left: 20px;
-	height: 150px;
-	width: 150px;
-}
-
-.big-button a div{
-	margin-left: 55px;
+.big-button .img {
+	height: 230px;
+	background-image: url('../img/pdf_icon_s.png');
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .add-box{
@@ -236,6 +235,7 @@ select.show-text {
 	font-weight: 100;
 	padding: 5px 15px 5px 15px;
 	border: 1px solid rgb(200,200,200);
+	color: rgb(150,150,150);
 	font-size: 18px;
 	border-radius: 4px;
 }
@@ -256,4 +256,9 @@ select.show-text {
 	padding: 15px;
 	font-size: 14px;
 	color: rgb(120,120,120);
+}
+
+h1 small {
+	color: rgb(130,130,130);
+	font-size: 70%;
 }
