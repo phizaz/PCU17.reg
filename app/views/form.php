@@ -284,7 +284,7 @@
 							<input id="contact1_phone" name="contact1_phone" class="input-text" style="width: 100px">
 						</div>
 						<div class="just-left just-last">
-							<h4>เป็น</h4>
+							<h4>เกี่ยวเป็น</h4>
 							<input id="contact1_relation" name="contact1_relation" class="input-text" style="width: 60px">
 						</div>
 
@@ -299,7 +299,7 @@
 							
 						</div>
 						<div class="just-left just-last">
-							<h4>เป็น</h4>
+							<h4>เกี่ยวเป็น</h4>
 							<input id="contact2_relation" name="contact2_relation" class="input-text" style="width: 60px">
 							
 						</div>
@@ -336,9 +336,9 @@
 						
 
 						<div style="clear:both;"></div>
-						<div style="height: 10px"></div>
-						<div class="just-left">
-							<button type="submit">ยืนยัน</button>
+						<div style="height: 20px"></div>
+						<div style="text-align: center;">
+							<button type="submit" class="btn btn-success">ไปต่อ</button>
 						</div>
 					</div>
 				</form>
