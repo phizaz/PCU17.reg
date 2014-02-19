@@ -215,6 +215,10 @@ select.show-text {
 	margin-left: 55px;
 }
 
+.details{
+	color: rgb(33,33,33);
+}
+
 .add-box{
 	float: left;
 	height: 200px;
