@@ -31,8 +31,8 @@ App::after(function($request, $response)
 
 Route::filter('online', function () {
 	$now = time();
-	if(Config::get('testing') or 
-		(Config::get('start_time') <= $now and $now <= Config::get('end_time'))) {
+	if(Config::get('app.testing') or 
+		(Config::get('app.start_time') <= $now and $now <= Config::get('app.end_time'))) {
 
 	} else {
 		return Redirect::to('');
