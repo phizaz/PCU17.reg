@@ -204,13 +204,16 @@ $(document).ready(function(){
     });
 
     $('.example-parent').focusin(function() {
-    	$(this).next().slideDown('fast');
     	$(this).css('border-radius', '5px 5px 0 0');
+    	$(this).next().slideDown('fast');
     });
 
     $('.example-parent').focusout(function() {
-    	$(this).next().slideUp('fast');
-    	$(this).css('border-radius', '5px');
+    	var th = $(this);
+    	$(this).next().slideUp('fast').queue(function () {
+    		th.css('border-radius', '5px');
+    		$(this).dequeue();
+    	});
     });
 
 });
