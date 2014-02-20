@@ -1,6 +1,6 @@
 @import "../fonts/stylesheet.css";
 
-html,body {
+html {
 	height: 100%;
 }
 
@@ -12,6 +12,7 @@ body,td,th {
 }
 
 body {
+	min-height: 100%;
 	background: rgb(255,255,255);
 }
 
