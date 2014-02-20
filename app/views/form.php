@@ -82,7 +82,7 @@
 						<div class="just-left just-last">
 							<h4>เลขประจำตัวประชาชนไทย<span class="required"> *</span></h4>
 							<input id="national_id" name="national_id" class="input-text example-parent" type="text" style="width: 190px">
-							<div class="example">กรอก 13หลัก ตัวอย่าง 1234567890123</div>
+							<div class="example">กรอก 13 หลัก ตัวอย่าง 1234567890123</div>
 						</div>
 
 
