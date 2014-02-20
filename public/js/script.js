@@ -72,7 +72,7 @@ $(document).ready(function(){
 			$.each(tambol, function(index, array) {
 				if(array['AMPHUR_ID'] == amphur_def)
 					options[options.length] = new Option(array['DISTRICT_NAME'], array['DISTRICT_ID']);	
-				console.log(array['AMPHUR_ID'] + " " + $("#amphur option:selected").val());		
+				// console.log(array['AMPHUR_ID'] + " " + $("#amphur option:selected").val());		
 			});
 			select.val(tambol_def);
 		});
@@ -169,6 +169,34 @@ $(document).ready(function(){
 		});	
 	});
 
+	//------------------- Input Form Control -----------------------------------
+	$('.required').attr("title", "จำเป็นต้องกรอกข้อมูล");
+	$( document ).tooltip({
+	  track: true,
+	  items: ".required",
+      position: {
+        my: "center bottom-20",
+        at: "center top",
+        using: function( position, feedback ) {
+          $( this ).css( position );
+          $( "<div>" )
+            .addClass( "arrow" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+      }
+    });
+
+    $('.example-parent').focusin(function() {
+    	$(this).next().slideDown('fast');
+    	$(this).css('border-radius', '5px 5px 0 0');
+    });
+
+    $('.example-parent').focusout(function() {
+    	$(this).next().slideUp('fast');
+    	$(this).css('border-radius', '5px');
+    });
 
 });
 
