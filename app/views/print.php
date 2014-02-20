@@ -28,9 +28,9 @@
 	<div class="container_24">
 		<div id="sidebar" class="sidebar" style="text-align: center; color: rgb(180,180,180);">
 			<div style="height: 20px"></div>
-			<h1 style="font-size: 400%; text-align:right;">สมัครเข้าค่าย</h1>
-			<h1 style="font-size: 800%; text-align:right; margin-top: -95px; color: rgb(255,60,168);">พี่จุฬา ฯ</h1>
-			<h1 style="font-size: 300%; margin-top: -100px;">ครั้งที่ <span style="color: rgb(255,60,168);">17</span></h1>
+			<h1 style="font-size: 216%; text-align: center; margin: 0px 0px 0px 0px;">ค่ายจามจุรีอาสา</h1>
+			<h1 style="font-size: 800%; margin-top: -50px; color: rgb(255,60,168);">พี่จุฬา ฯ</h1>
+			<h1 style="font-size: 320%; margin: -130px 0px 0px 130px;">สานฝันน้อง</h1>
 			<h1 id="side1" class="nav">กรอกข้อมูลส่วนตัว</h1>
 			<h1 id="side2" class="nav nav-select">พิมพ์ใบสมัคร</h1>
 			<h1 id="side3" class="nav">ทำแบบทดสอบ และส่งใบสมัคร</h1>
@@ -70,7 +70,8 @@
 				</p>
 
 				<div style="clear:both"></div>
-				<div style="height:30px"></div>
+				<div style="height:30px;"></div>
+
 				
 				<a name="details"/>
 				<div style="color: rgb(88,88,88);">
@@ -89,6 +90,7 @@
 						aoeu
 					</div>
 					
+					<div style="height: 15px;"></div>
 					<div style="height: 15px;"></div>
 					<p>
 						เมื่อทราบว่า <strong>ได้รับการคัดเลือก</strong> โปรดโอนเงิน <strong>จำนวน 3,000 บาท</strong> มาที่

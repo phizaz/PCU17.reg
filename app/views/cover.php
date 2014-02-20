@@ -15,24 +15,20 @@
 <body>
 	<div id="content">
 		<div style="height: 80px;"></div>
-		<h1 style="text-shadow: none; margin:0px 0px 0px -190px; font-size: 200%;" class="light-grey">ค่าย</h1>
-		<h1 style="text-shadow: none; margin:-80px 0px 0px 0px; font-size: 500%;" class="pink">พี่จุฬา ฯ</h1>
-		<h1 style="text-shadow: none; margin:-50px 0px -15px 80px; font-size: 200%;" class="light-grey">ครั้งที่ <span class="pink">17</span></h1>
-		<h2 style="font-size: 75%; color: rgb(220,220,220); text-shadow: none; font-family: 'thaisans_light'; font-weight: 100;">เรียนเตรียมความพร้อมกับพี่ ๆ จุฬา 14 มีนา - 28 เมษา 57</h2>
+		<h1 style="text-shadow: none; margin:0px 0px 0px 0px; font-size: 135%;" class="light-grey">ค่ายจามจุรีอาสา</h1>
+		<h1 style="text-shadow: none; margin:-60px 0px 0px 0px; font-size: 500%;" class="pink">พี่จุฬา ฯ</h1>
+		<h1 style="text-shadow: none; margin:-60px 0px -15px 170px; font-size: 200%;" class="light-grey">สานฝันน้อง</h1>
+		<h2 style="font-size: 75%; color: rgb(220,220,220); text-shadow: none; font-family: 'thaisans_light'; font-weight: 100;">21 มีนา - 4 เมษา 57 ณ หอพักนิสิตจุฬา ฯ</h2>
 		<h2 style="margin: 50px 0px 15px 0px;">เงื่อนไขการสมัคร</h2>
 		<ul id="list">
 			<li style="font-size: 150%;">เป็นนักเรียน ม.4 หรือ ม.5 ทั่วประเทศ</li>
-			<li style="margin: 8px 0px 8px 0px; font-size: 140%; font-family: 'thaisans';">สามารถเข้าร่วมกิจกรรมได้ตลอดทั้งค่าย<br>วันที่ 14 มีนามคม - 28 เมษายน 2557</li>
+			<li style="margin: 8px 0px 8px 0px; font-size: 140%; font-family: 'thaisans';">สามารถเข้าร่วมกิจกรรมได้ตลอดทั้งค่าย<br>วันที่ 21 มีนามคม - 4 เมษายน 2557</li>
 			<li style="font-size: 170%;">ได้รับการอนุญาตจากผู้ปกครอง</li>
-			<li style="margin: 8px 0px 8px 0px; font-size: 230%; font-family: 'thaisans';">ไม่เคยเข้าค่ายนี้มาก่อน</li>
 		</ul>
-		<div style="height: 35px;"></div>
+		<h2 style="margin: 25px 0px 0px 0px; font-size: 120%; color: rgb(220,220,220);">อ่านรายละเอียดก่อน..</h2>
+		<div style="height: 50px;"></div>
 
 		<?php if($online) : ?>
-		<a id="nav-reg" href="reg"><h2 id="box-reg" style="font-size: 150%;">ดูรายละเอียด</h2></a>
-		<div style="height: 15px;"></div>
-		<hr class="separator-line">
-		<h3 class="separator-text">สนใจ</h3>
 		<a id="nav-reg" href="reg"><h2 id="box-reg">สมัครเลย</h2></a>
 		<div style="height: 20px;"></div>
 		<hr class="separator-line">

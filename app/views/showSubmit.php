@@ -20,9 +20,9 @@
 <body>
     <div class="container_24">
         <div id="sidebar" class="sidebar" style="text-align: center; color: rgb(180,180,180);">
-            <h1 style="font-size: 400%; text-align:right;">สมัครเข้าค่าย</h1>
-            <h1 style="font-size: 800%; text-align:right; margin-top: -95px; color: rgb(255,60,168);">พี่จุฬา ฯ</h1>
-            <h1 style="font-size: 300%; margin-top: -100px;">ครั้งที่ <span style="color: rgb(255,60,168);">17</span></h1>
+            <h1 style="font-size: 216%; text-align: center; margin: 0px 0px 0px 0px;">ค่ายจามจุรีอาสา</h1>
+				<h1 style="font-size: 800%; margin-top: -50px; color: rgb(255,60,168);">พี่จุฬา ฯ</h1>
+				<h1 style="font-size: 320%; margin: -130px 0px 0px 130px;">สานฝันน้อง</h1>
             <h1 class="nav nav-select">กรอกข้อมูลส่วนตัว</h1>
             <h1 class="nav">พิมพ์ใบสมัคร</h1>
             <h1 class="nav">ทำแบบทดสอบ และส่งใบสมัคร</h1>
@@ -308,7 +308,7 @@
                         <h2 class="grey">เบอร์ติดต่อกรณีฉุกเฉิน</h2>
                         <div class="just-left">
                             <h4>ชื่อผู้ติดต่อ ท่านแรก</h4>
-                            <div id="contact1_name" name="contact1_name" type="text" class="show-text" style="width: 0px">
+                            <div id="contact1_name" name="contact1_name" type="text" class="show-text" style="width: 200px">
                                 <?php echo $contact1_name; ?>
                             </div>
                         </div>
