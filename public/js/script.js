@@ -1,13 +1,28 @@
+var sidebar_height = 560;
+var window_height;
+var document_height;
+var scrollable;
+var he;
+//var ratio = he/($(document).height()-$(window).height());
+var ratio;
+
+function update() {
+	console.log('update');
+	window_height = $(window).height();
+	document_height = $(document).height();
+	scrollable = document_height - window_height;
+	he = window_height - sidebar_height;
+	ratio = (he - 40) / scrollable;
+}
+$(window).resize(function() {
+	update();
+	$('.sidebar').css({"top": (he - $(window).scrollTop() * ratio) + 'px' });
+});
+
 $(document).ready(function(){
-
+	update();
 	// ----------------- Parallax scroll --------------------------
-
-	//var he = $(window).height() - $('#sidebar').height();
-	var he = $(window).height() - 670;
-	var ratio = he/($(document).height()-$(window).height());
-	//console.log(ratio);
 	$('.sidebar').css({"top": he});
-	
 
 	$(window).scroll(function(){
 		$('.sidebar').css({"top": (he - $(window).scrollTop() * ratio) + 'px' });
@@ -189,13 +204,16 @@ $(document).ready(function(){
     });
 
     $('.example-parent').focusin(function() {
-    	$(this).next().slideDown('fast');
     	$(this).css('border-radius', '5px 5px 0 0');
+    	$(this).next().slideDown('fast');
     });
 
     $('.example-parent').focusout(function() {
-    	$(this).next().slideUp('fast');
-    	$(this).css('border-radius', '5px');
+    	var th = $(this);
+    	$(this).next().slideUp('fast').queue(function () {
+    		th.css('border-radius', '5px');
+    		$(this).dequeue();
+    	});
     });
 
 });

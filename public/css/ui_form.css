@@ -1,6 +1,6 @@
 @import "../fonts/stylesheet.css";
 
-html,body {
+html {
 	height: 100%;
 }
 
@@ -12,6 +12,7 @@ body,td,th {
 }
 
 body {
+	min-height: 100%;
 	background: rgb(255,255,255);
 }
 
@@ -323,8 +324,9 @@ h1 small {
 
   .example{
   	width: auto;
-  	background-color: rgb(215,215,215);
-  	font-size: 80%;
+  	color: rgb(255,255,255);
+  	background-color: rgb(170,170,170);
+  	font-size: 11px;
   	margin: 0;
   	height: 30px;
   	border-radius: 0 0 5px 5px;
