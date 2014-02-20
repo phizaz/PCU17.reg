@@ -11,8 +11,24 @@ class CoverController extends BaseController{
 		else $fail = false;
 
 		$url = URL::to('');
+
+		$online = true;
+		$before = $after = false;
+		if(!Config::get('app.testing'))
+			if(time() <= Config::get('app.start_time') ) {
+				$online = false;
+				$before = true;
+			} else if(time() >= Config::get('app.end_time') ) {
+				$online = false;
+				$after = true;
+			}
+
 		return View::make('cover', array(
 			'url' => $url,
-			'fail' => $fail));
+			'fail' => $fail,
+			'online' => $online, 
+			'before' => $before,
+			'after' => $after
+			));
 	}
 }
