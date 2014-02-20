@@ -22,7 +22,7 @@
 	</script>
 	<script src="<?=$url?>/js/script.js"></script>
 	<title>
-		ลงทะเบียนค่ายพี่จุฬาฯครั้งที่ 17
+		ลงทะเบียน | <?=Config::get('app.title')?>
 	</title>
 </head>
 <body>

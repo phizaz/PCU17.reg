@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<title><?=$title?></title>
 	<link rel="stylesheet" href="<?=$url?>/css/cover.css">
 	<link rel="stylesheet" href="<?=$url?>/css/960_24_col.css">
 	<script src="<?=$url?>/js/jquery.min.js"></script>

@@ -12,6 +12,7 @@ class RegisterController extends BaseController {
 			$faculty = Session::get('faculty');
 		$months = DB::table('month')->get();
 		return View::make('form', array(
+			'title' => Config::get('app.title'),
 			'url' => URL::to(''),
 			'months' => $months,
 			'credential' => $credential,

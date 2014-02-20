@@ -24,6 +24,7 @@ class CoverController extends BaseController{
 			}
 
 		return View::make('cover', array(
+			'title' => Config::get('app.title'),
 			'url' => $url,
 			'fail' => $fail,
 			'online' => $online, 

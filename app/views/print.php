@@ -21,7 +21,7 @@
 	</script>
 	<script src="<?=$url?>/js/print-script.js"></script>
 	<title>
-		ลงทะเบียนค่ายพี่จุฬาฯครั้งที่ 17
+		พิมพ์ใบสมัคร | <?=Config::get('app.title')?>
 	</title>
 </head>
 <body>
