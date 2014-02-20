@@ -26,9 +26,13 @@
 			<li style="font-size: 170%;">ได้รับการอนุญาตจากผู้ปกครอง</li>
 			<li style="margin: 8px 0px 8px 0px; font-size: 230%; font-family: 'thaisans';">ไม่เคยเข้าค่ายนี้มาก่อน</li>
 		</ul>
-		<div style="height: 45px;"></div>
+		<div style="height: 35px;"></div>
 
 		<?php if($online) : ?>
+		<a id="nav-reg" href="reg"><h2 id="box-reg" style="font-size: 150%;">ดูรายละเอียด</h2></a>
+		<div style="height: 15px;"></div>
+		<hr class="separator-line">
+		<h3 class="separator-text">สนใจ</h3>
 		<a id="nav-reg" href="reg"><h2 id="box-reg">สมัครเลย</h2></a>
 		<div style="height: 20px;"></div>
 		<hr class="separator-line">
