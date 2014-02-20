@@ -48,7 +48,22 @@ img {
 }
 
 #box-reg {
-	text-shadow: none; font-size: 200%; text-align: center; width: 330px; padding: 7px 0px 7px 0px; margin: auto auto 5px auto; background: rgb(255,0,150); color: rgb(255,255,255); border-radius: 15px;
+	text-shadow: none; 
+	font-size: 200%; 
+	text-align: center; 
+	width: 330px; 
+	padding: 7px 0px 7px 0px; 
+	margin: auto auto 5px auto; 
+	background: rgb(255,0,150); 
+	color: rgb(255,255,255); 
+	border-radius: 15px;
+}
+
+#box-time {
+	text-shadow: none;
+	font-size: 120%;
+	text-align: center;
+	color: rgb(255,255,255);
 }
 
 hr.separator-line {

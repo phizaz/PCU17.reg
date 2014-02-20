@@ -29,6 +29,16 @@ App::after(function($request, $response)
 | Only who pass something will be allowed to get further.
 */
 
+Route::filter('online', function () {
+	$now = time();
+	if(Config::get('app.testing') or 
+		(Config::get('app.start_time') <= $now and $now <= Config::get('app.end_time'))) {
+
+	} else {
+		return Redirect::to('');
+	}
+});
+
 Route::filter('agreed', function () {
 	if(! Session::get('agree')) return Redirect::to('');
 });

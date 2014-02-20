@@ -27,6 +27,8 @@
 			<li style="margin: 8px 0px 8px 0px; font-size: 230%; font-family: 'thaisans';">ไม่เคยเข้าค่ายนี้มาก่อน</li>
 		</ul>
 		<div style="height: 45px;"></div>
+
+		<?php if($online) : ?>
 		<a id="nav-reg" href="reg"><h2 id="box-reg">สมัครเลย</h2></a>
 		<div style="height: 20px;"></div>
 		<hr class="separator-line">
@@ -40,6 +42,19 @@
 			</form>
 			<div id="fail" style="display: none; margin-top: 20px; font-family: 'thaisans_light'; font-weight: 100; font-size: 15px; background: rgb(206,0,70); text-shadow:none; border-radius: 4px;">เลขประจำตัวประชาชนนี้ยังไม่เคยถูกใช้ อาจะเป็นได้ที่คุณยังไม่เคยสมัครค่าย</div>
 		</div>
+		<?php else : ?>
+		<div>
+			<h2 id="box-time">
+				<?php if($before) : ?>
+					เริ่มรับสมัครวันที่ 22 กุมภา - 1 เมษา
+				<?php endif; ?>
+				<?php if($after) : ?>
+					ปิดรับสมัครแล้ว รอประกาศผลต่อไป
+				<?php endif; ?>
+			</h2>
+		</div>
+		<?php endif; ?>
+
 		<div style="height: 50px;"></div>
 		<div>
 			<h2 style="font-size: 13px; color: rgb(100,100,100); margin: 5px 0px 5px 0px;">สนับสนุนเว็บโฮสติงโดย</h2>
