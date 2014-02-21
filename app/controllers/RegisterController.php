@@ -243,7 +243,7 @@ class RegisterController extends BaseController {
 		//Check if any failure ? then show the messages to user.
 		if($validator->fails()) {
 			//This only the example of how to things work. REALLY!!!!
-			//return Redirect::to('reg')->withErrors($validator);
+			return Redirect::to('reg')->withErrors($validator);
 		}
 
 		
