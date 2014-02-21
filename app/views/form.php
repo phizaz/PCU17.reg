@@ -38,16 +38,16 @@
 		
 		<div class="prefix_12 grid_12">
 			<div style="height: 60px;"></div>			
-				<?php 
-					if(!$errors->first()==""){
-						echo "<div class=\"error\">";
-						foreach ($errors->all() as $message)
-						{
-						    echo $message . "<br>";
-						}
-						echo "</div>";
-					}
-				?>			
+			<?php 
+			if(!$errors->first()==""){
+				echo "<div class=\"error\">";
+				foreach ($errors->all() as $message)
+				{
+					echo $message . "<br>";
+				}
+				echo "</div>";
+			}
+			?>			
 			<div class="register">
 				<form id="register" action="" method="POST">					
 					<div style="padding-left: 20px;">
@@ -329,7 +329,7 @@
 							<h4>สนใจเป็นอันดับแรก<span class="required"> *</span></h4>
 							<input id="faculty1" name="faculty1" class="input-text" type="text" style="width: 195px">                
 						</div>
- 						<div class="just-left just-last">
+						<div class="just-left just-last">
 							<h4>สนใจเป็นอันดับสอง<span class="required"> *</span></h4>
 							<input id="faculty2" name="faculty2" class="input-text" type="text" style="width: 195px">                
 						</div>
@@ -337,13 +337,89 @@
 							<h4>สนใจเป็นอันดับสาม<span class="required"> *</span></h4>
 							<input id="faculty3" name="faculty3" class="input-text" type="text" style="width: 195px">                
 						</div>
- 						<div class="just-left just-last">
+						<div class="just-left just-last">
 							<h4>สนใจเป็นอันดับสี่<span class="required"> *</span></h4>
 							<input id="faculty4" name="faculty4" class="input-text" type="text" style="width: 195px">                
 						</div>
 
 						<div style="clear: both;"></div>
 						<h2 class="grey">ส่วนวิชาการ</h2>
+						<p class="desc">
+							ทางค่ายเปิดสอน 4 คอร์สดังตารางด่านล่างนี้ โดยนักเรียนพึงเลือกได้ตามความสนใจไม่จำเป็นต้องตรงตามแผนการเรียนที่โรงเรียนแต่อย่างใด
+						</p>
+						<table class="course-table">
+							<thead>
+								<tr>
+									<td>วิชา</td>
+									<td>วิทย์ ม.4 ขึ้น ม.5</td>
+									<td>วิทย์ ม.5 ขึ้น ม.6</td>
+								</tr>
+							</thead>
+							<tr>
+								<td class="head">คณิตศาสตร์</td>
+								<td>ตรีโกณมิติ</td>
+								<td>แคลคูลัสเบื้องต้น</td>
+							</tr>
+							<tr>
+								<td class="head">ฟิสิกส์</td>
+								<td>คลื่น ทฤษฎีจลน์ของก๊าซ</td>
+								<td>ไฟฟ้า</td>
+							</tr>
+							<tr>
+								<td class="head">เคมี</td>
+								<td>อัตราการเกิดปฎิกิริยาเคมี สมดุลเคมี กรด-เบส</td>
+								<td>เคมีอินทรีย์ สารชีวโมเลกุล พอลิเมอร์</td>
+							</tr>
+							<tr>
+								<td class="head">ชีววิทยา</td>
+								<td>พืช</td>
+								<td>พันธุศาสตร์</td>
+							</tr>
+							<tr>
+								<td class="head">ภาษาอังกฤษ</td>
+								<td colspan="2">Grammar, Reading, Vocabulary</td>
+							</tr>
+							<tr>
+								<td class="head">GAT</td>
+								<td colspan="2">เชื่อมโยง</td>
+							</tr>
+
+							<thead>
+								<tr>
+									<td>วิชา</td>
+									<td>ศิลป์ภาษา</td>
+									<td>ศิลป์คำนวณ</td>
+								</tr>
+							</thead>
+							<tr>
+								<td class="head">คณิตศาสตร์</td>
+								<td>สถิติ ลำดับและอนุกรม</td>
+								<td>สถิติ ความน่าจะเป็น</td>
+							</tr>
+							<tr>
+								<td class="head">วิทยาศาสตร์</td>
+								<td colspan="2">ฟิสิกส์ เคมี ชีววิทยา (พื้นฐาน) โลกและดาราศาสตร์</td>
+							</tr>
+							<tr>
+								<td class="head">ภาษาไทย</td>
+								<td colspan="2">หลักภาษา วรรณคดี</td>
+							</tr>
+							<tr>
+								<td class="head">สังคมศึกษา</td>
+								<td colspan="2">ประวัติศาสตร์ ภูมิศาสตร์ เศรษฐศาสตร์</td>
+							</tr>
+							<tr>
+								<td class="head">ภาษาอังกฤษ</td>
+								<td colspan="2">Grammar, Reading, Vocabulary</td>
+							</tr>
+							<tr>
+								<td class="head">GAT</td>
+								<td colspan="2">เชื่อมโยง</td>
+							</tr>
+						</table>
+						
+						<div style="height: 15px;"></div>
+
 						<div class="just-left">
 							<h4>คอร์สที่ต้องการเรียน</h4>
 							<select id="course" name="course" class="input-text" style="width: 215px">

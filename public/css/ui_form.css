@@ -32,6 +32,7 @@ h2 {
 	font-family: 'thaisans_bold';
 	font-weight: 800;
 	font-size: 150%;
+	margin: 30px 0px 10px 0px;
 }
 
 h4 {
@@ -47,8 +48,8 @@ p {
 
 select{
 	-webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 a {
@@ -98,6 +99,7 @@ strong {
 .sidebar{
 	width: 470px;
 	position: fixed;
+	z-index: 1000;
 }
 
 .input-text {
@@ -198,9 +200,9 @@ select.show-text {
 	background: rgb(240,240,240);
 	font-family: 'thaisans_bold';
 	vertical-align: center;
-   margin: 0px 20px 0px 0px;
-   text-align: center;
-   border-radius: 4px;
+	margin: 0px 20px 0px 0px;
+	text-align: center;
+	border-radius: 4px;
 }
 
 .big-button .btn {
@@ -227,11 +229,11 @@ select.show-text {
 	font-family: 'thaisans_bold';
 	vertical-align: center;
 	border: 5px solid rgb(200,200,200);
-    border-radius: 5px;
-    margin: 10px;
-    padding-left: 40px;
-    padding-top: 40px;
-    font-size: 150%;
+	border-radius: 5px;
+	margin: 10px;
+	padding-left: 40px;
+	padding-top: 40px;
+	font-size: 150%;
 }
 
 .btn {
@@ -275,75 +277,113 @@ h1 small {
 }
 
 .ui-tooltip, .arrow:after {
-    background: white;
-    border: 2px solid rgb(150,150,150);
-  }
-  .ui-tooltip {
-    padding: 10px 20px;
-    color: black;
-    border-radius: 5px;
-    /*font: bold 14px "Helvetica Neue", Sans-Serif;*/
-    /*text-transform: uppercase;*/
-    box-shadow: 0 0 7px rgb(150,150,150);
-    width: 150px;
-  }
-  .arrow {
-    width: 70px;
-    height: 16px;
-    overflow: hidden;
-    position: absolute;
-    /*left: 50%;*/
-    /*margin-left: -35px;*/
-    bottom: -16px;
-  }
-  .arrow.top {
-    top: -16px;
-    bottom: auto;
-  }
-  .arrow.left {
-    left: 30%;
-  }
-  .arrow:after {
-    content: "";
-    position: absolute;
-    left: 20px;
-    top: -20px;
-    width: 25px;
-    height: 25px;
-    box-shadow: 6px 5px 9px -9px black;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    tranform: rotate(45deg);
-  }
-  .arrow.top:after {
-    bottom: -20px;
-    top: auto;
-  }
+	background: white;
+	border: 2px solid rgb(150,150,150);
+}
+.ui-tooltip {
+	padding: 10px 20px;
+	color: black;
+	border-radius: 5px;
+	/*font: bold 14px "Helvetica Neue", Sans-Serif;*/
+	/*text-transform: uppercase;*/
+	box-shadow: 0 0 7px rgb(150,150,150);
+	width: 150px;
+}
+.arrow {
+	width: 70px;
+	height: 16px;
+	overflow: hidden;
+	position: absolute;
+	/*left: 50%;*/
+	/*margin-left: -35px;*/
+	bottom: -16px;
+}
+.arrow.top {
+	top: -16px;
+	bottom: auto;
+}
+.arrow.left {
+	left: 30%;
+}
+.arrow:after {
+	content: "";
+	position: absolute;
+	left: 20px;
+	top: -20px;
+	width: 25px;
+	height: 25px;
+	box-shadow: 6px 5px 9px -9px black;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	tranform: rotate(45deg);
+}
+.arrow.top:after {
+	bottom: -20px;
+	top: auto;
+}
 
-  .example{
-  	width: auto;
-  	color: rgb(255,255,255);
-  	background-color: rgb(170,170,170);
-  	font-size: 11px;
-  	margin: 0;
-  	height: 30px;
-  	border-radius: 0 0 5px 5px;
-  	text-align: center;
+.example{
+	width: auto;
+	color: rgb(255,255,255);
+	background-color: rgb(170,170,170);
+	font-size: 11px;
+	margin: 0;
+	height: 30px;
+	border-radius: 0 0 5px 5px;
+	text-align: center;
 	vertical-align: middle;
 	line-height: 30px;   
-  	display: none;
-  }
+	display: none;
+}
 
-  .example-parent{
-  	margin-bottom: 0;
-  }
+.example-parent{
+	margin-bottom: 0;
+}
 
-  .example-blue{
-  	background-color: rgb(159,165,206) !important;
-  }
+.example-blue{
+	background-color: rgb(159,165,206) !important;
+}
 
-  .example-pink{
-  	background-color: rgb(255,163,221) !important;
-  }
+.example-pink{
+	background-color: rgb(255,163,221) !important;
+}
+
+.desc {
+	margin: 10px 0px 10px 0px;
+	font-family: 'thaisans_light';
+	font-weight: 100;
+}
+
+.course-table {
+	border-spacing: 0px;
+}
+.course-table td{
+	font-weight: 100;
+	font-family: 'thaisans_light';
+	font-size: 14px;
+	text-align: center;
+	vertical-align: top;
+	color: rgb(66,66,66);
+	padding: 5px;
+	border-bottom: 1px solid rgb(230,230,230);
+}
+
+.course-table thead tr td {
+	border-top: 2px solid rgb(230,230,230);
+	padding: 7px 5px 7px 5px;
+}
+
+.course-table .head {
+	width: 80px;
+}
+
+.course-table thead tr td ,
+.course-table .head {
+	font-family: 'thaisans_bold';
+	font-weight: 800;
+	text-align: center;
+	vertical-align: middle;
+}
+
