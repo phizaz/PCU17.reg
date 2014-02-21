@@ -111,7 +111,7 @@
 						<li>สำเนาทะเบียนบ้านของนักเรียน</li>
 						<li>สำเนาบัตรประจำตัวนักเรียน (ถ้ามี)</li>
 					</ul>
-					<p>มาตามที่อยู่ด้านล่างนี้ ภายในวันที่ XXXXXXXXX</p>
+					<p>มาตามที่อยู่ด้านล่างนี้ <strong>ภายในวันที่ 11 มีนาคม 2557</strong></p>
 					<p class="group group-pink" style="text-align: center; color: rgb(33,33,33); font-family: 'thaisans_light'; font-weight: 100;">
 						<strong>โครงการค่ายจามจุรีอาสา พี่จุฬาฯ สานฝันน้อง</strong><br>
 						นายเยี่ยมยุทธ สุทธิฉายา<br>

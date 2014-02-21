@@ -41,7 +41,7 @@
 			<form action="print/return" method="post">
 				<input type="text" name="national_id"><button type="submit">พิมพ์</button>
 			</form>
-			<div id="fail" style="display: none; margin-top: 20px; font-family: 'thaisans_light'; font-weight: 100; font-size: 15px; background: rgb(206,0,70); text-shadow:none; border-radius: 4px;">เลขประจำตัวประชาชนนี้ยังไม่เคยถูกใช้ อาจะเป็นได้ที่คุณยังไม่เคยสมัครค่าย</div>
+			<div id="fail" style="display: none; margin-top: 20px; font-family: 'thaisans_light'; font-weight: 100; font-size: 15px; background: rgb(206,0,70); text-shadow:none; border-radius: 4px;">คุณอาจยังไม่เคยสมัครค่าย</div>
 		</div>
 		<?php else : ?>
 		<div>
