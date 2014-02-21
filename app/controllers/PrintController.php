@@ -35,7 +35,7 @@ class PrintController extends BaseController {
 		$credential = Auth::user();
 		
 		$pdf = new FPDI();
-		$pdf->AddFont('sarabun','','THSarabun.php');
+		$pdf->AddFont('sarabun','','thsarabun.php');
 
 		//Set font as angsana 14pt
 		$pdf->SetFont('sarabun','',14);
@@ -266,13 +266,15 @@ class PrintController extends BaseController {
 		$pdf->multiCell(38, $height, $text, 0, 'C', false);
 		//Write Faculty 2
 		if(sizeof($faculty) < 2) $text = "-"; 
-		else $text = $this->p($faculty[1]->faculty);		
+		else $text = $this->p($faculty[1]->faculty);
+		if($text == "") $text = "-";		
 		$pdf->setXY($col + 23 + 50, $row);
 		$pdf->multiCell(38, $height, $text, 0, 'C', false);
 		//Write Faculty 3
 		$row += $height;
 		if(sizeof($faculty) < 3) $text = "-"; 
-		else $text = $this->p($faculty[2]->faculty);		
+		else $text = $this->p($faculty[2]->faculty);
+		if($text == "") $text = "-";		
 		$pdf->setXY($col + 23, $row);
 		$pdf->multiCell(38, $height, $text, 0, 'C', false);
 		//Write Faculty 4
