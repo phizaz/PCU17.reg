@@ -47,12 +47,18 @@ class PrintController extends BaseController {
 			$pages[] = $pdf->importPage($i);
 		}
 
-		$pdf->addPage();
-		$pdf->useTemplate($pages[2], 0, 0);
+		// for($i = 0; $i < 6; $i++){
+		// 	$pdf->addPage();
+		// 	$pdf->useTemplate($pages[$i], 0, 0);
+		// }
 
-		$row = 69;
+		//------------ Page 7 -------------
+		$pdf->addPage();
+		$pdf->useTemplate($pages[6], 0, 0);
+
+		$row = 74.5;
 		$col = 25;
-		$height = 5.65;
+		$height = 6.5;
 
 		//Write Name Header
 		$pdf->setXY(78 , 12);
@@ -65,7 +71,7 @@ class PrintController extends BaseController {
 		$pdf->multiCell(56, $height, $text, 0, 'C', false);
 		//Write National ID
 		$pdf->setXY($col + 90, $row);
-		$text = $credential->national_id;
+		$text = substr($credential->national_id , 0, 1) . '-' . substr($credential->national_id , 1, 4) . '-' . substr($credential->national_id , 5, 5) . '-' . substr($credential->national_id , 10, 2) . '-' . substr($credential->national_id , 12, 1);
 		$pdf->multiCell(42, $height, $text, 0, 'C', false);
 		//Write Nickname
 		$row += $height;
@@ -273,9 +279,9 @@ class PrintController extends BaseController {
 		$pdf->setXY($col + 23 + 70, $row);
 		$pdf->multiCell(48, $height, $text, 0, 'C', false);
 
-		//------------Page 4---------------
+		//------------Page 8---------------
 		$pdf->addPage();
-		$pdf->useTemplate($pages[3], 0, 0);
+		$pdf->useTemplate($pages[7], 0, 0);
 
 		//Write Name Header
 		$pdf->setXY(78 , 12);
@@ -298,9 +304,9 @@ class PrintController extends BaseController {
 		$pdf->setXY($col + 23 + 70, $row);
 		$pdf->multiCell(48, $height, $text, 0, 'C', false);
 
-
+		//------------- Page 9 --------------------
 		$pdf->addPage();
-		$pdf->useTemplate($pages[4], 0, 0);
+		$pdf->useTemplate($pages[8], 0, 0);
 		//Write Name Header
 		$pdf->setXY(78 , 12);
 		$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
