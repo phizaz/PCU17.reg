@@ -26,7 +26,7 @@
 			<li style="margin: 8px 0px 8px 0px; font-size: 140%; font-family: 'thaisans';">สามารถเข้าร่วมกิจกรรมได้ตลอดทั้งค่าย<br>วันที่ 21 มีนามคม - 4 เมษายน 2557</li>
 			<li style="font-size: 170%;">ได้รับการอนุญาตจากผู้ปกครอง</li>
 		</ul>
-		<a href="<?php echo $url ?>/files/details.pdf" style="color: rgb(255,255,255);"><h2 style="margin: 25px 0px 0px 0px; font-size: 120%; ">ดูรายละเอียด..ที่นี่</h2></a>
+		<a href="<?php echo $url ?>/files/details.pdf" style="color: rgb(255,255,255);" target="_blank"><h2 style="margin: 25px 0px 0px 0px; font-size: 120%; ">ดูรายละเอียด..ที่นี่</h2></a>
 		<div style="height: 50px;"></div>
 
 		<?php if($online) : ?>
