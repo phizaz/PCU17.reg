@@ -50,17 +50,17 @@ class PrintController extends BaseController {
 		$col = 25;
 		$height = 6.5;
 
-		// for($i = 0; $i < 5; $i++){
-		// 	$pdf->addPage();
-		// 	$pdf->useTemplate($pages[$i], 0, 0);
-		// 	//Write Name Header
-		// 	$pdf->SetFont('sarabun', '',12);
-		// 	$pdf->setXY(78 , 11.5);
-		// 	$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
-		// 	$pdf->multiCell(56, $height, $text, 0, 'C', false);
+		for($i = 0; $i < 5; $i++){
+			$pdf->addPage();
+			$pdf->useTemplate($pages[$i], 0, 0);
+			//Write Name Header
+			$pdf->SetFont('sarabun', '',12);
+			$pdf->setXY(78 , 11.5);
+			$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
+			$pdf->multiCell(56, $height, $text, 0, 'C', false);
 
-		// 	$pdf->SetFont('sarabun','',14);
-		// }
+			$pdf->SetFont('sarabun','',14);
+		}
 
 		//------------ Page 6 -------------
 		$pdf->addPage();
