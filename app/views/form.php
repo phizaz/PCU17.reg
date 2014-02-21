@@ -261,15 +261,15 @@
 							<div class="just-left">
 								<h4 class="pink">ชั้น</h4>
 								<!-- <input name="address" type="text" class="input-text input-pink" style="width: 80px"> -->
-								<select id="school_level" name="school_level"class="input-text input-pink" style="width: 90px">
-									<option value="4">ม.4</option>  
-									<option value="5">ม.5</option>                          
+								<select id="school_level" name="school_level"class="input-text input-pink" style="width: 120px">
+									<option value="4">ม.4 ขึ้น ม.5</option>  
+									<option value="5">ม.5 ขึ้น ม.6</option>                          
 								</select>
 							</div>
 							<div class="just-left just-last">
-								<h4 class="pink">หลักสูตรการศึกษา</h4>
+								<h4 class="pink">หลักสูตร</h4>
 								<!-- <input name="road" type="text" class="input-text input-pink" style="width: 200px"> -->
-								<select id="school_plan" name="school_plan"class="input-text input-pink" style="width: 140px">
+								<select id="school_plan" name="school_plan"class="input-text input-pink" style="width: 110px">
 									<option value="0">วิทย์-คณิต</option>
 									<option value="1">ศิลป์-คำนวณ</option>
 									<option value="2">ศิลป์-ภาษา</option>                        

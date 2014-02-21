@@ -270,8 +270,8 @@
 								<!-- <show name="address" type="text" class="show-text show-pink" style="width: 80px"> -->
 								<div id="school_level" name="school_level" id="school_level" class="show-text show-pink" style="width: 103.333px">
 									<?php 
-									if($school_level==4) echo "ม.4";
-									else if($school_level==5) echo "ม.5";
+									if($school_level==4) echo "ม.4 ขึ้น ม.5";
+									else if($school_level==5) echo "ม.5 ขึ้น ม.6";
 									?>
 								</div> 
 							</div>

@@ -190,9 +190,9 @@ class PrintController extends BaseController {
 		$text = $this->p($text);
 		$pdf->multiCell(30, $height, $text, 0, 'C', false);
 		//Write Class
-		$pdf->setXY($col + 29 + 55, $row);
-		$text = $this->p('ม.' . $credential->school_level);
-		$pdf->multiCell(15, $height, $text, 0, 'C', false);
+		$pdf->setXY($col + 29 + 54, $row);
+		$text = $this->p('ม.' . $credential->school_level . ' ขึ้น ม.' . ($credential->school_level+1) );
+		$pdf->multiCell(21, $height, $text, 0, 'C', false);
 		//Write School Plan
 		$row += $height;
 		$col -= 15;
