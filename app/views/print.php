@@ -79,18 +79,17 @@
 					<p>
 						ส่ง <strong>ใบสมัคร</strong> (ที่ติดรูปแล้ว) พร้อมรูปถ่ายขนาด 3 x 4 ซม. <strong>อีกหนึ่งรูป</strong> มาที่
 					</p>
-					<div class="group group-pink">
-						aoeu
-					</div>
+					<p class="group group-pink" style="text-align: center; color: rgb(33,33,33); font-family: 'thaisans_light'; font-weight: 100;">
+						โครงการค่ายจามจุรีอาสา พี่จุฬาฯ สานฝันน้อง<br>
+						นายเยี่ยมยุทธ สุทธิฉายา<br>
+						ตึกจำปี ห้อง 508 หอพักนิสิตจุฬาลงกรณ์มหาวิทยาลัย<br>
+						ถนนพญาไท แขวงวังใหม่ เขตปทุมวัน กรุงเทพฯ 10330
+					</p>
 
 					<p>
-						รอการประกาศผลการทัดเลือก (วันที่ ...) เข้าค่ายที่เว็บไซต์นี้ หรือที่เพจ Facebook
+						รอการประกาศผลการคัดเลือกผู้มีสิทธิ์เข้าค่าย (วันที่ 6 มีนาคม 57) ที่เว็บไซต์นี้ หรือที่เพจ Facebook .....
 					</p>
-					<div class="group group-pink">
-						aoeu
-					</div>
 					
-					<div style="height: 15px;"></div>
 					<div style="height: 15px;"></div>
 					<p>
 						เมื่อทราบว่า <strong>ได้รับการคัดเลือก</strong> โปรดโอนเงิน <strong>จำนวน 3,000 บาท</strong> มาที่

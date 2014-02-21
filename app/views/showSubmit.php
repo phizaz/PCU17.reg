@@ -27,7 +27,7 @@
 			<h1 class="nav">พิมพ์ใบสมัคร</h1>
 			<h1 class="nav">ทำแบบทดสอบ และส่งใบสมัคร</h1>
 		</div>
-		
+
 		<div class="prefix_12 grid_12">
 			<div class="register">
 				<div style="height:50px"></div>
@@ -343,7 +343,7 @@
 							<div id="contact2_relation" name="contact2_relation" class="show-text" style="width: 65px">
 								<?php echo $contact2_relation; ?>
 							</div>
-							
+
 						</div>
 						<div style="clear:both;"></div>
 						<h2 class="grey">คณะที่สนใจศึกษาต่อในระดับมหาวิทยาลัย</h2>
@@ -375,7 +375,7 @@
 						<div style="clear: both;"></div>
 						<h2 class="grey">ส่วนวิชาการ</h2>
 						<p class="desc">
-							ทางค่ายเปิดสอน 4 คอร์สดังตารางด่านล่างนี้ โดยนักเรียนพึงเลือกได้ตามความสนใจไม่จำเป็นต้องตรงตามแผนการเรียนที่โรงเรียนแต่อย่างใด
+							ทางค่ายเปิดสอน 4 คอร์สดังตารางด้านล่างนี้ โดยนักเรียนพึงเลือกได้ตามความสนใจไม่จำเป็นต้องตรงตามแผนการเรียนที่โรงเรียนแต่อย่างใด
 						</p>
 						<table class="course-table">
 							<thead>
@@ -460,7 +460,7 @@
 								?>                        
 							</div>               
 						</div>
-						
+
 
 						<div style="clear:both;"></div>
 						<div style="height: 30px"></div>
