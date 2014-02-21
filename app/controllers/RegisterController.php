@@ -119,6 +119,7 @@ class RegisterController extends BaseController {
 		Session::put('credential', $credential);
 
 		//Hand-made validation rules defined in ValidatorLib in controller folder.
+		Validator::extend('unique_name', 'ValidatorLib@uniqueName');
 		Validator::extend('thai', 'ValidatorLib@isThai');
 		Validator::extend('national_id', 'ValidatorLib@isNationalId');
 		Validator::extend('address', 'ValidatorLib@isAddress');
@@ -130,19 +131,21 @@ class RegisterController extends BaseController {
 			'name_prefix' => 'required|thai',
 			'name_first' => 'required|thai', 
 			'name_last' => 'required|thai', 
+			'name' => 'unique_name',
 			'nickname' => 'required|thai',
 			'religion' => 'required', 
-			'national_id' => 'required|national_id',
-			'email' => 'required|email',
-			'address' => 'required|address',
+			'national_id' => 'required|national_id|unique:candidate',
+			'facebook' => 'required',
+			'email' => 'email',
+			'address' => 'required',
 			'road' => 'thai',
 			'moo' => 'numeric',
 			'zip_code' => 'required|numeric|digits:5',
-			'phone_mobile' => 'required|phone',
-			// 'phone_home' => 'required|phone',
-			'school_name' => 'required|thai',
-			'method_arrive'  => 'required|thai',
-			'method_depart'  => 'required|thai',
+			'phone_mobile' => 'required|phone:10',
+			'phone_home' => 'phone:9',
+			'school_name' => 'required',
+			'method_arrive'  => 'required',
+			'method_depart'  => 'required',
 			'contact1_name' => 'required|thai',
 			'contact1_phone' => 'required|numeric',
 			'contact1_relation' => 'required|thai',
@@ -150,9 +153,9 @@ class RegisterController extends BaseController {
 			'contact2_phone' => 'required|numeric',
 			'contact2_relation' => 'required|thai',
 			'faculty1' => 'required|thai',
-			'faculty2' => 'required|thai',
-			'faculty3' => 'required|thai',
-			'faculty4' => 'required|thai');
+			'faculty2' => 'thai',
+			'faculty3' => 'thai',
+			'faculty4' => 'thai');
 
 		//Messages array is defining text to respond to each circumstances.
 		$messages = array(
@@ -162,15 +165,17 @@ class RegisterController extends BaseController {
 			'name_first.thai' => 'กรุณากรอกชื่อจริงเป็นภาษาไทย',
 			'name_last.required' => 'กรุณากรอกนามสกุล',
 			'name_last.thai' => 'กรุณากรอกนามสกุลเป็นภาษาไทย',
+			'name.unique_name' => 'คุณเคยลงทะเบียนแล้ว เนื่องจากชื่อนามสกุลนี้ถูกใช้แล้ว',
 			'nickname.required' => 'กรุณากรอกชื่อเล่น',
 			'nickname.thai' => 'กรุณากรอกชื่อเล่นเป็นภาษาไทย',
 			'religion.required' => 'กรุณากรอกข้อมูลศาสนา',
 			'national_id.required' => 'กรุณากรอกเลขประจำตัวประชาชน',
 			'national_id.national_id' => 'รูปแบบเลขประจำตัวประชาชนไม่ถูกต้อง',
-			'email.required' => 'กรุณากรอกอีเมล์',
+			'national_id.unique' => 'คุณเคยลงทะเบียนแล้ว เนื่องจากเลขประจำตัวประชาชนี้ถูกใช้แล้ว',
+			'facebook.required' => 'กรุณากรอกเฟซบุ๊ค',
 			'email.email' => 'รูปแบบการกรอกอีเมล์ไม่ถูกต้อง',
-			'address.required' => 'กรุณากรอกย้านเลขที่',
-			'address.address' => 'รูปแบบการกรอกบ้านเลขที่ไม่ถูกต้อง',
+			'address.required' => 'กรุณากรอกบ้านเลขที่',
+			//'address.address' => 'รูปแบบการกรอกบ้านเลขที่ไม่ถูกต้อง',
 			'road.required' => 'กรุณากรอกถนน',
 			'road.thai' => 'กรุณากรอกถนนเป็นภาษาไทย',
 			'moo.numeric' => 'กรุณากรอกหมู่เป็นตัวเลข',
@@ -178,9 +183,9 @@ class RegisterController extends BaseController {
 			'zip_code.numeric' => 'กรุณากรอกรหัสไปรษณีย์เป็นตัวเลข',
 			'zip_code.digits' => 'กรุณากรอกรหัสไปรษณีย์ให้ครบ 5 หลัก',
 			'phone_mobile.required' => 'กรุณากรอกหมายเลขโทรศัพท์มือถือ',
-			'phone_mobile.phone' => 'รูปแบบการกรอกหมายเลขโทรศัพท์มือถือไม่รถูกต้อง',
+			'phone_mobile.phone' => 'รูปแบบการกรอกหมายเลขโทรศัพท์มือถือไม่ถูกต้อง',
 			// 'phone_home.required' => 'กรุณากรอกหมายเลขโทรศัพท์บ้าน',
-			// 'phone_home.phone' => 'รูปแบบการกรอกหมายเลขโทรศัพท์บ้านไม่รถูกต้อง',
+			'phone_home.phone' => 'รูปแบบการกรอกหมายเลขโทรศัพท์บ้านไม่ถูกต้อง',
 			'school_name.required' => 'กรุณากรอกชื่อโรงเรียน',
 			'school_name.thai' => 'กรุณากรอกชื่อโรงเรียนเป็นภาษาไทย',
 			'method_arrive.required' => 'กรุณากรอกวิธีการเดินทางมา',
@@ -199,14 +204,14 @@ class RegisterController extends BaseController {
 			'contact2_phone.numeric' => 'รูปแบบเบอร์ผู้ติดต่อ 2 ไม่ถูกต้อง',
 			'contact2_relation.required' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 2',
 			'contact2_relation.thai' => 'กรุณาใส่ความสัมพันธ์ผู้ติดต่อ 2 เป็นภาษาไทย',
-			'faculty1.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 1',
-			'faculty1.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 1เป็นภาษาไทย',
-			'faculty2.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 2',
-			'faculty2.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 2เป็นภาษาไทย',
-			'faculty3.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 3',
-			'faculty3.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 3เป็นภาษาไทย',
-			'faculty4.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 4',
-			'faculty4.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 4เป็นภาษาไทย');
+			'faculty1.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่ออันดับหนึ่ง',
+			'faculty1.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่ออันดับหนึ่ง เป็นภาษาไทย',
+			//'faculty2.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 2',
+			'faculty2.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่ออันดับสอง เป็นภาษาไทย',
+			//'faculty3.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 3',
+			'faculty3.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่ออันดับสาม เป็นภาษาไทย',
+			//'faculty4.required' => 'กรุณาใส่คณะที่ต้องการศึกษาต่อ 4',
+			'faculty4.thai' => 'กรุณาใส่คณะที่ต้องการศึกษาต่ออันดับสี่ เป็นภาษาไทย');
 
 		//Just turn the Validator on. the result kept in $validator.
 		$validator = Validator::make(
@@ -214,9 +219,11 @@ class RegisterController extends BaseController {
 				'name_prefix' => $name_prefix,
 				'name_first' => $name_first,
 				'name_last' => $name_last,
+				'name' => ($name_first . $name_last),
 				'nickname' => $nickname,
 				'religion' => $religion,
 				'national_id' => $national_id,
+				'facebook' => $facebook,
 				'email' => $email,
 				'address' => $address,
 				'road' => $road,

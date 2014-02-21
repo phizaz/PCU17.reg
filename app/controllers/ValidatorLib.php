@@ -36,11 +36,16 @@ class ValidatorLib extends BaseController {
 
 	public function isPhone($attr, $val, $params){
 		$val = preg_replace('/[^0-9]/', '', $val);
-		if(strlen($val) === 10 || strlen($val) === 9) {
-		    //Phone is 10 characters in length (###) ###-####
-		    return true;
+		if(strlen($val) == $params[0]) {
+			return true;
 		}
 		return false;
 
+	}
+
+	//VAL MUST BE CONCATINATED
+	public function uniqueName($attr, $val, $pararms) {
+		$candidate = Candidate::whereRaw('concat(name_first, name_last) = ?', array($val))->count();
+		return $candidate == 0;
 	}
 }

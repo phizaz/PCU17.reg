@@ -421,7 +421,7 @@
 						<div style="height: 15px;"></div>
 
 						<div class="just-left">
-							<h4>คอร์สที่ต้องการเรียน</h4>
+							<h4>คอร์สที่ต้องการเรียน<span class="required"> *</span></h4>
 							<select id="course" name="course" class="input-text" style="width: 215px">
 								<option value="0">วิทย์ ม.4 ขึ้น ม.5</option>
 								<option value="1">วิทย์ ม.5 ขึ้น ม.6</option>
