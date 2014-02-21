@@ -129,7 +129,8 @@
 	<div style="background:rgb(240,240,240); z-index:100; position:relative;">
 		<div class="container_24" style="padding: 20px 0px 20px 0px;">
 			<div class="grid_12" align="left">
-				<h4 style="font-size: 13px; color: rgb(100,100,100);">เว็บไซต์อย่างเป็นทางการของค่ายพี่จุฬา ฯ ครั้งที่ 17</h4>
+				<h4 style="margin: 0px; font-size: 13px; color: rgb(100,100,100);">เว็บไซต์อย่างเป็นทางการของ ค่ายจามจุรีอาสา พี่จุฬาฯ สานฝันน้อง</h4>
+				<p style="margin: 5px 0px 5px 0px; font-size: 12px; color: rgb(100,100,100);">ติดต่อเราทาง <a href="http://www.facebook.com/pcu17" target="_blank">Facebook</a></p>
 			</div>
 			<div class="grid_12" align="center">
 				<h4 style="font-size: 13px; color: rgb(100,100,100);">สนับสนุนเว็บโฮสติงโดย</h4>
