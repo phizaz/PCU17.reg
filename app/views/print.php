@@ -87,7 +87,7 @@
 					</p>
 
 					<p>
-						รอการประกาศผลการคัดเลือกผู้มีสิทธิ์เข้าค่าย <strong>ในวันที่ 6 มีนาคม 2557</strong> ที่เว็บไซต์นี้ หรือที่เพจ Facebook .....
+						รอการประกาศผลการคัดเลือกผู้มีสิทธิ์เข้าค่าย <strong>ในวันที่ 6 มีนาคม 2557</strong> ที่เว็บไซต์นี้ หรือที่เพจ Facebook <a href="http://www.facebook.com/PCU17" target="_blank">www.facebook.com/PCU17 </a>
 					</p>
 					
 					<div style="height: 15px;"></div>

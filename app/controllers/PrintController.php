@@ -35,7 +35,7 @@ class PrintController extends BaseController {
 		$credential = Auth::user();
 		
 		$pdf = new FPDI();
-		$pdf->AddFont('sarabun','','thsarabun.php');
+		$pdf->AddFont('sarabun','','THSarabun.php');
 
 		//Set font as angsana 14pt
 		$pdf->SetFont('sarabun','',14);
