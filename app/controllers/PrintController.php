@@ -50,17 +50,17 @@ class PrintController extends BaseController {
 		$col = 25;
 		$height = 6.5;
 
-		for($i = 0; $i < 5; $i++){
-			$pdf->addPage();
-			$pdf->useTemplate($pages[$i], 0, 0);
-			//Write Name Header
-			$pdf->SetFont('sarabun', '',12);
-			$pdf->setXY(78 , 11.3);
-			$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
-			$pdf->multiCell(56, $height, $text, 0, 'C', false);
+		// for($i = 0; $i < 5; $i++){
+		// 	$pdf->addPage();
+		// 	$pdf->useTemplate($pages[$i], 0, 0);
+		// 	//Write Name Header
+		// 	$pdf->SetFont('sarabun', '',12);
+		// 	$pdf->setXY(78 , 11.5);
+		// 	$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
+		// 	$pdf->multiCell(56, $height, $text, 0, 'C', false);
 
-			$pdf->SetFont('sarabun','',14);
-		}
+		// 	$pdf->SetFont('sarabun','',14);
+		// }
 
 		//------------ Page 6 -------------
 		$pdf->addPage();
@@ -70,7 +70,7 @@ class PrintController extends BaseController {
 
 		//Write Name Header
 		$pdf->SetFont('sarabun', '',12);
-		$pdf->setXY(78 , 11.3);
+		$pdf->setXY(78 , 11.5);
 		$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
 		$pdf->multiCell(56, $height, $text, 0, 'C', false);
 
@@ -210,7 +210,7 @@ class PrintController extends BaseController {
 		//Write school province
 		$getdata = DB::table('province')->select('PROVINCE_NAME')->where('PROVINCE_ID' , '=' , $credential->school_province)->get();
 		$text = $this->p($getdata[0]->PROVINCE_NAME);
-		$pdf->setXY($col + 25 + 32 + 39 + 8, $row);
+		$pdf->setXY($col + 25 + 32 + 39 + 9.5, $row);
 		$pdf->multiCell(28, $height, $text, 0, 'C', false);
 		//Write shirt_size
 		$shirt_size = $credential->shirt_size;
@@ -241,7 +241,7 @@ class PrintController extends BaseController {
 		$text = substr($this->p($credential->contact1_phone), 0, 2) . '-' . substr($this->p($credential->contact1_phone), 2);
 		$pdf->multiCell(22, $height, $text, 0, 'C', false);
 		//Write contact1 relation
-		$pdf->setXY($col + 23 + 72 + 41, $row);
+		$pdf->setXY($col + 23 + 72 + 40, $row);
 		$text = $this->p($credential->contact1_relation);
 		$pdf->multiCell(17, $height, $text, 0, 'C', false);
 		//Write contact2 name
@@ -254,7 +254,7 @@ class PrintController extends BaseController {
 		$text = substr($this->p($credential->contact2_phone), 0, 2) . '-' . substr($this->p($credential->contact2_phone), 2);
 		$pdf->multiCell(22, $height, $text, 0, 'C', false);
 		//Write contact2 relation
-		$pdf->setXY($col + 23 + 72 + 41, $row);
+		$pdf->setXY($col + 23 + 72 + 40, $row);
 		$text = $this->p($credential->contact2_relation);
 		$pdf->multiCell(17, $height, $text, 0, 'C', false);
 		//Write Faculty
@@ -282,20 +282,20 @@ class PrintController extends BaseController {
 		$pdf->setXY($col + 23 + 50, $row);
 		$pdf->multiCell(38, $height, $text, 0, 'C', false);
 		//Write sign name
-		$row += 3*$height + 4.5;
+		$row += 2*$height + 3.5;
 		$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
 		$pdf->setXY($col + 23 + 70, $row);
 		$pdf->multiCell(48, $height, $text, 0, 'C', false);
 		//Write parent approve student name
-		$row += 3*$height + 4;
+		$row += 4*$height + 5.5;
 		$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
 		$pdf->setXY($col + 23 + 80, $row);
 		$pdf->multiCell(46, $height, $text, 0, 'C', false);
 		//Write parent sign text
-		$row += 8*$height + 3.4;
+		$row += 7*$height + 11;
 		$text = $this->p("ผู้ปกครองของ " . $credential->name_prefix . $credential->name_first . " " . $credential->name_last);
-		$pdf->setXY($col + 23 + 70, $row);
-		$pdf->multiCell(48, $height, $text, 0, 'C', false);
+		$pdf->setXY($col + 23 + 63, $row);
+		$pdf->multiCell(60, $height, $text, 0, 'C', false);
 
 		//------------Page 7---------------
 		$pdf->addPage();
@@ -303,7 +303,7 @@ class PrintController extends BaseController {
 
 		//Write Name Header
 		$pdf->SetFont('sarabun','',12);
-		$pdf->setXY(78 , 11.3);
+		$pdf->setXY(78 , 11.5);
 		$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
 		$pdf->multiCell(56, $height, $text, 0, 'C', false);
 
@@ -319,7 +319,7 @@ class PrintController extends BaseController {
 		$pdf->setXY($col + 25, $row);
 		$pdf->multiCell(46, $height, $text, 0, 'C', false);
 		//Write sign name page 4
-		$row += 5*$height + 3;
+		$row += 4*$height ;
 		$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
 		$pdf->setXY($col + 23 + 70, $row);
 		$pdf->multiCell(48, $height, $text, 0, 'C', false);
@@ -329,7 +329,7 @@ class PrintController extends BaseController {
 		$pdf->useTemplate($pages[7], 0, 0);
 		//Write Name Header
 		$pdf->SetFont('sarabun','',12);
-		$pdf->setXY(78 , 11.3);
+		$pdf->setXY(78 , 11.5);
 		$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
 		$pdf->multiCell(56, $height, $text, 0, 'C', false);
 
