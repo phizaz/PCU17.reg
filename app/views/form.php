@@ -129,7 +129,7 @@
 							<div class="example example-blue">ตัวอย่าง facebook.com/abcxyz</div>
 						</div>
 						<div class="just-left just-last">
-							<h4>Email<span class="required"> *</span></h4>
+							<h4>Email</h4>
 							<input id="email" name="email" class="input-text example-parent" type="text" style="width: 195px">
 							<div class="example">ตัวอย่าง abc@ijk.com</div>
 						</div>
@@ -309,7 +309,7 @@
 
 
 						<div class="just-left">
-							<h4>ชื่อผู้ติดต่อ ท่านที่สอง</h4>
+							<h4>ชื่อผู้ติดต่อ ท่านที่สอง<span class="required"> *</span></h4>
 							<input id="contact2_name" name="contact2_name" type="text" class="input-text" style="width: 190px">
 						</div>
 						<div class="just-left">
@@ -330,15 +330,15 @@
 							<input id="faculty1" name="faculty1" class="input-text" type="text" style="width: 195px">                
 						</div>
 						<div class="just-left just-last">
-							<h4>สนใจเป็นอันดับสอง<span class="required"> *</span></h4>
+							<h4>สนใจเป็นอันดับสอง</h4>
 							<input id="faculty2" name="faculty2" class="input-text" type="text" style="width: 195px">                
 						</div>
 						<div class="just-left">
-							<h4>สนใจเป็นอันดับสาม<span class="required"> *</span></h4>
+							<h4>สนใจเป็นอันดับสาม</h4>
 							<input id="faculty3" name="faculty3" class="input-text" type="text" style="width: 195px">                
 						</div>
 						<div class="just-left just-last">
-							<h4>สนใจเป็นอันดับสี่<span class="required"> *</span></h4>
+							<h4>สนใจเป็นอันดับสี่</h4>
 							<input id="faculty4" name="faculty4" class="input-text" type="text" style="width: 195px">                
 						</div>
 

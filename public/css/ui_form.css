@@ -277,16 +277,14 @@ h1 small {
 }
 
 .ui-tooltip, .arrow:after {
-	background: white;
-	border: 2px solid rgb(150,150,150);
+	background: rgb(255,226,0);
 }
 .ui-tooltip {
 	padding: 10px 20px;
-	color: black;
+	color: rgb(0,0,0);
 	border-radius: 5px;
 	/*font: bold 14px "Helvetica Neue", Sans-Serif;*/
 	/*text-transform: uppercase;*/
-	box-shadow: 0 0 7px rgb(150,150,150);
 	width: 150px;
 }
 .arrow {
@@ -312,7 +310,6 @@ h1 small {
 	top: -20px;
 	width: 25px;
 	height: 25px;
-	box-shadow: 6px 5px 9px -9px black;
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
