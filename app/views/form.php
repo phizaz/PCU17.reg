@@ -170,7 +170,7 @@
 						<div class="just-left just-last">
 							<h4>โรคประจำตัว</h4>
 							<input id="disease" name="disease" class="input-text example-parent" type="text" style="width: 195px">
-							<div class="example">บอกชื่อโรคประจำตัว</div>
+							<div class="example">หากมีโรคประจำตัวกรุณานำยาติดตัวมาด้วย</div>
 						</div>
 						<!-- Address Group -->
 						<div style="clear:both;"></div>
