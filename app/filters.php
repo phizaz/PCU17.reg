@@ -30,7 +30,7 @@ App::after(function($request, $response)
 */
 
 Route::filter('online', function () {
-	$now = time();
+	$now = new DateTime();
 	if(Config::get('app.testing') or 
 		(Config::get('app.start_time') <= $now and $now <= Config::get('app.end_time'))) {
 

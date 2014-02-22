@@ -283,12 +283,12 @@
 						<div class="just-left just-last">
 							<h4>วิธีการเดินทางมา<span class="required"> *</span></h4>
 							<input id="method_arrive" name="method_arrive" class="input-text example-parent" type="text" style="width: 430px">                
-							<div class="example">ใส่การเดินทางมาคราวๆ เช่น โดยสารรถตู้มาที่อนุสาวรีย์ แล้วต่อรถไฟฟ้าถึงจุฬาฯ</div>
+							<div class="example">ใส่การเดินทางมาคร่าวๆ เช่น โดยสารรถตู้มาที่อนุสาวรีย์ แล้วต่อรถไฟฟ้าถึงจุฬาฯ</div>
 						</div>
 						<div class="just-left just-last">
 							<h4>วิธีการเดินทางกลับ<span class="required"> *</span></h4>
 							<input id="method_depart" name="method_depart" class="input-text example-parent" type="text" style="width: 430px">                
-							<div class="example">ใส่การเดินทางกลับคราวๆ เช่น นั่งรถไฟฟ้าไปลงหมอชิต แล้วโดยสารรถกลับจังหวัด</div>
+							<div class="example">ใส่การเดินทางกลับคร่าวๆ เช่น นั่งรถไฟฟ้าไปลงหมอชิต แล้วโดยสารรถกลับจังหวัด</div>
 						</div>
 
 						<div style="clear:both;"></div>

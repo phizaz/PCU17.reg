@@ -14,11 +14,12 @@ class CoverController extends BaseController{
 
 		$online = true;
 		$before = $after = false;
+
 		if(!Config::get('app.testing'))
-			if(time() <= Config::get('app.start_time') ) {
+			if(new DateTime() <= Config::get('app.start_time') ) {
 				$online = false;
 				$before = true;
-			} else if(time() >= Config::get('app.end_time') ) {
+			} else if(new DateTime() >= Config::get('app.end_time') ) {
 				$online = false;
 				$after = true;
 			}

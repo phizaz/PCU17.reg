@@ -1,14 +1,13 @@
 <?php
-
 return array(
 
 	/*
 	Custom Configures.
 	*/
 	'title' => 'ค่ายจามจุรีอาสา พี่จุฬาฯ สานฝันน้อง',
-	'testing' => true,
-	'start_time' => mktime(8,00,00,02,22,2014),
-	'end_time' => mktime(16,00,00,03,01,2014),
+	'testing' => false,
+	'start_time' => new DateTime('2014-02-22 12:40:00', new DateTimeZone('Asia/Bangkok')),//mktime(10,00,00,02,22,2014),
+	'end_time' => new DateTime('2014-03-01 16:00:00', new DateTimeZone('Asia/Bangkok')),//mktime(16,00,00,03,01,2014),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -47,7 +46,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'Asia/Bangkok',//'UTC',
 
 	/*
 	|--------------------------------------------------------------------------
