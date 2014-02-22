@@ -1,7 +1,15 @@
 <!doctype html>
-<html>
+<html
+xmlns:og="http://ogp.me/ns#"
+xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
 	<meta charset="utf-8">
+	<meta property="og:title" content="<?=$title?>" />
+	<meta property="og:type" content="non_profit" />
+	
+	<meta property="og:image" content="<?=$url?>/img/logo.png" />
+	<meta property="og:description" content="21 มีนา - 4 เมษา 57 ณ หอพักนิสิตจุฬา ฯ"/>
+
 	<title><?=$title?></title>
 	<link rel="stylesheet" href="<?=$url?>/css/cover.css">
 	<link rel="stylesheet" href="<?=$url?>/css/960_24_col.css">
@@ -31,7 +39,8 @@
 
 		<?php if($online) : ?>
 		<a id="nav-reg" href="reg"><h2 id="box-reg">สมัครเลย</h2></a>
-		<div style="height: 20px;"></div>
+		<h4 style="color: rgb(150,150,150); margin: 10px 0px 25px 0px; font-size: 60%; font-family: 'thaisans_light'; font-weight: 100;">ปิดรับสมัคร 1 มีนาคม</h4>
+		
 		<hr class="separator-line">
 		<h3 class="separator-text">หรือ</h3>
 		<div id="section-return" style="margin: 5px 0px 0px 0px;">
