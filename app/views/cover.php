@@ -23,7 +23,7 @@
 		<h2 style="margin: 50px 0px 15px 0px;">เงื่อนไขการสมัคร</h2>
 		<ul id="list">
 			<li style="font-size: 125%;">เป็นนักเรียน ม.4 ขึ้น ม.5 หรือ ม.5 ขึ้น ม.6 ทั่วประเทศ</li>
-			<li style="margin: 8px 0px 8px 0px; font-size: 140%; font-family: 'thaisans';">สามารถเข้าร่วมกิจกรรมได้ตลอดทั้งค่าย<br>วันที่ 21 มีนามคม - 4 เมษายน 2557</li>
+			<li style="margin: 8px 0px 8px 0px; font-size: 140%; font-family: 'thaisans';">สามารถเข้าร่วมกิจกรรมได้ตลอดทั้งค่าย<br>วันที่ 21 มีนาคม - 4 เมษายน 2557</li>
 			<li style="font-size: 170%;">ได้รับการอนุญาตจากผู้ปกครอง</li>
 		</ul>
 		<a href="<?php echo $url ?>/files/details.pdf" style="color: rgb(255,255,255);" target="_blank"><h2 style="margin: 25px 0px 0px 0px; font-size: 120%; ">ดูรายละเอียด..ที่นี่</h2></a>
