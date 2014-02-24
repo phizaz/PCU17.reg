@@ -51,6 +51,11 @@ Route::filter('credential', function() {
 	if(! Session::has('credential')) return Redirect::guest('reg');
 });
 
+Route::filter('admin', function () {
+	if(! Session::has('admin') or ! Session::get('admin.is')) 
+		return Redirect::guest('admin/login');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Authentication Filters

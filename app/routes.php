@@ -35,5 +35,11 @@ Route::controller('print', 'PrintController');
 Route::controller('service', 'ServiceController');
 //Redir use only for redirection.
 Route::controller('redir', 'RedirController');
+
+Route::when('admin', 'admin');
+Route::when('admin/csv', 'admin');
+Route::controller('admin', 'AdminController');
+
 //Step 1: agreements. (Declare the last, prevent ambiguous.)
 Route::controller('', 'CoverController');
+
