@@ -112,21 +112,23 @@ class PrintController extends BaseController {
 		$row += $height;
 		$col += 4;
 		$pdf->setXY($col, $row);
-		$text = $credential->food_allergies;
+		$text = $this->p($credential->food_allergies);
 		if ($text == "") {
 			$text = "-";
 		}
 		$pdf->multiCell(10, $height, $text, 0, 'C', false);
 		//Write Drug
-		$pdf->setXY($col + 10 + 10, $row);
-		$text = $credential->drug;
+		$pdf->setXY($col + 10 + 9, $row);
+		$text = $this->p($credential->drug);
 		if ($text == "") {
 			$text = "-";
 		}
-		$pdf->multiCell(16, $height, $text, 0, 'C', false);		
+		$pdf->SetFont('sarabun','',11);
+		$pdf->multiCell(17, $height, $text, 0, 'C', false);		
+		$pdf->SetFont('sarabun','',14);
 		//Write Disease
 		$pdf->setXY($col + 10 + 10 + 16 + 19, $row);
-		$text = $credential->disease;
+		$text = $this->p($credential->disease);
 		if ($text == "") {
 			$text = "-";
 		}
