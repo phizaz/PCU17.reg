@@ -73,6 +73,15 @@ class AdminController extends BaseController {
 			$th = &$result[];
 			$th = $each->toArray();
 
+			$province = Province::find($th['province'])->toArray();
+			$th['province'] = $province['PROVINCE_NAME'];
+
+			$amphur = Amphur::find($th['amphur'])->toArray();
+			$th['amphur'] = $amphur['AMPHUR_NAME'];
+
+			$tambol = District::find($th['tambol'])->toArray();
+			$th['tambol'] = $tambol['DISTRICT_NAME'];
+
 			$th['school_plan'] = $school_plan[$th['school_plan']];
 			$th['shirt_size'] = $shirt_size[$th['shirt_size']];
 			$th['course'] = $course[$th['course']];
