@@ -227,12 +227,12 @@ class PrintController extends BaseController {
 		$row += $height;
 		$pdf->setXY($col + 28, $row);
 		$text = $this->p($credential->method_arrive);
-		$pdf->multiCell(130, $height, $text, 0, 'L', false);
+		$pdf->multiCell(140, $height, $text, 0, 'L', false);
 		//Write method_depart
 		$row += $height;
 		$pdf->setXY($col + 20, $row);
 		$text = $this->p($credential->method_depart);
-		$pdf->multiCell(140, $height, $text, 0, 'L', false);
+		$pdf->multiCell(150, $height, $text, 0, 'L', false);
 		//Write contact1 name
 		$row += $height;
 		$pdf->setXY($col + 23, $row);
@@ -264,27 +264,27 @@ class PrintController extends BaseController {
 		$row += $height;
 		//Write Faculty 1
 		$text = $this->p($faculty[0]->faculty);
-		$pdf->setXY($col + 23, $row);
-		$pdf->multiCell(38, $height, $text, 0, 'C', false);
+		$pdf->setXY($col + 22, $row);
+		$pdf->multiCell(40, $height, $text, 0, 'C', false);
 		//Write Faculty 2
 		if(sizeof($faculty) < 2) $text = "-"; 
 		else $text = $this->p($faculty[1]->faculty);
 		if($text == "") $text = "-";		
-		$pdf->setXY($col + 23 + 50, $row);
-		$pdf->multiCell(38, $height, $text, 0, 'C', false);
+		$pdf->setXY($col + 22 + 50, $row);
+		$pdf->multiCell(40, $height, $text, 0, 'C', false);
 		//Write Faculty 3
 		$row += $height;
 		if(sizeof($faculty) < 3) $text = "-"; 
 		else $text = $this->p($faculty[2]->faculty);
 		if($text == "") $text = "-";		
-		$pdf->setXY($col + 23, $row);
-		$pdf->multiCell(38, $height, $text, 0, 'C', false);
+		$pdf->setXY($col + 22, $row);
+		$pdf->multiCell(40, $height, $text, 0, 'C', false);
 		//Write Faculty 4
 		if(sizeof($faculty) < 4) $text = "-"; 
 		else $text = $this->p($faculty[3]->faculty);		
 		if($text == "") $text = "-";
-		$pdf->setXY($col + 23 + 50, $row);
-		$pdf->multiCell(38, $height, $text, 0, 'C', false);
+		$pdf->setXY($col + 22 + 50, $row);
+		$pdf->multiCell(40, $height, $text, 0, 'C', false);
 		//Write sign name
 		$row += 2*$height + 3.5;
 		$text = $this->p($credential->name_prefix . $credential->name_first . " " . $credential->name_last);
@@ -298,8 +298,8 @@ class PrintController extends BaseController {
 		//Write parent sign text
 		$row += 7*$height + 11;
 		$text = $this->p("ผู้ปกครองของ " . $credential->name_prefix . $credential->name_first . " " . $credential->name_last);
-		$pdf->setXY($col + 23 + 63, $row);
-		$pdf->multiCell(60, $height, $text, 0, 'C', false);
+		$pdf->setXY($col + 23 + 61, $row);
+		$pdf->multiCell(64, $height, $text, 0, 'C', false);
 
 		//------------Page 7---------------
 		$pdf->addPage();
