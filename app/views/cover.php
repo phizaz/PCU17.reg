@@ -39,7 +39,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml">
 
 		<?php if($online) : ?>
 		<a id="nav-reg" href="reg"><h2 id="box-reg">สมัครเลย</h2></a>
-		<h4 style="color: rgb(150,150,150); margin: 10px 0px 25px 0px; font-size: 60%; font-family: 'thaisans_light'; font-weight: 100;">ปิดรับสมัคร 1 มีนาคม</h4>
+		<h4 style="color: rgb(150,150,150); margin: 10px 0px 25px 0px; font-size: 60%; font-family: 'thaisans_light'; font-weight: 100;">ปิดรับสมัคร 1 มีนาคม <strong style="font-family: 'thaisans_bold'; font-weight: 8000;">บ่ายโมงครึ่ง</strong></h4>
 		
 		<hr class="separator-line">
 		<h3 class="separator-text">หรือ</h3>
@@ -54,14 +54,14 @@ xmlns:fb="http://www.facebook.com/2008/fbml">
 		</div>
 		<?php else : ?>
 		<div>
-			<h2 id="box-time">
-				<?php if($before) : ?>
-					เริ่มรับสมัครวันที่ 22 กุมภา - 1 มีนา
-				<?php endif; ?>
-				<?php if($after) : ?>
-					ปิดรับสมัครแล้ว รอประกาศผลต่อไป
-				<?php endif; ?>
-			</h2>
+			
+			<?php if($before) : ?>
+				<h2 id="box-time">เริ่มรับสมัครวันที่ 22 กุมภา - 1 มีนา</h2>
+			<?php endif; ?>
+			<?php if($after) : ?>
+				<h2><a href="qualified.pdf" target="_blank" class="pink">รายชื่อผู้ผ่านการคัดเลือก</a></h2>
+				<h4 style="margin-top: -30px; font-weight: 100; font-family: 'thaisans_light'; font-size: 25px; color: rgb(150,150,150);">อย่าลืมส่งเอกสารมาภายในวันที่ 11 มีนาคมนี้นะ...</h4>
+			<?php endif; ?>
 		</div>
 		<?php endif; ?>
 
