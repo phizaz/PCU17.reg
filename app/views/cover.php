@@ -59,8 +59,8 @@ xmlns:fb="http://www.facebook.com/2008/fbml">
 				<h2 id="box-time">เริ่มรับสมัครวันที่ 22 กุมภา - 1 มีนา</h2>
 			<?php endif; ?>
 			<?php if($after) : ?>
-				<h2><a href="qualified.pdf" target="_blank" class="pink">รายชื่อผู้ผ่านการคัดเลือก</a></h2>
-				<h4 style="margin-top: -30px; font-weight: 100; font-family: 'thaisans_light'; font-size: 25px; color: rgb(150,150,150);">อย่าลืมส่งเอกสารมาภายในวันที่ 11 มีนาคมนี้นะ...</h4>
+				<h2><a href="prepare_for_camp.pdf" target="_blank" class="pink">เอกสารสำคัญก่อนเข้าค่าย</a></h2>
+				<h4 style="margin-top: -30px; font-weight: 100; font-family: 'thaisans_light'; font-size: 25px; color: rgb(150,150,150);">แล้วเจอกันในค่ายนะครับ</h4>
 			<?php endif; ?>
 		</div>
 		<?php endif; ?>

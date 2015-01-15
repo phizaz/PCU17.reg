@@ -1,0 +1,113 @@
+@import "fonts/stylesheet.css";
+
+html, body {
+	height: 100%;
+}
+
+body, td, th {
+	margin: 0px;
+	background: rgb(55,55,55);
+	font-size: 15px;
+	font-weight: 400;
+	color: rgb(77,77,77);
+	/*font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;*/
+	font-family: "Helvetica Neue", 'thaisans' ,Helvetica,Arial,sans-serif;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'thaisans_bold';
+	font-weight: 800;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+.pink {
+	color: rgb(255,0,150);
+}
+
+.light-grey {
+	color: rgb(180,180,180);
+}
+
+.grey {
+	color: rgb(66,66,66);
+}
+
+#content {
+	width: 600px; margin: auto; text-align:center; font-size: 200%; color: rgb(255,255,255); text-shadow: 0px -1px 0px rgb(33,33,33);
+}
+
+#list {
+	color: rgb(160,160,160); list-style-type: none; padding: 0px; margin: 0px; font-size: 20px; font-family: 'thaisans_light'; font-weight: 100;
+}
+
+#box-reg {
+	text-shadow: none; 
+	font-size: 200%; 
+	text-align: center; 
+	width: 330px; 
+	padding: 7px 0px 7px 0px; 
+	margin: auto auto 5px auto; 
+	background: rgb(255,0,150); 
+	color: rgb(255,255,255); 
+	border-radius: 15px;
+}
+
+#box-time {
+	text-shadow: none;
+	font-size: 120%;
+	text-align: center;
+	color: rgb(255,255,255);
+}
+
+hr.separator-line {
+	border-width: 1px 0px 1px 0px; border-style: solid; border-color: rgb(44,44,44) transparent rgb(77,77,77) transparent;
+}
+
+.separator-text {
+	position: relative; margin: -35px auto auto auto; width: 60px; background: rgb(55,55,55); color: rgb(120,120,120); font-size: 70%;
+}
+
+#box-return {
+	margin: 0px;
+	font-size: 100%; text-align: center; color: rgb(230,230,230);
+}
+
+#section-return input {
+	margin: 0px; 
+	padding: 0px 10px 0px 10px; 
+	border-radius: 4px 0px 0px 4px; 
+	border-width: 1px 0px 0px 0px;
+	border-color: rgb(44,44,44) transparent transparent transparent;
+	border-style: solid;
+	outline: none;
+	color: rgb(0,0,0);
+	background: rgb(255,255,255);
+	font-family: 'thaisans'; 
+	width: 220px;
+	font-size: 25px;
+	text-align: center;
+	box-shadow: inset 0px 3px 5px 0px rgba(0,0,0,0.4);
+}
+
+#section-return button {
+	margin: 0px 0px 0px 0px;
+	padding: 10px;
+	outline: none;
+	border-radius: 0px 4px 4px 0px;
+	border-width: 1px 0px 0px 0px;
+	border-color: rgb(44,44,44) transparent transparent transparent;
+	border-style: solid;
+	color: rgb(255,255,255);
+	background: rgb(255,0,150);
+	font-family: 'thaisans_bold';
+	font-weight: 800;
+	font-size: 20px;
+	height: 48px;
+}
